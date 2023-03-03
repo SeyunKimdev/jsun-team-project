@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "https://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+	
+	<typeAliases>
+		<typeAlias type="com.rewrite.member.domain.MemberVO" alias="memberVO"/>
+		<typeAlias type="com.rewrite.board.domain.BoardVO" alias="boardVO"/>
+		<typeAlias type="com.rewrite.board.domain.BoardDTO" alias="boardDTO"/>
+		<!-- board -->
+		<typeAlias type="com.rewrite.board.domain.BoardDTO" alias="eventVO"/>
+		<typeAlias type="com.rewrite.board.domain.BoardDTO" alias="feedVO"/>
+		<typeAlias type="com.rewrite.board.domain.BoardDTO" alias="feedDTO"/>
+		<typeAlias type="com.rewrite.board.domain.BoardDTO" alias="reviewVO"/>
+		<typeAlias type="com.rewrite.board.domain.BoardDTO" alias="reviewDTO"/>
+		<typeAlias type="com.rewrite.board.domain.BoardDTO" alias="rankingVO"/>
+		<typeAlias type="com.rewrite.board.domain.BoardDTO" alias="profileVO"/>
+		<typeAlias type="com.rewrite.board.domain.BoardDTO" alias="matchingVO"/>
+	</typeAliases>
+	
+	<environments default="mysql">
+		<environment id="mysql">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql://localhost:3306/rewrite"/>
+				<property name="username" value="root"/>
+				<property name="password" value="1234"/>
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<mappers>
+		<mapper resource="com/rewrite/mybatis/mapper/memberMapper.xml"/>
+		<mapper resource="com/rewrite/mybatis/mapper/feedMapper.xml"/>
+		<mapper resource="com/rewrite/mybatis/mapper/reviewMapper.xml"/>
+		<mapper resource="com/rewrite/mybatis/mapper/rankingMapper.xml"/>
+		<mapper resource="com/rewrite/mybatis/mapper/matchingMapper.xml"/>
+		<mapper resource="com/rewrite/mybatis/mapper/profileMapper.xml"/>
+		<mapper resource="com/rewrite/mybatis/mapper/eventMapper.xml"/>
+		<mapper resource="com/rewrite/mybatis/mapper/fileMapper.xml"/>
+	</mappers>
+</configuration>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

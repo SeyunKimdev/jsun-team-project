@@ -1,4 +1,4 @@
-use jsun;
+use rewrite;
 create table tbl_matching(
 	matching_id int unsigned auto_increment primary key,
 	matching_status char(1) default 'n',
@@ -10,6 +10,3 @@ create table tbl_matching(
 	constraint fk_matching_attracter foreign key(attracter_id) 
 	references tbl_member(member_id) on delete cascade
 );
-INSERT INTO tbl_matching
-(matching_status, tempter_id, attracter_id, matching_register_date)
-VALUES('n', 0, 0, CURRENT_TIMESTAMP);

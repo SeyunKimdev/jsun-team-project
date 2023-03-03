@@ -1,5 +1,5 @@
-create database jsun;
-use jsun;
+use rewrite;
+
 create table tbl_member(
 	member_id int unsigned auto_increment primary key,
 	member_identification varchar(500) unique not null,
@@ -13,6 +13,3 @@ create table tbl_member(
 	member_profile_image varchar(500) not null,
 	member_status char(1) default 'y'
 );
-INSERT INTO tbl_member
-(member_identification, member_password, member_nickname, member_name, member_phone, member_email, member_birth, member_gender, member_profile_image, member_status)
-VALUES('', '', '', '', '', '', '', '', '', 'y');

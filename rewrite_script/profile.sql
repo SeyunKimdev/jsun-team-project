@@ -1,4 +1,4 @@
-use jsun;
+use rewrite;
 create table tbl_profile(
 	member_id int unsigned auto_increment primary key,
 	profile_location varchar(500),
@@ -12,6 +12,3 @@ create table tbl_profile(
 	constraint fk_profile_member foreign key(member_id)
 	references tbl_member(member_id) on delete cascade
 );
-INSERT INTO tbl_profile
-(profile_location, profile_job, profile_salary, profile_hobby, profile_mbti, profile_height, profile_child, profile_married)
-VALUES('', '', 0, '', '', 0, 'n', 'y');

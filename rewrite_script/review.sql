@@ -1,4 +1,4 @@
-use jsun;
+use rewrite;
 create table tbl_review(
    review_id int unsigned auto_increment primary key,
    review_title varchar(500) not null,
@@ -13,9 +13,6 @@ create table tbl_review(
    constraint fk_review_member foreign key(member_id) 
    references tbl_member(member_id) on delete cascade
 );
-INSERT INTO tbl_review
-(review_title, review_content, review_register_date, review_update_date, review_like_count, review_read_count, review_image, member_id)
-VALUES('', '', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 0, 0, '', 0);
 create view view_review as
 (
    select review_id, review_title, review_content, review_register_date, 

@@ -1,0 +1,1114 @@
+@charset "utf-8";
+
+.mainContainer {
+    background-color: rgb(255, 255, 255);
+}
+
+.mainDivDiv1 {
+    display: flex;
+    margin-bottom: 20px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.mainDivDiv1Div {
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow: visible;
+}
+
+.mainDivDiv1DivDiv1 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 50%;
+    height: calc(100% - 32px);
+    background-color: rgb(0, 0, 0);
+}
+
+.mainDivDiv1DivDiv2 {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 32px);
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+}
+
+.mainDivDiv1DivDiv2Img {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    filter: blur(28px);
+    backface-visibility: hidden;
+    transform: translateZ(0px);
+    background: linear-gradient(270.44deg, rgb(0, 0, 0) 0.21%, rgba(0, 0, 0, 0.4) 99.18%) 0% 0% / 100%;
+}
+
+.mainDivDiv1DivDiv3 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 100%;
+    height: calc(100% - 32px);
+    transition: background-color 0.4s ease 0s;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+}
+
+.mainDivDiv1DivDiv4 {
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+}
+
+.mainDivDiv1DivDiv4Div {
+    display: flex;
+    width: 100%;
+    max-width: 1176px;
+    margin: 0px auto;
+    overflow-x: hidden;
+}
+
+.mainDivDiv1DivDiv4DivDiv1 {
+    position: relative;
+    width: 660px;
+    padding-top: 8px;
+    border-radius: 3px;
+    overflow: hidden;
+    z-index: 900;
+}
+
+.mainDivDiv1DivDiv4DivDiv1Div {
+    display: block;
+    width: calc(100% + 16px);
+    height: 100%;
+}
+
+.mainDivDiv1DivDiv4DivDiv1DivDiv1 {
+    display: none;
+    position: absolute;
+    width: 32px;
+    height: calc(100% - 40px);
+    top: 20px;
+    left: 0px;
+    z-index: 2001;
+}
+
+.mainDivDiv1DivDiv4DivDiv1DivDiv2 {
+    display: none;
+    position: absolute;
+    width: 32px;
+    height: calc(100% - 40px);
+    top: 20px;
+    z-index: 2001;
+    left: initial;
+    right: 0px;
+}
+
+.mainDivDiv1DivDiv4DivDiv1DivDiv3 {
+    margin: 0px auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0px;
+    z-index: 1;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 48px;
+    margin-top: -48px;
+    width: 100%;
+}
+
+.mainDivDiv1DivDiv4DivDiv1DivDiv3Div1 {
+    width: 1352px;
+    will-change: transform;
+    margin-bottom: 32px;
+    transition-timing-function: cubic-bezier(0, 0.4, 0.17, 1);
+}
+
+.mainDivDiv1DivDiv4DivDiv1DivDiv3Div1 img {
+    position: relative;
+    margin-right: 16px;
+    width: 660px;
+    height: 415px;
+    float: left;
+    background-size: cover;
+}
+
+.mainDivDiv1DivDiv4DivDiv1DivDiv3Div1Div {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform, -webkit-transform;
+    padding-right: 16px;
+    top: 32px;
+    padding-top: 61.5%;
+}
+
+.mainDivDiv1DivDiv4DivDiv1DivDiv3Div1DivDiv {
+    position: absolute;
+    width: calc(100% - 16px);
+    height: 100%;
+    top: 0px;
+    z-index: 50;
+}
+
+.mainDivDiv1DivDiv4DivDiv1DivDiv3Div1DivDivDiv {
+    padding-top: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+}
+
+.mainDivDiv1DivDiv4DivDiv1DivDiv3Div1DivDivDivPicture {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.mainDivDiv1DivDiv4DivDiv1DivDiv3Div1DivA {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.mainDivDiv1DivDiv4DivDiv1DivDiv3Div2 {
+    position: absolute;
+    top: 0px;
+    transform: translateX(calc(-50% - 1px));
+    left: 50%;
+    z-index: 1;
+    width: 100%;
+}
+
+.mainDivDiv1DivDiv4DivDiv2 {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    min-width: 450px;
+    padding-left: 48px;
+    padding-bottom: 32px;
+    z-index: 1;
+}
+
+.mainDivDiv1DivDiv4DivDiv2A {
+    display: block;
+    max-width: 412px;
+    flex: 1 1 0%;
+    padding-top: 56px;
+    word-break: keep-all;
+}
+
+.mainDivDiv1DivDiv4DivDiv2AP1 {
+    display: flex;
+    white-space: pre-line;
+    -webkit-box-align: center;
+    align-items: center;
+    max-width: 380px;
+    color: rgb(255, 255, 255);
+    font-size: 34px;
+    line-height: 44px;
+    font-weight: bold;
+    letter-spacing: -0.02rem;
+    word-break: keep-all;
+    animation-duration: 600ms;
+    animation-fill-mode: both;
+    transition-timing-function: cubic-bezier(0, 0.63, 0.35, 1.01);
+    animation-name: iVvFKB;
+}
+
+.mainDivDiv1DivDiv4DivDiv2AP2 {
+    margin: 10px 0px 0px;
+    white-space: pre-line;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 26px;
+    max-width: 300px;
+    font-weight: normal;
+    animation-delay: 75ms;
+    animation-duration: 600ms;
+    animation-fill-mode: both;
+    transition-timing-function: cubic-bezier(0, 0.63, 0.35, 1.01);
+    animation-name: kiXdaf;
+}
+
+.mainDivDiv1DivDiv4DivDiv2Div {
+    margin-bottom: 30px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.mainDivDiv1DivDiv4DivDiv2DivSpan {
+    display: flex;
+    width: 50px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    cursor: default;
+    margin-right: 8px;
+}
+
+.mainDivDiv1DivDiv4DivDiv2DivSpanSpan1 {
+    height: 10px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: bold;
+    padding-right: 8px;
+    border-right: 1px solid rgba(255, 255, 255, 0.4)
+}
+
+.mainDivDiv1DivDiv4DivDiv2DivSpanSpan2 {
+    height: 10px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: normal;
+    padding: 0px 0px 0px 8px;
+    border: none;
+}
+
+.mainDivDiv1DivDiv4DivDiv2DivDiv1 {
+    display: flex;
+    overflow: hidden;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 1px;
+}
+
+.mainDivDiv1DivDiv4DivDiv2DivDiv1Div {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+    will-change: transform;
+    transition: transform 15000ms cubic-bezier(0.4, 0, 1, 1) 0s;
+    transform: translateX(0%);
+}
+
+.mainDivDiv1DivDiv4DivDiv2DivButton {
+    width: 32px;
+    height: 32px;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    border: 0px;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    display: inline-flex;
+    flex: 0 0 auto;
+    vertical-align: middle;
+    padding: 0px;
+    border-radius: 3px;
+    color: rgb(26, 26, 26);
+    background-color: transparent;
+    transition: background-color 0.1s ease 0s;
+    cursor: pointer;
+}
+
+.mainDivDiv1DivDiv4DivDiv2DivButton:first-of-type {
+    margin: 0px 6px 0px 16px;
+}
+
+.mainDivDiv1DivDiv4DivDiv2DivButtonSpan1 {
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.mainDivDiv1DivDiv4DivDiv2DivButtonSpan2 {
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.mainDivDiv2 {
+    max-width: 1176px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mainDivDiv {
+    max-width: 1176px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 72px;
+}
+
+.mainDivDiv:last-of-type {
+    margin-bottom: 0px;
+}
+
+.mainDivDivSectionDiv1 {
+    margin-bottom: 16px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.mainDivDivSectionDiv1 a {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.mainDivDivSectionDiv1ADiv {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.mainDivDivSectionDiv1ADivH2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(26, 26, 26);
+    line-height: 34px;
+    letter-spacing: -0.4px;
+    margin: 0px;
+}
+
+.mainDivDivSectionDiv1ADivP {
+    word-break: keep-all;
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(162, 162, 162);
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 4px 0px 0px;
+}
+
+.mainDivDivSectionDiv1Span {
+
+    cursor: pointer;
+    margin-left: 24px;
+    font-weight: bold;
+    color: rgb(162, 162, 162);
+    display: inline-flex;
+    vertical-align: middle;
+    background: none;
+    color: rgb(202, 202, 202);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+    transition: color 0.1s ease 0s;
+    margin: 0px;
+    padding: 0px;
+    flex: initial;
+    box-sizing: border-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.mainDivDivSectionDiv1SpanA {
+    display: inline-flex;
+    flex-direction: column;
+    color: rgb(162, 162, 162);
+    width: 100%;
+    height: 100%;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.mainDivDivSectionDiv1SpanASpan {
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.mainDivDivSectionDiv {
+    margin: 24px 0px 0px;
+}
+
+.mainDivDivSectionDiv2 {
+    position: relative;
+}
+
+.mainDivDivSectionDiv2Button1 {
+
+    color: rgb(239, 239, 239);
+    background-color: transparent;
+    position: absolute;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    left: 0px;
+    top: calc((100% - 40px) / 2);
+    transform: translateY(-50%) translateX(-52px);
+    display: inline-flex;
+    flex: 0 0 auto;
+    vertical-align: middle;
+    padding: 0px;
+    border-radius: 3px;
+    transition: background-color 0.1s ease 0s;
+    border: 0px;
+    outline: none;
+    margin: 0px;
+    box-sizing: border-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.mainDivDivSectionDiv2ButtonSpan {
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.mainDivDivSectionDiv2Div {
+    margin: 0px auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0px;
+    z-index: 1;
+}
+
+.mainDivDivSectionDiv2DivDiv {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform, -webkit-transform;
+    box-sizing: content-box;
+}
+
+.mainDivDivSectionDiv2DivDivDiv {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform, -webkit-transform;
+}
+
+.mainDivDivSectionDiv2DivDivDivA {
+    display: block;
+}
+
+
+.mainDivDivSectionDiv2DivDivDivADiv1 {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.mainDivDivSectionDiv2DivDivDivADiv1Span {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    font-size: 0px;
+    padding-top: 59%;
+    background: rgb(238, 238, 238);
+}
+
+.mainDivDivSectionDiv2DivDivDivADiv1SpanPicture {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.mainDivDivSectionDiv2DivDivDivADiv2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(26, 26, 26);
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+}
+
+.mainDivDivSectionDiv2DivDivDivADiv3 {
+    margin-top: 2px;
+}
+
+.mainDivDivSectionDiv2DivDivDivADiv4 {
+    font-size: 11px;
+    font-weight: normal;
+    color: rgb(26, 26, 26);
+    line-height: 16px;
+    letter-spacing: normal;
+    margin: 0px;
+}
+
+.mainDivDivSectionDiv2Button2 {
+
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    right: 0px;
+    top: calc((100% - 40px) / 2);
+    transform: translateY(-50%) translateX(52px);
+    display: inline-flex;
+    flex: 0 0 auto;
+    vertical-align: middle;
+    padding: 0px;
+    border-radius: 3px;
+    color: rgb(26, 26, 26);
+    background-color: transparent;
+    transition: background-color 0.1s ease 0s;
+    border: 0px;
+    outline: none;
+    margin: 0px;
+    box-sizing: border-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.mainDivDivSection {
+    position: relative;
+}
+
+.mainDivDivSectionDiv1Div {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.mainDivDivSectionDiv1DivH2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(26, 26, 26);
+    line-height: 34px;
+    letter-spacing: -0.4px;
+    margin: 0px;
+}
+
+.mainDivDivSectionDiv2DivDiv {
+
+    transform: translate3d(0px, 0px, 0px);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform, -webkit-transform;
+    box-sizing: content-box;
+}
+
+.mainDivDivSectionDiv2DivDivDivDiv {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivA {
+    display: block;
+    text-decoration: none !important;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADiv {
+    position: relative;
+    width: 100%;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv1 {
+    overflow: hidden;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv1Span {
+    position: relative;
+    border-radius: 3px;
+    /*  -webkit-mask-image: radial-gradient(rgb(255, 255, 255), rgb(0, 0, 0)); */
+    display: block;
+    overflow: hidden;
+    font-size: 0px;
+    padding-top: 75%;
+    background: rgb(238, 238, 238);
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv1SpanPicture {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv1SpanDiv {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv1SpanDivButton {
+
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border-radius: 100%;
+    z-index: 100;
+    display: inline-flex;
+    flex: 0 0 auto;
+    vertical-align: middle;
+    padding: 0px;
+    color: rgb(26, 26, 26);
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+    transition: background-color 0.1s ease 0s;
+    border: 0px;
+    outline: none;
+    margin: 0px;
+    box-sizing: border-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv1SpanDivButtonSpan {
+
+    transform: translate(0px);
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv2Div1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv2Div1P {
+    border-width: 0;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    line-height: 0.875rem;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv2Div1Div2 {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    color: rgb(26, 26, 26);
+    height: 40px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin: 4px 0px 8px;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv2Div1Div3 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv2Div1Div3>* {
+    flex: 0 0 auto;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv2Div1Div3Div {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv2Div1Div3DivDiv {
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: normal;
+    margin: 0px 8px 0px 0px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(162, 162, 162);
+}
+
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv2Div1Div3DivDivDiv {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex: 0 0 auto;
+    height: 12px;
+    margin-right: 2px;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv3 {
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    background-color: #F8F8F8;
+    width: 100%;
+    height: 1px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv4Div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv4DivP1 {
+    border-width: 0;
+    color: #FD3049;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    line-height: 1.125rem;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv4DivDiv {
+    width: 4px;
+    height: 0;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv4DivP2 {
+    border-width: 0;
+    color: #1A1A1A;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    line-height: 1.125rem;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv4DivDiv {
+    width: 4px;
+    height: 0;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv4DivDiv2 {
+    margin-right: 4px;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv4P {
+    border-width: 0;
+    color: #A2A2A2;
+    margin: 0;
+    padding: 0;
+    font-size: 0.6875rem;
+    font-weight: 400;
+    line-height: 0.875rem;
+}
+
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv5 {
+    display: flex;
+}
+
+.mainDivDivSectionDiv1ADiv {
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.mainDivDivSectionDiv1ADivH2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(26, 26, 26);
+    line-height: 34px;
+    letter-spacing: -0.4px;
+    margin: 0px;
+}
+
+.mainDivDiv8SectionDiv1AP {
+
+    word-break: keep-all;
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(162, 162, 162);
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 4px 0px 0px;
+}
+
+.mainDivDivSectionDiv1Span {
+
+    cursor: pointer;
+    margin-left: 24px;
+    font-weight: bold;
+    color: rgb(162, 162, 162);
+    display: inline-flex;
+    vertical-align: middle;
+    background: none;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+    transition: color 0.1s ease 0s;
+    margin: 0px;
+    padding: 0px;
+    flex: initial;
+    box-sizing: border-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.mainDivDivSectionDiv1SpanA {
+    color: rgb(162, 162, 162);
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.mainDivDivSectionDiv1SpanASpan {
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv5Div {
+    margin-top: 4px;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv5DivDiv {
+    min-width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: rgb(248, 248, 248);
+    flex: 0 0 auto;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv5DivDivDiv {
+    font-size: 9px;
+    line-height: 12px;
+    letter-spacing: normal;
+    margin: 0px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv1SpanDiv2 {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv1SpanDiv2Div {
+    min-width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: rgb(0, 0, 0);
+    flex: 0 0 auto;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv1SpanDiv2DivDiv {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: normal;
+    margin: 0px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv1SpanDiv3 {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+}
+
+.mainDivDivSectionDiv2DivDivDivDivADivDiv1SpanDiv3Span {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 1px 4px 2px;
+    border-radius: 1px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 640px) {
+    .mainDivDiv1 {
+        margin-bottom: 32px;
+    }
+}

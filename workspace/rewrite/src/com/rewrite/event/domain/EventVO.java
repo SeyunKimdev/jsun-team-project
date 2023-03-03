@@ -67,9 +67,6 @@ public class EventVO {
 			return false;
 		return true;
 	}
-	
-	
-	
 }
 
 

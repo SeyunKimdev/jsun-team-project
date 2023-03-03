@@ -7,9 +7,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>이벤트 - 리스트</title>
-        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/eventList.css" />
-        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/newHeader.css" />
-        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/newFooter.css" />
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/event/eventList.css" />
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/header/newHeader.css" />
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/footer/newFooter.css" />
         <link rel="icon" type="image/png" sizes="32x32" href="${pageContext.request.contextPath}/static/images/favicon.png" />
     </head>
     <body>
@@ -252,50 +252,6 @@
                 <div class="RankTopIconContainer">
                     <div class="RankTopContainer">
                         <h4 class="RankTopH1" style="color: rgb(0, 0, 0)">이벤트 목록</h4>
-                        <!-- <div class="RankTopDiv1"></div> -->
-                    </div>
-                    <div class="RankIconContainer">
-                        <div class="RankIconDiv2"></div>
-                        <!-- 버튼5  -->
-                        <div class="RankIconDiv2"></div>
-                        <div class="RankIconDiv3" id="ten">
-                            <div class="RankIconDiv3Div1">
-                                <div class="RankIconDiv3Div1Div1">
-                                    <div class="RankIconDiv3Div1Div1Div1">
-                                        <picture class="RankIconDiv3Div1Div1Div1Picture1">
-                                            <source
-                                                type="image/webp"
-                                                srcset="
-                                                    https://cdn.bhdw.net/im/minji-newjeans-kpop-girls-group-wallpaper-102317_w635.webp  640w,
-                                                    https://cdn.bhdw.net/im/minji-newjeans-kpop-girls-group-wallpaper-102317_w635.webp  750w,
-                                                    https://cdn.bhdw.net/im/minji-newjeans-kpop-girls-group-wallpaper-102317_w635.webp  828w,
-                                                    https://cdn.bhdw.net/im/minji-newjeans-kpop-girls-group-wallpaper-102317_w635.webp 1080w,
-                                                    https://cdn.bhdw.net/im/minji-newjeans-kpop-girls-group-wallpaper-102317_w635.webp 1200w,
-                                                    https://cdn.bhdw.net/im/minji-newjeans-kpop-girls-group-wallpaper-102317_w635.webp 1920w,
-                                                    https://cdn.bhdw.net/im/minji-newjeans-kpop-girls-group-wallpaper-102317_w635.webp 2048w,
-                                                    https://cdn.bhdw.net/im/minji-newjeans-kpop-girls-group-wallpaper-102317_w635.webp 3840w
-                                                " />
-                                            <img
-                                                srcset="
-                                                    https://cdn.bhdw.net/im/minji-newjeans-kpop-girls-group-wallpaper-102317_w635.webp  640w,
-                                                    https://cdn.bhdw.net/im/minji-newjeans-kpop-girls-group-wallpaper-102317_w635.webp  750w,
-                                                    https://cdn.bhdw.net/im/minji-newjeans-kpop-girls-group-wallpaper-102317_w635.webp  828w,
-                                                    https://cdn.bhdw.net/im/minji-newjeans-kpop-girls-group-wallpaper-102317_w635.webp 1080w,
-                                                    https://cdn.bhdw.net/im/minji-newjeans-kpop-girls-group-wallpaper-102317_w635.webp 1200w,
-                                                    https://cdn.bhdw.net/im/minji-newjeans-kpop-girls-group-wallpaper-102317_w635.webp 1920w,
-                                                    https://cdn.bhdw.net/im/minji-newjeans-kpop-girls-group-wallpaper-102317_w635.webp 2048w,
-                                                    https://cdn.bhdw.net/im/minji-newjeans-kpop-girls-group-wallpaper-102317_w635.webp 3840w
-                                                "
-                                                src="${pageContext.request.contextPath}/static/images/woman.png"
-                                                loading="lazy"
-                                                class="RankIconDiv3Div1Div1Div1Picture1Img1"
-                                        /></picture>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="RankIconDiv3Div2"></div>
-                            <p class="RankIconDiv3P1">전체 리스트 보기</p>
-                        </div>
                     </div>
                 </div>
                 <div class="RankMainDiv1"></div>
@@ -1168,5 +1124,5 @@
         </footer>
     </body>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script src="${pageContext.request.contextPath}/static/js/header.js"></script>
+    <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
 </html>

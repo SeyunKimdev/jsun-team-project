@@ -18,25 +18,18 @@ public class EventFrontController extends HttpServlet {
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
 
-		System.out.println("1. " + target);
-
-		if (target.equals("/eventList")) {
-			System.out.println("2. " + target);
-		} else if (target.equals("")) {
-			System.out.println("2. " + target);
-
+		if (target.equals("/event/list-ok")) {
+			result = new ListOkController().execute(req, resp);
 		} else {
-			System.out.println("3. " + target);
-			System.err.println("cant find path");
+			System.err.println(target);
 		}
+		
 		if (result != null) {
 			if (result.isRedirect()) {
 				resp.sendRedirect(result.getPath());
 			} else {
 				req.getRequestDispatcher(result.getPath()).forward(req, resp);
 			}
-		} else {
-			System.err.println("result == null");
 		}
 	}
 

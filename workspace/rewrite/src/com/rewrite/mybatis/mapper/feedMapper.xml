@@ -2,11 +2,17 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="feed">
+	<sql id="search">
+			where member_nickname like concat('%', #{keyword}, '%')
+	</sql>
+
 	<!-- 피드 리스트  -->
 	<select id="getFeedList" parameterType="map" resultType="feedDTO">
-		select feed_id, feed_content, board_register_date,
-		board_update_date, feed_like_count, feed_read_count, feed_hash_tag, feed_image, member_nickname
-		from view_board order by 
+		select feed_id, feed_content, feed_register_date,
+		feed_update_date, feed_like_count, feed_read_count, feed_hash_tag, feed_image, member_nickname, member_name, profile_location, profile_married 
+		from view_feed_profile 
+		<include refid="search"/>
+		order by 
 		<choose>
 			<when test="sort=='recent'.toString()">
 				feed_id 
@@ -19,8 +25,15 @@
 		limit #{startRow}, #{rowCount}
 	</select>
 
-	<select id="getTotal" resultType="long">
-		select count(feed_id) from tbl_feed
+	<!-- 게시물 총 갯수 -->
+	<select id="getTotal" parameterType="string" resultType="long">
+		select count(feed_id) from view_feed_profile
+		<include refid="search"/>
 	</select>
-
+	
+	<insert id="feedWrite" parameterType="feedVO">
+		insert into tbl_feed
+		(feed_content, feed_register_date, feed_update_date, feed_hash_tag, feed_image, member_id)
+		values(#{feedContent}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, #{feedHashTag}, #{feedImage}, #{memberId});
+	</insert>
 </mapper>

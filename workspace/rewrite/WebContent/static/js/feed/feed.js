@@ -10,20 +10,12 @@ const likeButton = document.querySelectorAll(".likeButton");
 const heartImg = document.querySelector(".heartImg");
 const emptyHeartImg = document.querySelector(".emptyHeartImg");
 let temp = 0;
+const $sortButton = $(".sortButton");
 
 // 최신순, 인기순 버튼 누르면 폰트 변경
-$(".sortButton").each((i, e) => {
-	$(e).on("click", function(){
-		$($(".sortText")[i]).css("fontWeight", 'bold');
-	
-		if(temp == i){
-			return;
-		}
-		
-		$($(".sortText")[temp]).css("fontWeight", 'normal');
-		
-		temp = i;
-	});
+$sortButton.click(function(){
+	let i = $sortButton.index($(this));
+	location.href=`${contextPath}/feedListOk.feed?sort=${i == 0 ? 'recent' : 'popular'}`;
 });
 
 
@@ -63,31 +55,29 @@ function showFeedList(){
 										<img class="feedImage" sizes="(min-width: 1024px) 300px, 50vw" srcset="https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/375xauto 375w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/750xauto 750w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/960xauto 960w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/1440xauto 1440w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2048xauto 2048w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2880xauto 2880w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/autoxauto 5120w" src="https://cdn.class101.net/images/baf7ab7e-eba0-49ef-ab00-694a1574562d" alt="귀요미" />
 									</picture>
 								</span>
-				`;				
-		text += `				/*좋아요 버튼*/
+				`;				/*좋아요 버튼*/
+		text += `				
 								<div class="likeButtonWrap">
 									<button type="button" icon-position="2" class="likeButton" color="transparent">
-										<span class="likeButtonSpan"> <img class="emptyHeartImg" src="${pageContext.request.contextPath}/static/images/emptyHeart.png">
-											<img class="heartImg" src="${pageContext.request.contextPath}/static/images/heart.png">
+										<span class="likeButtonSpan"> <img class="emptyHeartImg" src="${contextPath}/static/images/emptyHeart.png">
+											<img class="heartImg" src="${contextPath}/static/images/heart.png">
 										</span>
 									</button>
 								</div>
-				`;				
-		text +=	`				/*지역 이름 넣기*/
+				`;				/*지역 이름 넣기*/
+		text +=	`				
 								<div class="locationWrap">
 									<div class="location" color="#FFF" backgroundcolor="#000">
-										<div color="#FFF" class="locationText">서울</div>
+										<div color="#FFF" class="locationText">${feed.profileLocation}</div>
 									</div>
 								</div>
 							</div>	
 				`;				
-										
 		text +=	`			<div class="feedInfo">
 								<div class="feedNickname">
-									/*닉네임*/
-									<p class="feedNicknameText">귀요미</p>
+									
+									<p class="feedNicknameText">${feed.memberNickname}</p>
 								</div>
-								/*태그*/
 								<div class="feedHashTagWrap">
 									<strong style="color: skyblue">#여행</strong> 
 									<strong style="color: skyblue">#일상</strong> 
@@ -102,7 +92,7 @@ function showFeedList(){
 													</path>
 	                                      		</svg>
 											</div>
-											4884
+											${feed.feedLikeCount}
 										</div>
 									</div>
 								</div>
@@ -110,7 +100,13 @@ function showFeedList(){
 							<div class="feedInfoMargin"></div>
 							<div class="statusWrap">
 								<div class="status">
-									<p class="statusText">미혼</p>
+					`;
+					if(feed.profileMarried != 'y'){
+						text+= `<p class="statusText">기혼</p>`;
+					}else {
+						text+= `<p class="statusText">미혼</p>`;
+					}
+			text +=	`		
 								</div>
 							</div>
 						</div>
@@ -121,4 +117,6 @@ function showFeedList(){
 	 
 	$feedUl.append(text);
 }
+
+
 	

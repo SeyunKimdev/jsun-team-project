@@ -20,3 +20,9 @@ create view view_review as
    from tbl_member m join tbl_review r
    on m.member_id = r.member_id
 );
+create table tbl_notice(
+	notice_id int unsigned auto_increment primary key,
+	notice_title varchar(500) not null,
+	notice_content varchar(500) not null,
+	notice_register_date datetime default now()
+);

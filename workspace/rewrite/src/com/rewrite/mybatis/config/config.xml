@@ -9,17 +9,16 @@
 	<typeAliases>
 		<typeAlias type="com.rewrite.member.domain.MemberVO" alias="memberVO"/>
 		<typeAlias type="com.rewrite.member.domain.MemberDTO" alias="memberDTO"/>
-		<typeAlias type="com.rewrite.board.domain.BoardVO" alias="boardVO"/>
-		<typeAlias type="com.rewrite.board.domain.BoardDTO" alias="boardDTO"/>
-		<!-- board -->
-		<typeAlias type="com.rewrite.board.domain.BoardDTO" alias="eventVO"/>
-		<typeAlias type="com.rewrite.board.domain.BoardDTO" alias="feedVO"/>
-		<typeAlias type="com.rewrite.board.domain.BoardDTO" alias="feedDTO"/>
-		<typeAlias type="com.rewrite.board.domain.BoardDTO" alias="reviewVO"/>
-		<typeAlias type="com.rewrite.board.domain.BoardDTO" alias="reviewDTO"/>
-		<typeAlias type="com.rewrite.board.domain.BoardDTO" alias="rankingVO"/>
-		<typeAlias type="com.rewrite.board.domain.BoardDTO" alias="profileVO"/>
-		<typeAlias type="com.rewrite.board.domain.BoardDTO" alias="matchingVO"/>
+		<typeAlias type="com.rewrite.event.domain.EventVO" alias="eventVO"/>
+		<typeAlias type="com.rewrite.feed.domain.FeedVO" alias="feedVO"/>
+		<typeAlias type="com.rewrite.feed.domain.FeedDTO" alias="feedDTO"/>
+		<typeAlias type="com.rewrite.file.domain.FileVO" alias="fileVO"/>
+		<typeAlias type="com.rewrite.matching.domain.MatchingVO" alias="matchingVO"/>
+		<typeAlias type="com.rewrite.profile.domain.ProfileVO" alias="profileVO"/>
+		<typeAlias type="com.rewrite.ranking.domain.RankingVO" alias="rankingVO"/>
+		<typeAlias type="com.rewrite.review.domain.ReviewDTO" alias="reviewDTO"/>
+		<typeAlias type="com.rewrite.review.domain.ReviewVO" alias="reviewVO"/>
+		<typeAlias type="com.rewrite.notice.domain.NoticeVO" alias="noticeVO"/>
 	</typeAliases>
 	
 	<environments default="mysql">

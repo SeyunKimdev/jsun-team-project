@@ -21,15 +21,20 @@ public class FeedFrontController extends HttpServlet {
 		System.out.println("1. "+ target);
 		
 		if (target.equals("/feedDetail")) {
-			System.out.println("2. "+ target);
 			result = new FeedDetailController().execute(req, resp);
-		}else if (target.equals("")) {
-			System.out.println("2. "+ target);
 			
+		}else if (target.equals("/feedList")) {
+			result = new Result();
+			result.setPath("templates/feed/feed.jsp");
+			
+		}else if (target.equals("/feedListOk")) {
+			result = new FeedListOkController().execute(req, resp);
 		}else {
-			System.out.println("3. "+ target);
-			System.err.println("cant find path");
+			System.out.println(target);
 		}
+		
+		
+		
 		if(result != null) {
 			if(result.isRedirect()) {
 				resp.sendRedirect(result.getPath());

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="feed">
+	<!-- 피드 리스트  -->
+	<select id="getFeedList" parameterType="map" resultType="boardDTO">
+		select feed_id, feed_content, board_register_date,
+		board_update_date, feed_like_count, feed_read_count, feed_hash_tag, feed_image, member_nickname
+		from view_board order by 
+		<choose>
+			<when test="sort=='recent'.toString()">
+				feed_id 
+			</when>
+			<when test="sort=='popular'.toString()">
+				feed_like_count 
+			</when>
+		</choose>
+		desc
+		limit #{startRow}, #{rowCount}
+	</select>
+
+	<select id="getTotal" resultType="long">
+		select count(feed_id) from tbl_feed
+	</select>
+
+</mapper>

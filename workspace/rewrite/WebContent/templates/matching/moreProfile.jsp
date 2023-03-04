@@ -6,6 +6,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>프로필 - 더보기</title>
         <link
             rel="icon"
             type="image/png"
@@ -14,19 +15,21 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         />
         <link
             rel="stylesheet"
-            href="${pageContext.request.contextPath}/static/css/notice/notice.css"
+            type="text/css"
+            href="${pageContext.request.contextPath}/static/css/matching/moreProfile.css"
         />
         <link
             rel="stylesheet"
-            href="${pageContext.request.contextPath}/static/css/header/newHeader.css"
-        />
-        <link
-            rel="stylesheet"
+            type="text/css"
             href="${pageContext.request.contextPath}/static/css/footer/newFooter.css"
         />
-        <title>공지사항 - 목록</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="${pageContext.request.contextPath}/static/css/header/newHeader.css"
+        />
     </head>
-    <body class="bodysection">
+    <body style="background-color: white">
         <!-- Header -->
         <section class="sectionContainer">
             <header class="headContainer">
@@ -264,162 +267,252 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                 </div>
             </header>
         </section>
-        <header class="header">
-            <!--헤더 전체  -->
-            <div class="container header_container o__ltr" dir="ltr">
-                <!--헤더 위아래 마진빼고 센터부분 -->
-                <div class="content">
-                    <!-- 헤더 내용이 들어있는부분 -->
-                    <h1 class="headerHeadline">공지사항</h1>
-                    <form action="/class101faq/ko/" autocomplete="off" class="header__form search">
-                        <input
-                            type="text"
-                            autocomplete="off"
-                            class="headlineSerchInput"
-                            placeholder="답변 검색 중..."
-                            tabindex="1"
-                            name="q"
-                            value=""
-                        />
-                        <div class="search_icons">
-                            <button type="submit" class="search_submit_button"></button>
-                            <a class="search-text-icon">
-                                <svg
-                                    class="search-text-icon-svg"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 16 16"
-                                >
-                                    <path
-                                        d="M8.018 6.643L5.375 4 4 5.375l2.643 2.643L4 10.643 5.375 12l2.643-2.625L10.625 12 12 10.643 9.357 8.018 12 5.375 10.643 4z"
-                                    ></path>
-                                </svg>
-                            </a>
+        <div class="matchingWholeContainer">
+            <!-- 윗부분 -->
+            <div class="matchingTopContainer">
+                <div class="matchingTop">
+                    <div class="matchingTopDiv1">
+                        <div class="matchingTopDiv1Div1">
+                            <div class="matchingTopDiv1Div1Div1">
+                                <div class="matchingTopDiv1Div1Div1Div1">
+                                    <div class="matchingTopDiv1Div1Div1Div1Div1">
+                                        <div class="matchingTopDiv1Div1Div1Div1Div1Div1">
+                                            <div class="matchingTopDiv1Div1Div1Div1Div1Div1Div1">
+                                                <picture class="member-Profile-Pic">
+                                                    <source
+                                                        type="image/webp"
+                                                        srcset="
+                                                            https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/640xauto.webp   640w,
+                                                            https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/750xauto.webp   750w,
+                                                            https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/828xauto.webp   828w,
+                                                            https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/1080xauto.webp 1080w,
+                                                            https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/1200xauto.webp 1200w,
+                                                            https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/1920xauto.webp 1920w,
+                                                            https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/2048xauto.webp 2048w,
+                                                            https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/3840xauto.webp 3840w
+                                                        " />
+                                                    <img
+                                                        srcset="
+                                                            https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/640xauto   640w,
+                                                            https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/750xauto   750w,
+                                                            https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/828xauto   828w,
+                                                            https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/1080xauto 1080w,
+                                                            https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/1200xauto 1200w,
+                                                            https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/1920xauto 1920w,
+                                                            https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/2048xauto 2048w,
+                                                            https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/3840xauto 3840w
+                                                        "
+                                                        src="https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb"
+                                                        loading="lazy"
+                                                        class="member-Profile-img"
+                                                /></picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="matchingTopDiv1Div1Div2">
+                                <img
+                                    class="profile-background"
+                                    src="https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb"
+                                    style="
+                                        filter: blur(8px);
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    "
+                                />
+                            </div>
                         </div>
-                    </form>
+                        <div class="matchingTopDiv1Div2"></div>
+                    </div>
                 </div>
-            </div>
-        </header>
-        <div class="container">
-            <div class="containerDiv educate-content">
-                <section class="containerSection section">
-                    <!-- <div class="containerDivDiv"> -->
-                    <div class="containerDivDivDiv paper">
-                        <div class="list">
-                            <!-- 공지 작성 란 -->
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
-
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
-                                            </div>
-                                        </div>
-                                    </div>
+                <div class="matchingBottom">
+                    <div class="matchingBottomDiv1">
+                        <div class="matchingBottomDiv1Div1">
+                            <div class="matchingBottomDiv1Div1Div1">
+                                <p class="matching_Age">10대</p>
+                                <div class="matchingBottomDiv1Div1Div1Div1">
+                                    <div class="matchingBottomDiv1Div1Div1Div1Div1"></div>
                                 </div>
-                            </a>
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
-
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
-                                            </div>
-                                        </div>
-                                    </div>
+                                <p class="matching_name">오 태 양</p>
+                            </div>
+                            <div class="matchingBottomDiv1Div1Div2"></div>
+                            <div class="matchingBottomDiv1Div1Div3">
+                                <div class="matchingBottomDiv1Div1Div3Div1">
+                                    <h1 class="matching_Content">
+                                        통통 튀는 매력이 포인트 입니다 :)
+                                    </h1>
                                 </div>
-                            </a>
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
-
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
+                                <div class="likeButton-wrap">
+                                    <button class="likeBtn">
+                                        <div class="matchingBottomDiv1Div1Div5Div1Button1Div1">
+                                            <span
+                                                class="matchingBottomDiv1Div1Div5Div1Button1Div1Span1"
+                                            >
+                                                <span class="likeButton">
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="18"
+                                                        height="18"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                        class="mainContainerDiv2DivDivDivDivButtonSpanButtonSpanSvg"
+                                                    >
+                                                        <path
+                                                            class="mainContainerDiv2DivDivDivDivButtonSpanButtonSpanPath"
+                                                            fill-rule="evenodd"
+                                                            d="M20.5 9c0-2-1.5-3.9-3.7-3.9-2.3 0-3.8 1.63-4.8 3.33-1-1.7-2.5-3.33-4.8-3.33C5 5.1 3.5 6.867 3.5 9c0 4.62 4.949 7.667 8.5 9.623 3.551-1.956 8.5-5.003 8.5-9.623zm-19-.176C1.5 5.607 3.962 3 7 3c2.7 0 4 1 5 2.2C13 4 14.3 3 17 3c3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z"
+                                                            fill="#FFF"
+                                                        ></path>
+                                                    </svg>
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        class="heart"
+                                                        height="24"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                    >
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z"
+                                                            fill="#fd3049"
+                                                        ></path>
+                                                    </svg>
+                                                </span>
+                                            </span>
                                         </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </button>
+                                    <div class="matchingBottomDiv1Div1Div5Div1Div1"></div>
+                                    <p class="like_Count">13518</p>
                                 </div>
-                            </a>
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
+                            </div>
 
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                            <div class="matchingBottomDiv1Div1Div4"></div>
+                        </div>
+                        <div class="matchingBottomDiv1Div2"></div>
+                        <div class="matchingBottomDiv1Div3">
+                            <div class="matchingBottomDiv1Div3Div1"></div>
                         </div>
                     </div>
-                </section>
+                    <div class="matchingBottomDiv2"></div>
+                    <!-- 정보 창 -->
+                    <div class="profileContainer">
+                        <div class="profileWrapper">
+                            <div class="profileDiv1">
+                                <div class="profileDiv1Div2">
+                                    <dl class="profile-key">
+                                        <dt>닉네임</dt>
+                                        <dd style="display: block">
+                                            <span class="profile_input" id="memberNickName"
+                                                >아무개</span
+                                            >
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="profileDiv2">
+                                <dl class="profile-key">
+                                    <dt>생년월일</dt>
+                                    <dd>
+                                        <span class="profile_input" id="memberBirth"
+                                            >2000년 00월 00일</span
+                                        >
+                                    </dd>
+                                </dl>
+                                <dl class="profile-key">
+                                    <dt>지역</dt>
+                                    <dd>
+                                        <span class="profile_input" id="memberLocation"
+                                            >광진구 성수동</span
+                                        >
+                                    </dd>
+                                </dl>
+                                <dl class="profile-key">
+                                    <dt>이메일</dt>
+                                    <dd>
+                                        <span class="profile_input" id="memberEmail"
+                                            >0000@naver.com</span
+                                        >
+                                    </dd>
+                                </dl>
+                                <dl class="profile-key">
+                                    <dt>기혼여부</dt>
+                                    <dd>
+                                        <span class="profile_input" id="memberStatus">미혼</span>
+                                    </dd>
+                                </dl>
+                                <dl class="profile-key">
+                                    <dt>직업</dt>
+                                    <dd>
+                                        <span class="profile_input" id="memberJob">직장인</span>
+                                    </dd>
+                                </dl>
+                                <dl class="profile-key">
+                                    <dt>연봉</dt>
+                                    <dd>
+                                        <span class="profile_input" id="memberSalary"
+                                            >월 2000~3000</span
+                                        >
+                                    </dd>
+                                </dl>
+                                <dl class="profile-key">
+                                    <dt>취미</dt>
+                                    <dd>
+                                        <span class="profile_input" id="memberHobby"
+                                            >레저 · 스포츠</span
+                                        >
+                                    </dd>
+                                </dl>
+                                <dl class="profile-key">
+                                    <dt>MBTI</dt>
+                                    <dd>
+                                        <span class="profile_input" id="memberMbti">ENFP</span>
+                                    </dd>
+                                </dl>
+                                <dl class="profile-key">
+                                    <dt>신장</dt>
+                                    <dd>
+                                        <span class="profile_input" id="memberHeight">181cm</span>
+                                    </dd>
+                                </dl>
+                                <dl class="profile-key">
+                                    <dt>자녀</dt>
+                                    <dd>
+                                        <span class="profile_input" id="memberChild">없음</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+        <!-- 추가 파트  -->
+        <div class="profile-images-wrap">
+            <ul smcolumn="1" class="profile-image-ul">
+                <li smcolumn="1" lgcolumn="3" class="">
+                    <img
+                        src="https://cdn.class101.net/images/35c3a430-8192-4124-8a3e-2e1c26793b13/3840xauto.webp"
+                    />
+                </li>
+                <li smcolumn="1" lgcolumn="3" class="">
+                    <img
+                        src="https://cdn.class101.net/images/35c3a430-8192-4124-8a3e-2e1c26793b13/3840xauto.webp"
+                    />
+                </li>
+                <li smcolumn="1" lgcolumn="3" class="">
+                    <img
+                        src="https://cdn.class101.net/images/35c3a430-8192-4124-8a3e-2e1c26793b13/3840xauto.webp"
+                    />
+                </li>
+                <li smcolumn="1" lgcolumn="3" class="">
+                    <img
+                        src="https://cdn.class101.net/images/35c3a430-8192-4124-8a3e-2e1c26793b13/3840xauto.webp"
+                    />
+                </li>
+            </ul>
         </div>
         <!-- Footer  -->
         <footer class="footContainer">
@@ -604,6 +697,6 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <script>
         let contextPath = `${pageContext.request.contextPath}`;
     </script>
+    <script src="${pageContext.request.contextPath}/static/js/matching/matchingMain.js"></script>
     <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
-    <script src="${pageContext.request.contextPath}/static/js/notice/notice.js"></script>
 </html>

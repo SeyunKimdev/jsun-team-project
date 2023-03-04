@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@ taglib
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib
 uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +15,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         />
         <link
             rel="stylesheet"
-            href="${pageContext.request.contextPath}/static/css/notice/notice.css"
+            href="${pageContext.request.contextPath}/static/css/notice/qnaDetail.css"
         />
         <link
             rel="stylesheet"
@@ -24,7 +25,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
             rel="stylesheet"
             href="${pageContext.request.contextPath}/static/css/footer/newFooter.css"
         />
-        <title>공지사항 - 목록</title>
+        <title>FAQ - 상세</title>
     </head>
     <body class="bodysection">
         <!-- Header -->
@@ -264,14 +265,14 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                 </div>
             </header>
         </section>
+        <!-- 공지사항 헤더 -->
         <header class="header">
-            <!--헤더 전체  -->
-            <div class="container header_container o__ltr" dir="ltr">
+            <div class="header_container" dir="ltr">
                 <!--헤더 위아래 마진빼고 센터부분 -->
                 <div class="content">
                     <!-- 헤더 내용이 들어있는부분 -->
-                    <h1 class="headerHeadline">공지사항</h1>
-                    <form action="/class101faq/ko/" autocomplete="off" class="header__form search">
+                    <h1 class="headerHeadline">자주 묻는 질문</h1>
+                    <form action="" autocomplete="off" class="header__form search">
                         <input
                             type="text"
                             autocomplete="off"
@@ -301,125 +302,79 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                 </div>
             </div>
         </header>
+        <!-- 내용 부분 -->
         <div class="container">
             <div class="containerDiv educate-content">
-                <section class="containerSection section">
-                    <!-- <div class="containerDivDiv"> -->
-                    <div class="containerDivDivDiv paper">
-                        <div class="list">
-                            <!-- 공지 작성 란 -->
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
+                <div class="containerSectionDiv paper">
+                    <div class="ContainerSectionDivDiv content__narrow">
+                        <div class="ContainerSectionDivDivDiv intercom-force-break">
+                            <div class="ContainerSectionDivDivDivDiv" dir="ltr">
+                                <h1 class="ContainerSectionDivDivDivDivH1">
+                                    강사님이 2팀 팀장님이신가요?
+                                </h1>
+                                <div class="ContainerSectionDivDivDivDivDiv"></div>
 
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
-                                            </div>
+                                <div class="writer">
+                                    <div class="writerDiv2">
+                                        <div>
+                                            <span class="writerDiv2Span">작성자:</span>오태양
+                                            <br />
+                                            1주일 전에 업데이트됨
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
+                            </div>
+                            <article dir="article">
+                                <p class="articleP">
+                                    <b>🟨강사님 JSUN팀 팀장 임명</b>
+                                </p>
+                                <p class="articleP"></p>
+                                <ol>
+                                    <li>
+                                        <p class="articleP">제곧내</p>
+                                    </li>
+                                </ol>
 
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
+                                <p class="articleP">
+                                    <br />2023-02-28 부로 2팀 팀장을 명 받았습니다.<br />
+                                    이에 신고합니다.
+                                </p>
+                                <p class="articleP"></p>
 
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
-
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                                <hr />
+                            </article>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
+        </div>
+        <div class="articlefooter" dir="ltr">
+            <div class="articlefooterDiv">답변을 찾으셨나요?</div>
+
+            <button
+                class="articlefooterButton"
+                data-reaction-text="disappointed"
+                tabindex="0"
+                aria-label="Disappointed Reaction"
+            >
+                <span data-emoji="disappointed" title="Disappointed">😞</span>
+            </button>
+            <button
+                class="articlefooterButton"
+                data-reaction-text="neutral_face"
+                tabindex="0"
+                aria-label="Neutral face Reaction"
+            >
+                <span data-emoji="neutral_face" title="Neutral face">😐</span>
+            </button>
+            <button
+                class="articlefooterButton"
+                data-reaction-text="smiley"
+                tabindex="0"
+                aria-label="Smiley Reaction"
+            >
+                <span data-emoji="smiley" title="Smiley">😃</span>
+            </button>
         </div>
         <!-- Footer  -->
         <footer class="footContainer">
@@ -604,6 +559,6 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <script>
         let contextPath = `${pageContext.request.contextPath}`;
     </script>
-    <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
     <script src="${pageContext.request.contextPath}/static/js/notice/notice.js"></script>
+    <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
 </html>

@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@ taglib
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib
 uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +15,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         />
         <link
             rel="stylesheet"
-            href="${pageContext.request.contextPath}/static/css/notice/notice.css"
+            href="${pageContext.request.contextPath}/static/css/notice/noticeDetail.css"
         />
         <link
             rel="stylesheet"
@@ -24,7 +25,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
             rel="stylesheet"
             href="${pageContext.request.contextPath}/static/css/footer/newFooter.css"
         />
-        <title>공지사항 - 목록</title>
+        <title>공지사항 - 상세</title>
     </head>
     <body class="bodysection">
         <!-- Header -->
@@ -264,14 +265,14 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                 </div>
             </header>
         </section>
+        <!-- 공지사항 헤더 -->
         <header class="header">
-            <!--헤더 전체  -->
-            <div class="container header_container o__ltr" dir="ltr">
+            <div class="header_container" dir="ltr">
                 <!--헤더 위아래 마진빼고 센터부분 -->
                 <div class="content">
                     <!-- 헤더 내용이 들어있는부분 -->
                     <h1 class="headerHeadline">공지사항</h1>
-                    <form action="/class101faq/ko/" autocomplete="off" class="header__form search">
+                    <form action="" autocomplete="off" class="header__form search">
                         <input
                             type="text"
                             autocomplete="off"
@@ -301,124 +302,62 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                 </div>
             </div>
         </header>
+        <!-- 내용 부분 -->
         <div class="container">
             <div class="containerDiv educate-content">
-                <section class="containerSection section">
-                    <!-- <div class="containerDivDiv"> -->
-                    <div class="containerDivDivDiv paper">
-                        <div class="list">
-                            <!-- 공지 작성 란 -->
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
+                <div class="containerSectionDiv paper">
+                    <div class="ContainerSectionDivDiv content__narrow">
+                        <div class="ContainerSectionDivDivDiv intercom-force-break">
+                            <div class="ContainerSectionDivDivDivDiv" dir="ltr">
+                                <h1 class="ContainerSectionDivDivDivDivH1">
+                                    홈페이지 개편 안내(2023년1월23일부터 적용)
+                                </h1>
+                                <div class="ContainerSectionDivDivDivDivDiv"></div>
 
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
-                                            </div>
+                                <div class="writer">
+                                    <!-- <div class="writerDiv o__ltr">
+                              
+
+                           </div> -->
+                                    <div class="writerDiv2">
+                                        <div>
+                                            <span class="writerDiv2Span">작성자:</span>reWrite
+                                            <br />
+                                            1주일 전에 업데이트됨
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
+                            </div>
+                            <article dir="article">
+                                <p class="articleP">
+                                    <b>🟨홈페이지 개편 안내(2022년11월23일부터 적용)</b>
+                                </p>
+                                <p class="articleP"></p>
+                                <ol>
+                                    <li>
+                                        <p class="articleP">
+                                            항상 reWrite를 사랑해 주시는 클래스메이트님께 진심으로
+                                            감사드립니다😍 홈페이지가 개편됨에 따라
+                                            클래스메이트님들의 원활한 서비스 이용을 위해 몇 가지
+                                            안내를 드리고자 합니다. 서비스 이용에 참고하시기를
+                                            바랍니다.
+                                        </p>
+                                    </li>
+                                </ol>
 
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
+                                <p class="articleP">
+                                    2022년 11월 23일 이후, 건건별로 판매하던 매칭서비스가 '무제한
+                                    매칭 서비스'로 개편되었습니다. 월 19,900원의 금액으로 4,000개
+                                    이상의 클래스를 '무제한으로 매칭할 수 있는 매칭 서비스로
+                                    개편됩니다' 입니다.
+                                </p>
+                                <p class="articleP"></p>
 
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
-
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                                <hr />
+                            </article>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
         </div>
         <!-- Footer  -->

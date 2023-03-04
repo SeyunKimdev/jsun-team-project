@@ -21,9 +21,11 @@ public SqlSession sqlSession;
 	}
 	
 //	피드 총 개수
-	public Long getTotal() {
-		return sqlSession.selectOne("feed.getTotal");
+	public Long getTotal(String keyword) {
+		return sqlSession.selectOne("feed.getTotal",keyword);
 	}
 	
-//	
+	
+//  좋아요 눌럿던 사람인지 아닌지
+	
 }

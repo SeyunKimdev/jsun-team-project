@@ -29,14 +29,15 @@ public class FeedListOkController implements Action {
 		
 		List<FeedDTO> feedList = null;
 		
-		String temp = req.getParameter("page"); 
+		String temp = req.getParameter("page");
+		String keyword = req.getParameter("keyword");
 		String sort = req.getParameter("sort");
 		
 		int page = temp == null || temp.equals("null") ? 1 : Integer.parseInt(temp);
-		Long total = feedDAO.getTotal();
+		Long total = feedDAO.getTotal(keyword);
 
 //		한 페이지에 출력되는 게시글의 개수
-		int rowCount = 5;
+		int rowCount = 4;
 //		한 페이지에서 나오는 페이지 버튼의 개수
 		int pageCount = 5;
 		int startRow = (page - 1) * rowCount;
@@ -55,6 +56,7 @@ public class FeedListOkController implements Action {
 		
 		pageMap.put("rowCount", rowCount);
 		pageMap.put("startRow", startRow);
+		pageMap.put("keyword", keyword);
 		pageMap.put("sort", sort);
 		
 		feedList = feedDAO.getFeedList(pageMap);
@@ -68,6 +70,7 @@ public class FeedListOkController implements Action {
 		req.setAttribute("prev", prev);
 		req.setAttribute("next", next);
 		req.setAttribute("sort", sort);
+		req.setAttribute("keyword", keyword);
 		
 		result.setPath("/feedList.feed");
 		

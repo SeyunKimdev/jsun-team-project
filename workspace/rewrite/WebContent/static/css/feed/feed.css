@@ -196,7 +196,6 @@ span {
 
 .recentButton {
 	cursor: pointer;
-	font-weight: bold;
     font-size: 14px;
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(229, 229, 229);
@@ -265,7 +264,6 @@ span {
 
 .recentButtonText {
 	font-size: 14px;
-    font-weight: bold;
     color: rgb(26, 26, 26);
     line-height: 20px;
     letter-spacing: -0.15px;
@@ -274,7 +272,6 @@ span {
 
 .popularButton {
 	cursor: pointer;
-	font-weight: bold;
     font-size: 14px;
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(229, 229, 229);
@@ -713,14 +710,19 @@ span {
 }
 
 
-.pageCountButton {
+button.pageCountButton {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 86, 0);
+}
+
+.pageCountButton-no-active {
 	width: auto;
     display: inline-flex;
     vertical-align: middle;
     border-radius: 3px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(255, 86, 0);
-    font-weight: 500;
+	color: black;
+   	background-color: #fff;
+   	font-weight: 500;
     font-size: 14px;
     letter-spacing: -0.2px;
     padding: 0px 12px;
@@ -803,4 +805,8 @@ span {
 
 .emptyHeart {
 	position: absolute;
+}
+
+span.selected {
+	font-weight: bold;
 }

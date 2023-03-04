@@ -2,6 +2,29 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="member">
+	<sql id="search">
+		<if test="types != null">
+			where
+			<trim prefixOverrides="and">
+				<foreach item="type" collection="types">
+					<trim prefix="and">
+						<choose>
+							<when test="type == 'married'.toString()">
+								profile_married = #{married}
+							</when>
+							<when test="type == 'gender'.toString()">
+								member_gender = #{gender}
+							</when>
+							<when test="type == 'writer'.toString()">
+								member_name like concat('%', #{keyword}, '%')
+							</when>
+						</choose>
+					</trim>
+				</foreach>
+			</trim>
+		</if>
+	</sql>
+
 	<select id="checkId" parameterType="string" resultType="long">
 		select member_id from tbl_member where member_identification = #{memberIdentification}
 	</select>
@@ -14,6 +37,15 @@
 	<select id="login" parameterType="map" resultType="long">
 		select member_id from tbl_member 
 		where member_identification = #{memberIdentification} and member_password = #{memberPassword}
+	</select>
+	
+	<select id="selectAll" parameterType="map" resultType="memberDTO">
+		select member_id, member_identification, member_password, 
+		member_nickname, member_name, member_phone, member_email, member_birth, member_gender, member_status,
+		profile_location, profile_job, profile_salary, profile_hobby, profile_mbti, profile_height, 
+		profile_child, profile_married, file_id, file_original_name, file_system_name, file_register_date 
+		from view_member_dto
+		<include refid="search"/>
 	</select>
 </mapper>
 

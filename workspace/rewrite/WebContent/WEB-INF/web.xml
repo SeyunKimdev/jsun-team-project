@@ -73,6 +73,14 @@
   	<servlet-name>review</servlet-name>
   	<url-pattern>*.review</url-pattern>
   </servlet-mapping>
+  <servlet>
+  	<servlet-name>notice</servlet-name>
+  	<servlet-class>com.rewrite.notice.NoticeFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>notice</servlet-name>
+  	<url-pattern>*.notice</url-pattern>
+  </servlet-mapping>
   
   
   

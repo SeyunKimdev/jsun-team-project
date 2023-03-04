@@ -8,6 +8,7 @@
 	
 	<typeAliases>
 		<typeAlias type="com.rewrite.member.domain.MemberVO" alias="memberVO"/>
+		<typeAlias type="com.rewrite.member.domain.MemberDTO" alias="memberDTO"/>
 		<typeAlias type="com.rewrite.board.domain.BoardVO" alias="boardVO"/>
 		<typeAlias type="com.rewrite.board.domain.BoardDTO" alias="boardDTO"/>
 		<!-- board -->

@@ -17,6 +17,7 @@ closeButton.addEventListener('click', function (e) {
 });
 
 file.addEventListener('change', function (e) {
+	console.log(file.value);
     // closeSpan(x 버튼)을 보이게 하기
     imgDiv.style.display = "block";
     // 기존의 이미지 숨김 처리

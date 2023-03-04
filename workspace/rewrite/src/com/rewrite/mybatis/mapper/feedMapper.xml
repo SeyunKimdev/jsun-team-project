@@ -3,13 +3,15 @@
 
 <mapper namespace="feed">
 	<sql id="search">
-			where member_nickname like concat('%', #{keyword}, '%')
+			<if test="keyword != null">
+				where member_nickname like concat('%', #{keyword}, '%')
+			</if>
 	</sql>
 
 	<!-- 피드 리스트  -->
 	<select id="getFeedList" parameterType="map" resultType="feedDTO">
 		select feed_id, feed_content, feed_register_date,
-		feed_update_date, feed_like_count, feed_read_count, feed_hash_tag, feed_image, member_nickname, member_name, profile_location, profile_married 
+		feed_update_date, feed_like_count, feed_read_count, feed_hash_tag, member_nickname, member_name, profile_location, profile_married 
 		from view_feed_profile 
 		<include refid="search"/>
 		order by 
@@ -33,7 +35,12 @@
 	
 	<insert id="feedWrite" parameterType="feedVO">
 		insert into tbl_feed
-		(feed_content, feed_register_date, feed_update_date, feed_hash_tag, feed_image, member_id)
-		values(#{feedContent}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, #{feedHashTag}, #{feedImage}, #{memberId});
+		(feed_content, feed_register_date, feed_update_date, feed_hash_tag, member_id)
+		values(#{feedContent}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, #{feedHashTag}, #{memberId});
 	</insert>
+	
+	<select id="getCurrentSequence" resultType="long">
+		select last_insert_id()
+	</select>
+	
 </mapper>

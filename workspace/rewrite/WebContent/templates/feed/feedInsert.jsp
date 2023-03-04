@@ -196,7 +196,7 @@
 	</section>
 	<div class="chatWholeContainer">
 		<div class="mainContainer">
-			<form action="#" class="mainContainerForm">
+			<form action="${pageContext.request.contextPath}/feedWriteOk.feed" class="mainContainerForm"  method="post" enctype="multipart/form-data">
 				<div class="mainContainerFormDiv">
 					<div class="mainContainerFormDivDiv">
 						<h2 md="Headline3" class="mainContainerFormDivDivH2">피드 작성하기</h2>
@@ -205,18 +205,17 @@
 						<div class="mainContainerFormDivDiv2Div">
 							<div class="mainContainerFormDivDiv2DivDiv">
 								<div size="28" class="mainContainerFormDivDiv2DivDivDiv">
-									<span class="mainContainerFormDivDiv2DivDivDivSpan"><picture
-											class="mainContainerFormDivDiv2DivDivDivSpanPicture">
-										<img sizes=" 100vw"
-											src="https://class101.net/images/default-user.png"
-											class="mainContainerFormDivDiv2DivDivDivSpanPictureImg"></picture></span>
+									<span class="mainContainerFormDivDiv2DivDivDivSpan">
+										<picture class="mainContainerFormDivDiv2DivDivDivSpanPicture">
+											<img sizes=" 100vw" src="https://class101.net/images/default-user.png" class="mainContainerFormDivDiv2DivDivDivSpanPictureImg">
+										</picture>
+									</span>
 								</div>
 								<div md="Body2" class="mainContainerFormDivDiv2DivDivDiv2">Classmate</div>
 							</div>
 							<div class="mainContainerFormDivDiv2DivDiv2">
-								<label class="mainContainerFormDivDiv2DivDiv2Label"><input
-									type="file" accept="image/*"
-									class="mainContainerFormDivDiv2DivDiv2LabelInput" id="attach">
+								<label class="mainContainerFormDivDiv2DivDiv2Label">
+								<input type="file" class="mainContainerFormDivDiv2DivDiv2LabelInput" id="attach" name="upload">
 									<button type="button" icon-position="0"
 										class="mainContainerFormDivDiv2DivDiv2LabelButton"
 										color="default" fill="false">
@@ -465,8 +464,6 @@
 <script>
 	let contextPath = `${pageContext.request.contextPath}`
 </script>
-<script
-	src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
-<script
-	src="${pageContext.request.contextPath}/static/js/feed/feedInsert.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/feed/feedInsert.js"></script>
 </html>

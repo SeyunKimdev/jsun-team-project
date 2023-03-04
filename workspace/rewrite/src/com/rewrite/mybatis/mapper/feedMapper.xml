@@ -3,7 +3,7 @@
 
 <mapper namespace="feed">
 	<!-- 피드 리스트  -->
-	<select id="getFeedList" parameterType="map" resultType="boardDTO">
+	<select id="getFeedList" parameterType="map" resultType="feedDTO">
 		select feed_id, feed_content, board_register_date,
 		board_update_date, feed_like_count, feed_read_count, feed_hash_tag, feed_image, member_nickname
 		from view_board order by 

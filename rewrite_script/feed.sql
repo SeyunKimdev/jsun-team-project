@@ -20,3 +20,12 @@ create view view_feed_profile as
    from tbl_member m join tbl_profile p on m.member_id = p.member_id
    join tbl_feed f on m.member_id = f.member_id 
 );
+create table tbl_feed_file(
+	file_id int unsigned auto_increment primary key,
+	file_original_name varchar(500) not null,
+	file_system_name varchar(500) not null,
+	file_register_date date not null,
+	feed_id int unsigned,
+	constraint fk_file_feed foreign key(feed_id) 
+	references tbl_feed(feed_id) on delete cascade
+);

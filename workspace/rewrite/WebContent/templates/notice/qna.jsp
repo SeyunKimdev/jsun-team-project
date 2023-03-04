@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@ taglib
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib
 uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +25,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
             rel="stylesheet"
             href="${pageContext.request.contextPath}/static/css/footer/newFooter.css"
         />
-        <title>공지사항 - 목록</title>
+        <title>FAQ 목록</title>
     </head>
     <body class="bodysection">
         <!-- Header -->
@@ -270,7 +271,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                 <!--헤더 위아래 마진빼고 센터부분 -->
                 <div class="content">
                     <!-- 헤더 내용이 들어있는부분 -->
-                    <h1 class="headerHeadline">공지사항</h1>
+                    <h1 class="headerHeadline">자주 묻는 질문</h1>
                     <form action="/class101faq/ko/" autocomplete="off" class="header__form search">
                         <input
                             type="text"
@@ -312,7 +313,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                                 <div class="listADiv" dir="ltr">
                                     <h2 class="listADivh2">
                                         <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
+                                            >팀장일은 원래 힘든 건가요?</span
                                         >
                                     </h2>
                                     <span class="listADivh2Span2"></span>
@@ -327,9 +328,8 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                                         </div>
                                         <div class="listADivDiv2">
                                             <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
+                                                <span class="listADivDiv2Span">작성자:</span>오태양
+                                                <br />
                                             </div>
                                         </div>
                                     </div>
@@ -339,7 +339,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                                 <div class="listADiv" dir="ltr">
                                     <h2 class="listADivh2">
                                         <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
+                                            >지욱이는 원래 귀여운가요?</span
                                         >
                                     </h2>
                                     <span class="listADivh2Span2"></span>
@@ -354,9 +354,9 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                                         </div>
                                         <div class="listADivDiv2">
                                             <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
+                                                <span class="listADivDiv2Span">작성자:</span>정지욱
+                                                <br />
+                                                방금 업데이트됨
                                             </div>
                                         </div>
                                     </div>
@@ -366,7 +366,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                                 <div class="listADiv" dir="ltr">
                                     <h2 class="listADivh2">
                                         <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
+                                            >강사님이 2팀 팀장님이신가요?</span
                                         >
                                     </h2>
                                     <span class="listADivh2Span2"></span>
@@ -381,9 +381,9 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                                         </div>
                                         <div class="listADivDiv2">
                                             <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
+                                                <span class="listADivDiv2Span">작성자:</span>이영준
+                                                <br />
+                                                2달전 업데이트됨
                                             </div>
                                         </div>
                                     </div>
@@ -393,7 +393,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                                 <div class="listADiv" dir="ltr">
                                     <h2 class="listADivh2">
                                         <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
+                                            >오늘은 일찍자도 괜찮을까요?</span
                                         >
                                     </h2>
                                     <span class="listADivh2Span2"></span>
@@ -408,9 +408,9 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                                         </div>
                                         <div class="listADivDiv2">
                                             <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
+                                                <span class="listADivDiv2Span">작성자:</span>HDS
+                                                <br />
+                                                매일 업데이트
                                             </div>
                                         </div>
                                     </div>

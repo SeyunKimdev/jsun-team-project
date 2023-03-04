@@ -1,7 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@ taglib
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib
 uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,7 +15,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         />
         <link
             rel="stylesheet"
-            href="${pageContext.request.contextPath}/static/css/notice/notice.css"
+            href="${pageContext.request.contextPath}/static/css/review/boardReviewInsert.css"
         />
         <link
             rel="stylesheet"
@@ -24,10 +25,9 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
             rel="stylesheet"
             href="${pageContext.request.contextPath}/static/css/footer/newFooter.css"
         />
-        <title>공지사항 - 목록</title>
+        <title>후기글 작성</title>
     </head>
-    <body class="bodysection">
-        <!-- Header -->
+    <body>
         <section class="sectionContainer">
             <header class="headContainer">
                 <div class="headDiv">
@@ -110,6 +110,20 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                                 <div class="headDivDivDivDiv4Div">
                                     <div class="headDivDivDivDiv4DivDiv">
                                         <div class="headDivDivDivDivDivDivDivDiv"></div>
+                                        <a href="">
+                                            <span class="headDivDivDivDiv4DivDivSpan">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    class="headDivDivDivDiv4DivDivSpanSvg"
+                                                >
+                                                    <path
+                                                        class="headDivDivDivDiv4DivDivSpanSvgPath"
+                                                        d="M21.141 3.91A6.262 6.262 0 0 0 16.654 2c-1.621 0-3.252.635-4.488 1.91-.06.06-.11.125-.165.19-.055-.06-.105-.13-.165-.19A6.263 6.263 0 0 0 7.35 2c-1.621 0-3.252.635-4.488 1.91-2.481 2.545-2.481 6.67 0 9.21l8.935 8.79c.06.06.135.09.21.09.075 0 .15-.03.21-.09l8.935-8.79c2.467-2.54 2.467-6.665-.01-9.21Zm-1.78 7.35-7.37 7.245-7.369-7.245c-1.47-1.525-1.466-3.99.015-5.51A3.73 3.73 0 0 1 7.33 4.605c1.005 0 2.19.505 2.996 1.25.73.68 1.066 1.235 1.361 1.655.03.045.125.215.3.215s.27-.175.305-.22c.296-.425.63-.975 1.356-1.655.806-.75 1.991-1.25 2.997-1.25a3.74 3.74 0 0 1 2.696 1.145c1.486 1.525 1.491 3.99.02 5.514Z"
+                                                    ></path>
+                                                </svg>
+                                            </span>
+                                        </a>
                                         <div class="headDivDivDivDivDivDivDivDiv"></div>
                                         <div id="mypageLogo" class="headDivDivDivDiv4DivDivDiv2">
                                             <div class="headDivDivDivDiv4DivDivDiv2Div">
@@ -264,161 +278,130 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                 </div>
             </header>
         </section>
-        <header class="header">
-            <!--헤더 전체  -->
-            <div class="container header_container o__ltr" dir="ltr">
-                <!--헤더 위아래 마진빼고 센터부분 -->
-                <div class="content">
-                    <!-- 헤더 내용이 들어있는부분 -->
-                    <h1 class="headerHeadline">공지사항</h1>
-                    <form action="/class101faq/ko/" autocomplete="off" class="header__form search">
-                        <input
-                            type="text"
-                            autocomplete="off"
-                            class="headlineSerchInput"
-                            placeholder="답변 검색 중..."
-                            tabindex="1"
-                            name="q"
-                            value=""
-                        />
-                        <div class="search_icons">
-                            <button type="submit" class="search_submit_button"></button>
-                            <a class="search-text-icon">
-                                <svg
-                                    class="search-text-icon-svg"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 16 16"
-                                >
-                                    <path
-                                        d="M8.018 6.643L5.375 4 4 5.375l2.643 2.643L4 10.643 5.375 12l2.643-2.625L10.625 12 12 10.643 9.357 8.018 12 5.375 10.643 4z"
-                                    ></path>
-                                </svg>
-                            </a>
+        <div class="chatWholeContainer">
+            <div class="mainContainer">
+                <form action="#" class="mainContainerForm">
+                    <div class="mainContainerFormDiv">
+                        <div class="mainContainerFormDivDiv">
+                            <h2 md="Headline3" class="mainContainerFormDivDivH2">리뷰 작성하기</h2>
                         </div>
-                    </form>
-                </div>
-            </div>
-        </header>
-        <div class="container">
-            <div class="containerDiv educate-content">
-                <section class="containerSection section">
-                    <!-- <div class="containerDivDiv"> -->
-                    <div class="containerDivDivDiv paper">
-                        <div class="list">
-                            <!-- 공지 작성 란 -->
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
-
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
-                                            </div>
-                                        </div>
+                        <div class="mainContainerFormDivDiv2">
+                            <div class="mainContainerFormDivDiv2Div">
+                                <div class="mainContainerFormDivDiv2DivDiv">
+                                    <div size="28" class="mainContainerFormDivDiv2DivDivDiv">
+                                        <span class="mainContainerFormDivDiv2DivDivDivSpan"
+                                            ><picture class="review-member-img-wrap">
+                                                <img
+                                                    sizes=" 100vw"
+                                                    src="https://class101.net/images/default-user.png"
+                                                    class="review-member-img" /></picture
+                                        ></span>
                                     </div>
+                                    <div md="Body2" class="review-member-Name">Classmate</div>
                                 </div>
-                            </a>
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
+                                <div class="mainContainerFormDivDiv2DivDiv2">
+                                    <label class="file-btn-lable"
+                                        ><input
+                                            type="file"
+                                            accept="image/*"
+                                            class="review-img-insert-input"
+                                            id="attach"
+                                        />
+                                        <button
+                                            type="button"
+                                            icon-position="0"
+                                            class="review-img-insert"
+                                            color="default"
+                                            fill="false"
                                         >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
-
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
+                                            <div
+                                                position="0"
+                                                buttonsize="md"
+                                                class="mainContainerFormDivDiv2DivDiv2LabelButtonDiv"
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="18"
+                                                    height="18"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    class="mainContainerFormDivDiv2DivDiv2LabelButtonDivSvg"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M3 2h18a1 1 0 011 1v18a1 1 0 01-1 1H3a1 1 0 01-1-1V3a1 1 0 011-1zm5.5 11.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"
+                                                        fill="#1a1a1a"
+                                                        class="mainContainerFormDivDiv2DivDiv2LabelButtonDivSvgPath"
+                                                    ></path>
+                                                </svg>
                                             </div>
-                                        </div>
-                                    </div>
+                                            <span
+                                                class="mainContainerFormDivDiv2DivDiv2LabelButtonSpan"
+                                                >사진 첨부</span
+                                            >
+                                        </button></label
+                                    >
                                 </div>
-                            </a>
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
-
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class=""></div>
+                            <div top="8" right="0" bottom="0" left="0" class="fileContainer">
+                                <div class="fileContainerDiv">
+                                    <div class="fileTest"></div>
+                                    <button
+                                        type="button"
+                                        icon-position="2"
+                                        class="file-Container-Btn"
+                                        color="transparent"
+                                    >
+                                        <span class="fileContainerDivButtonSpan"
+                                            ><svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="18"
+                                                height="18"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path
+                                                    fill="#1a1a1a"
+                                                    fill-rule="evenodd"
+                                                    d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+                                                ></path></svg
+                                        ></span>
+                                    </button>
                                 </div>
-                            </a>
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
-
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="massage-content-wrap">
+                                <div class="mainContainerFormDivDiv2Div2Div">
+                                    <textarea
+                                        class="massage-content"
+                                        placeholder="무단 홍보, 비방 글은 삭제될 수 있습니다."
+                                        name="content"
+                                        autocomplete="off"
+                                    ></textarea>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
-                </section>
+                    <div class="mainContainerFormDiv2" zindex="2001">
+                        <div class="mainContainerFormDiv2Div">
+                            <hr color="#f8f8f8" class="mainContainerFormDiv2DivHr" />
+                        </div>
+                        <div class="mainContainerFormDiv2Div2">
+                            <div class="mainContainerFormDiv2Div2Div">
+                                <button
+                                    type="submit"
+                                    icon-position="0"
+                                    class="review-img-save-btn"
+                                    color="orange"
+                                    fill="false"
+                                >
+                                    <span class="mainContainerFormDiv2Div2DivButtonSpan"
+                                        >저장하기</span
+                                    >
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
         <!-- Footer  -->
@@ -605,5 +588,5 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         let contextPath = `${pageContext.request.contextPath}`;
     </script>
     <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
-    <script src="${pageContext.request.contextPath}/static/js/notice/notice.js"></script>
+    <script src="${pageContext.request.contextPath}/static/js/review/boardReviewInsert.js"></script>
 </html>

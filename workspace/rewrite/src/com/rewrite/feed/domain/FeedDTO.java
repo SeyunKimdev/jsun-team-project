@@ -8,7 +8,6 @@ public class FeedDTO {
 	private String feedLikeCount;
 	private String feedReadCount;
 	private String feedHashTag;
-	private String feedImage;
 	private String memberNickname;
 	private String memberName;
 	private String profileLocation;
@@ -72,14 +71,6 @@ public class FeedDTO {
 		this.feedHashTag = feedHashTag;
 	}
 
-	public String getFeedImage() {
-		return feedImage;
-	}
-
-	public void setFeedImage(String feedImage) {
-		this.feedImage = feedImage;
-	}
-
 	public String getMemberNickname() {
 		return memberNickname;
 	}
@@ -112,13 +103,15 @@ public class FeedDTO {
 		this.profileMarried = profileMarried;
 	}
 
+	
+
 	@Override
 	public String toString() {
 		return "FeedDTO [feedId=" + feedId + ", feedContent=" + feedContent + ", feedRegisterDate=" + feedRegisterDate
 				+ ", feedUpdateDate=" + feedUpdateDate + ", feedLikeCount=" + feedLikeCount + ", feedReadCount="
-				+ feedReadCount + ", feedHashTag=" + feedHashTag + ", feedImage=" + feedImage + ", memberNickname="
-				+ memberNickname + ", memberName=" + memberName + ", profileLocation=" + profileLocation
-				+ ", profileMarried=" + profileMarried + "]";
+				+ feedReadCount + ", feedHashTag=" + feedHashTag + ", memberNickname=" + memberNickname
+				+ ", memberName=" + memberName + ", profileLocation=" + profileLocation + ", profileMarried="
+				+ profileMarried + "]";
 	}
 
 	@Override

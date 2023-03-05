@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.rewrite.file.domain.FeedFileVO;
 import com.rewrite.file.domain.FileVO;
 import com.rewrite.mybatis.config.MyBatisConfig;
 
@@ -15,12 +16,12 @@ public SqlSession sqlSession;
 	}
 
 	//	첨부파일 추가
-		public void insert(FileVO fileVO) {
-			sqlSession.insert("file.insert", fileVO);
+		public void insert(FeedFileVO feedFileVO) {
+			sqlSession.insert("file.insert", feedFileVO);
 		}
 		
 	//	첨부파일 조회
-		public List<FileVO> select(Long feedId) {
+		public List<FeedFileVO> select(Long feedId) {
 			return sqlSession.selectList("file.select", feedId);
 		}
 		

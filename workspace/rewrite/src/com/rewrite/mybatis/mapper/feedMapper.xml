@@ -11,7 +11,7 @@
 	<!-- 피드 리스트  -->
 	<select id="getFeedList" parameterType="map" resultType="feedDTO">
 		select feed_id, feed_content, feed_register_date,
-		feed_update_date, feed_like_count, feed_read_count, feed_hash_tag, member_nickname, member_name, profile_location, profile_married 
+		feed_update_date, feed_like_count, feed_read_count, feed_hash_tag, member_nickname, member_name, profile_location, profile_married
 		from view_feed_profile 
 		<include refid="search"/>
 		order by 
@@ -45,8 +45,18 @@
 	
 	<select id="feedSelect" parameterType="long" resultType="feedDTO">
 		select feed_id, feed_content, feed_register_date,
-		feed_update_date, feed_like_count, feed_read_count, feed_hash_tag, member_nickname, member_name, profile_location, profile_married 
+		feed_update_date, feed_like_count, feed_read_count, feed_hash_tag, member_nickname, member_name, profile_location, profile_married, member_id 
 		from view_feed_profile where feed_id = ${feedId}
 	</select>
+	
+	<update id="feedUpdate" parameterType="feedVO">
+		update tbl_feed
+		set feed_content = #{feedContent}, feed_update_date = CURRENT_TIMESTAMP, feed_hash_tag = #{feedHashTag}
+		where feed_id = ${feedId}
+	</update>
+	
+	<delete id="feedDelete" parameterType="long">
+		delete from tbl_feed where feed_id = #{feedId}
+	</delete>
 	
 </mapper>

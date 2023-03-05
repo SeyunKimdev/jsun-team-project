@@ -34,11 +34,13 @@ $(".likeButton").each((i, e) => {
 	});
 	
 /*피드 목록 가져오기*/	
-showFeedList();
 
+showFeedList();
+console.log(files);
 function showFeedList(){
-	
 	feeds = JSON.parse(feeds);
+	files = JSON.parse(files);
+	
 	const $feedUl = $(".feedListWrapper .feedList");	
 	
 	let text = "";
@@ -51,9 +53,19 @@ function showFeedList(){
 				`;				/*이미지 넣는 곳 src*/
 		text +=	`				<span class="feedThumbnailSpan" ratio="0.75">
 									<picture ratio="0.75" class="feedPicture">
-										<source class="feedPictureSource" type="image/webp" sizes="(min-width: 1024px) 300px, 50vw" srcset=" https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/375xauto 375w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/750xauto 750w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/960xauto 960w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/1440xauto 1440w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2048xauto 2048w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2880xauto 2880w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/autoxauto 5120w " />
-										<img class="feedImage" sizes="(min-width: 1024px) 300px, 50vw" srcset="https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/375xauto 375w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/750xauto 750w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/960xauto 960w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/1440xauto 1440w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2048xauto 2048w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2880xauto 2880w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/autoxauto 5120w" src="https://cdn.class101.net/images/baf7ab7e-eba0-49ef-ab00-694a1574562d" alt="귀요미" />
-									</picture>
+										
+				`
+				if(files[feed.feedId]){
+					text +=	`<source class="feedPictureSource" type="image/webp" sizes="(min-width: 1024px) 300px, 50vw" />
+					<img class="feedImage" sizes="(min-width: 1024px) 300px, 50vw" src="${contextPath}/upload/${files[feed.feedId].fileSystemName}"/>
+				`
+				}else{
+					text +=	`<source class="feedPictureSource" type="image/webp" sizes="(min-width: 1024px) 300px, 50vw" /images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/375xauto 375w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/750xauto 750w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/960xauto 960w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/1440xauto 1440w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2048xauto 2048w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2880xauto 2880w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/autoxauto 5120w " />
+					<img class="feedImage" sizes="(min-width: 1024px) 300px, 50vw" srcset="https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/375xauto 375w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/750xauto 750w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/960xauto 960w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/1440xauto 1440w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2048xauto 2048w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2880xauto 2880w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/autoxauto 5120w"
+				 			src="${contextPath}/upload/${files[feed.feedId].fileSystemName}"/>
+				`
+				}		
+		text+=	`					</picture>
 								</span>
 				`;				/*좋아요 버튼*/
 		text += `				
@@ -79,9 +91,7 @@ function showFeedList(){
 									<p class="feedNicknameText">${feed.memberNickname}</p>
 								</div>
 								<div class="feedHashTagWrap">
-									<strong style="color: skyblue">#여행</strong> 
-									<strong style="color: skyblue">#일상</strong> 
-									<strong style="color: skyblue">#ootd</strong>
+									<strong style="color: skyblue">${feed.feedHashTag}</strong> 
 								</div>
 								<div class="likeCountWrap">
 									<div>
@@ -101,11 +111,9 @@ function showFeedList(){
 							<div class="statusWrap">
 								<div class="status">
 					`;
-					if(feed.profileMarried != 'y'){
-						text+= `<p class="statusText">기혼</p>`;
-					}else {
-						text+= `<p class="statusText">미혼</p>`;
-					}
+					
+			text+= `<p class="statusText">${feed.profileMarried == 'y' ? '기혼' : '미혼'}</p>`;
+			
 			text +=	`		
 								</div>
 							</div>
@@ -117,6 +125,5 @@ function showFeedList(){
 	 
 	$feedUl.append(text);
 }
-
 
 	

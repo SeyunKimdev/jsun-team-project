@@ -43,4 +43,10 @@
 		select last_insert_id()
 	</select>
 	
+	<select id="feedSelect" parameterType="long" resultType="feedDTO">
+		select feed_id, feed_content, feed_register_date,
+		feed_update_date, feed_like_count, feed_read_count, feed_hash_tag, member_nickname, member_name, profile_location, profile_married 
+		from view_feed_profile where feed_id = ${feedId}
+	</select>
+	
 </mapper>

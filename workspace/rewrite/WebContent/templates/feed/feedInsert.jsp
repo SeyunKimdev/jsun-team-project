@@ -49,10 +49,10 @@
 										<div class="headDivDivDivDiv2Div3DivDivDiv">
 											<div class="headDivDivDivDiv2Div3DivDivDivDiv">
 												<div class="headDivDivDivDiv2Div3DivDivDivDivDiv">
-													<form action="">
-														<input class="headInput" type="text"
-															placeholder="원하는 이상형을 검색해보세요">
+													<form action="${pageContext.request.contextPath}/feedListOk.feed">
+														<input class="headInput" type="text" placeholder="원하는 이상형을 검색해보세요" value="${keyword}" name="keyword" autocomplete="off">
 													</form>
+													<button type="submit" onclick="">
 													<span class="headDivDivDivDiv2Div3DivDivDivDivDivSpan">
 														<svg xmlns="http://www.w3.org/2000/svg"
 															viewBox="0 0 24 24"
@@ -251,54 +251,55 @@
 						<div class="feedContentWrapper">
 							<label class="hashTagContainer">
 								<div class="hashTagContent">
-								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;">
+								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;" value="#연애">
 								#연애</div>
 							</label>
 							<label class="hashTagContainer">
 								<div class="hashTagContent">
-								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;">
+								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;" value="#결혼">
 								#결혼</div>
 							</label>
 							<label class="hashTagContainer">
 								<div class="hashTagContent">
-								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;">
+								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;" value="#일상">
 								#일상</div>
 							</label>
 							<label class="hashTagContainer">
 								<div class="hashTagContent">
-								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;">
+								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;" value="#소통">
 								#소통</div>
 							</label>
 							<label class="hashTagContainer">
 								<div class="hashTagContent">
-								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;">
+								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;" value="#취미">
 								#취미</div>
 							</label>
 							<label class="hashTagContainer">
 								<div class="hashTagContent">
-								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;">
+								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;" value="#운동">
 								#운동</div>
 							</label>
 							<label class="hashTagContainer">
 								<div class="hashTagContent">
-								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;">
+								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;" value="#맛집">
 								#맛집</div>
 							</label>
 							<label class="hashTagContainer">
 								<div class="hashTagContent">
-								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;">
+								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;" value="#산책">
 								#산책</div>
 							</label>
 							<label class="hashTagContainer">
 								<div class="hashTagContent">
-								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;">
+								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;" value="#만남">
 								#만남</div>
 							</label>
 							<label class="hashTagContainer">
 								<div class="hashTagContent">
-								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;">
+								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;" value="#기타">
 								#기타</div>
 							</label>
+							<input type="text" name="hashTagAll" class="hashTagAll" style="display:none;">
 						</div>
 						<div class="feedContentContainer">
 							<div class="feedContentWrap">
@@ -312,7 +313,7 @@
 				<div class="feedSubmitContainer">
 					<div class="feedSubmitWrap">
 						<div class="feedSubmit">
-							<button type="submit" icon-position="0"
+							<button  icon-position="0"
 								class="feedSubmitButton " color="orange"
 								fill="false">
 								<span class="feedSubmitText">저장하기</span>

@@ -7,7 +7,7 @@
 	</insert>
 	
 	<select id="select" parameterType="long" resultType="feedFileVO">
-		select file_id, file_system_name, file_original_name,, file_register_date, feed_id
+		select file_id, file_system_name, file_original_name, file_register_date, feed_id
 		from tbl_feed_file where feed_id = #{feedId}
 	</select>
 	

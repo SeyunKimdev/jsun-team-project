@@ -36,4 +36,10 @@ public SqlSession sqlSession;
 		return sqlSession.selectOne("feed.getCurrentSequence");
 	}
 	
+// 피드 상세보기
+	public FeedDTO feedSelect() {
+		
+	}
+	}
+	
 }

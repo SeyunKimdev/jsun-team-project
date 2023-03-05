@@ -21,7 +21,7 @@ import com.rewrite.feed.domain.FeedDTO;
 import com.rewrite.file.dao.FileDAO;
 import com.rewrite.file.domain.FeedFileVO;
 
-public class FeedListOkController implements Action {
+public class FeedDetailOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -90,7 +90,7 @@ public class FeedListOkController implements Action {
 		req.setAttribute("sort", sort);
 		req.setAttribute("keyword", keyword);
 		
-		result.setPath("/feedList.feed");
+		result.setPath("/feedDetail.feed");
 		
 		return result;
 	}

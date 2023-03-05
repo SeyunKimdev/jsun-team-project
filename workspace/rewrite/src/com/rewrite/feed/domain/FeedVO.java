@@ -10,7 +10,7 @@ public class FeedVO {
 	private String feedReadCount;
 	private String feedHashTag;
 	private String feedImage;
-	private String memberId;
+	private Long memberId;
 
 	public FeedVO() {
 		;
@@ -80,11 +80,11 @@ public class FeedVO {
 		this.feedImage = feedImage;
 	}
 
-	public String getMemberId() {
+	public Long getMemberId() {
 		return memberId;
 	}
 
-	public void setMemberId(String memberId) {
+	public void setMemberId(Long memberId) {
 		this.memberId = memberId;
 	}
 

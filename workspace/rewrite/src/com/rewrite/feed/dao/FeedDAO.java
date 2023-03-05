@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 
 import com.rewrite.feed.domain.FeedDTO;
+import com.rewrite.feed.domain.FeedVO;
 import com.rewrite.mybatis.config.MyBatisConfig;
 
 public class FeedDAO {
@@ -21,9 +22,24 @@ public SqlSession sqlSession;
 	}
 	
 //	피드 총 개수
-	public Long getTotal() {
-		return sqlSession.selectOne("feed.getTotal");
+	public Long getTotal(String keyword) {
+		return sqlSession.selectOne("feed.getTotal",keyword);
 	}
 	
-//	
+// 피드 작성
+	public void feedWrite(FeedVO feedVO) {
+		sqlSession.selectOne("feed.feedWrite",feedVO);
+	}
+	
+//	현재 시퀀스 조회
+	public Long getCurrentSequence() {
+		return sqlSession.selectOne("feed.getCurrentSequence");
+	}
+	
+// 피드 상세보기
+	public FeedDTO feedSelect() {
+		
+	}
+	}
+	
 }

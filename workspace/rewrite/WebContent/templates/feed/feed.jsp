@@ -1,23 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="icon" type="image/png" sizes="32x32"
-	href="${pageContext.request.contextPath}/static/images/favicon.png">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/static/css/feed/feed.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/static/css/header/newHeader.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/static/css/footer/newFooter.css">
 <title>피드 게시판</title>
-
-
+<link rel="icon" type="image/png" sizes="32x32" href="${pageContext.request.contextPath}/static/images/favicon.png">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/feed/feed.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/header/newHeader.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/footer/newFooter.css">
 </head>
 <body>
 	<section class="sectionContainer">
@@ -45,19 +39,20 @@
 										<div class="headDivDivDivDiv2Div3DivDivDiv">
 											<div class="headDivDivDivDiv2Div3DivDivDivDiv">
 												<div class="headDivDivDivDiv2Div3DivDivDivDivDiv">
-													<form action="">
-														<input class="headInput" type="text"
-															placeholder="원하는 이상형을 검색해보세요">
+													<form action="${pageContext.request.contextPath}/feedListOk.feed">
+														<input class="headInput" type="text" placeholder="원하는 이상형을 검색해보세요" value="${keyword}" name="keyword" autocomplete="off">
 													</form>
-													<span class="headDivDivDivDiv2Div3DivDivDivDivDivSpan">
-														<svg xmlns="http://www.w3.org/2000/svg"
-															viewBox="0 0 24 24"
-															class="headDivDivDivDiv2Div3DivDivDivDivDivSpanSvg">
-                                                                <path
-																d="M16.105 17.66A8.997 8.997 0 0 1 10.5 19.6c-5.02 0-9.1-4.08-9.1-9.1s4.08-9.1 9.1-9.1 9.1 4.08 9.1 9.1c0 2.05-.67 3.985-1.94 5.605l5.48 5.485-1.555 1.555-5.485-5.48.005-.005ZM10.5 3.6a6.907 6.907 0 0 0-6.9 6.9c0 3.805 3.095 6.9 6.9 6.9s6.9-3.095 6.9-6.9-3.095-6.9-6.9-6.9Z">
-                                                                </path>
-                                                            </svg>
-													</span>
+													<button type="submit" onclick="">
+														<span class="headDivDivDivDiv2Div3DivDivDivDivDivSpan">
+															<svg xmlns="http://www.w3.org/2000/svg"
+																viewBox="0 0 24 24"
+																class="headDivDivDivDiv2Div3DivDivDivDivDivSpanSvg">
+	                                                                <path
+																	d="M16.105 17.66A8.997 8.997 0 0 1 10.5 19.6c-5.02 0-9.1-4.08-9.1-9.1s4.08-9.1 9.1-9.1 9.1 4.08 9.1 9.1c0 2.05-.67 3.985-1.94 5.605l5.48 5.485-1.555 1.555-5.485-5.48.005-.005ZM10.5 3.6a6.907 6.907 0 0 0-6.9 6.9c0 3.805 3.095 6.9 6.9 6.9s6.9-3.095 6.9-6.9-3.095-6.9-6.9-6.9Z">
+	                                                                </path>
+	                                                            </svg>
+														</span>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -82,15 +77,15 @@
 							<div class="headDivDivDivDiv4Div">
 								<div class="headDivDivDivDiv4DivDiv">
 									<div class="headDivDivDivDivDivDivDivDiv"></div>
-									<a href=""> <span class="headDivDivDivDiv4DivDivSpan">
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-												class="headDivDivDivDiv4DivDivSpanSvg">
+									<a href=""> 
+										<span class="headDivDivDivDiv4DivDivSpan">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="headDivDivDivDiv4DivDivSpanSvg">
                                                     <path
 													class="headDivDivDivDiv4DivDivSpanSvgPath"
 													d="M21.141 3.91A6.262 6.262 0 0 0 16.654 2c-1.621 0-3.252.635-4.488 1.91-.06.06-.11.125-.165.19-.055-.06-.105-.13-.165-.19A6.263 6.263 0 0 0 7.35 2c-1.621 0-3.252.635-4.488 1.91-2.481 2.545-2.481 6.67 0 9.21l8.935 8.79c.06.06.135.09.21.09.075 0 .15-.03.21-.09l8.935-8.79c2.467-2.54 2.467-6.665-.01-9.21Zm-1.78 7.35-7.37 7.245-7.369-7.245c-1.47-1.525-1.466-3.99.015-5.51A3.73 3.73 0 0 1 7.33 4.605c1.005 0 2.19.505 2.996 1.25.73.68 1.066 1.235 1.361 1.655.03.045.125.215.3.215s.27-.175.305-.22c.296-.425.63-.975 1.356-1.655.806-.75 1.991-1.25 2.997-1.25a3.74 3.74 0 0 1 2.696 1.145c1.486 1.525 1.491 3.99.02 5.514Z">
                                                     </path>
-                                                </svg>
-									</span>
+                                      		</svg>
+										</span>
 									</a>
 									<div class="headDivDivDivDivDivDivDivDiv"></div>
 									<div id="mypageLogo" class="headDivDivDivDiv4DivDivDiv2">
@@ -196,24 +191,24 @@
 				<div class="mainHeader">
 					<section class="mainHeaderSection">
 						<button type="button" class="recentButton sortButton">
-							<span><div class="recentButtonText sortText">최신순</div> <svg
-									xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-									fill="none" viewBox="0 0 24 24">
-                      <path fill-rule="evenodd" d="M17 10l-5 5-5-5h10z"
-										fill="#1B1C1D"></path></svg></span>
+							<div class="recentButtonText sortText">
+								<span class="${sort == null or sort == 'recent' ? 'selected' : ''}">최신순</span>
+							</div> 
+							<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24">
+                      			<path fill-rule="evenodd" d="M17 10l-5 5-5-5h10z" fill="#1B1C1D"></path>
+                      		</svg>
 						</button>
 						<button type="button" class="popularButton sortButton">
-							<span>
-								<div class="popularButtonText sortText">인기순</div> <svg
-									xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-									fill="none" viewBox="0 0 24 24">
-                      <path fill-rule="evenodd" d="M17 10l-5 5-5-5h10z"
-										fill="#1B1C1D"></path></svg>
-							</span>
+							<div class="popularButtonText sortText">
+								<span class="${sort == 'popular' ? 'selected' : ''}">인기순</span>
+							</div> 
+							<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24">
+                      			<path fill-rule="evenodd" d="M17 10l-5 5-5-5h10z"fill="#1B1C1D"></path>
+                      		</svg>
 						</button>
 					</section>
 					<div class="feedWriteWrap">
-						<button type="button" class="writeButton">
+						<button type="button" class="writeButton" onclick="location.href='${pageContext.request.contextPath}/feedWrite.feed'">
 							<h4 class="writeButtonText">작성하기</h4>
 						</button>
 					</div>
@@ -230,28 +225,38 @@
 						</div>
 						<section class="mainPageSection">
 							<div>
-								<button type="button" icon-position="2" disabled=""
-									class="pagePrevButton" color="default">
-									<span class="pagePrevButtonSpan"><svg
-											xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-											fill="none" viewBox="0 0 24 24">
-                          <path fill-rule="evenodd"
-												d="M15.5 5.5l-6 6.5 6 6.5L14 20l-7.5-8L14 4l1.5 1.5z"
-												fill="#efefef"></path></svg></span>
+								<c:if test="${prev}">
+									<button type="button" icon-position="2" disabled="" class="pagePrevButton" color="default" onclick="location.href='/feedListOk.feed?page=${startPage - 1}&sort=${sort}&keyword=${keyword}'">
+										<span class="pagePrevButtonSpan">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+				                          		<path fill-rule="evenodd" d="M15.5 5.5l-6 6.5 6 6.5L14 20l-7.5-8L14 4l1.5 1.5z" fill="#efefef"></path>
+			                          		</svg>
+	                          			</span>
+									</button>
+								</c:if>
+								<c:forEach var="i" begin="${startPage}" end="${endPage}">
+									<c:choose>
+										<c:when test="${i eq page}">
+										<button type="button" icon-position="0" class="pageCountButton-no-active pageCountButton" color="orange" fill="false" onclick="location.href='/feedListOk.feed?page=${i}&sort=${sort}&keyword=${keyword}'">
+											<span class="pageCountButtonSpan"><c:out value="${i}"/></span>
+										</button>
+										</c:when>
+										<c:otherwise>
+											<button type="button" icon-position="0" class="pageCountButton-no-active" color="orange" fill="false" onclick="location.href='/feedListOk.feed?page=${i}&sort=${sort}&keyword=${keyword}'">
+											<span class="pageCountButtonSpan"><c:out value="${i}"/></span>
+										</button>
+										</c:otherwise>
+									</c:choose>
+								</c:forEach>
+								<c:if test="${next}">
+								<button type="button" icon-position="2" class="pageNextButton" color="default" onclick="location.href='/feedListOk.feed?page=${endPage + 1}&sort=${sort}&keyword=${keyword}'">
+									<span class="pageNextButtonSpan">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+											<path fill-rule="evenodd" d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z" fill="#efefef"></path>
+										</svg>
+									</span>
 								</button>
-								<button type="button" icon-position="0" class="pageCountButton"
-									color="orange" fill="false">
-									<span class="pageCountButtonSpan">1</span>
-								</button>
-								<button type="button" icon-position="2" class="pageNextButton"
-									color="default">
-									<span class="pageNextButtonSpan"><svg
-											xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-											fill="none" viewBox="0 0 24 24">
-													<path fill-rule="evenodd"
-												d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z"
-												fill="#efefef"></path></svg></span>
-								</button>
+								</c:if>
 							</div>
 						</section>
 					</div>
@@ -397,9 +402,11 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
-	let contextPath = `${pageContext.request.contextPath}`
+	let contextPath = "${pageContext.request.contextPath}";
+	let page = `${page}`, keyword = `${keyword}` || null,  sort = `${sort}`;
+	let feeds = `${feeds}`;
+	let files = `${files}`;
 </script>
-<script
-	src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/feed/feed.js"></script>
 </html>

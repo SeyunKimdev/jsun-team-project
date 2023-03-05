@@ -8,8 +8,10 @@ public class FeedDTO {
 	private String feedLikeCount;
 	private String feedReadCount;
 	private String feedHashTag;
-	private String feedImage;
 	private String memberNickname;
+	private String memberName;
+	private String profileLocation;
+	private String profileMarried;
 	
 	public FeedDTO() {;}
 
@@ -69,14 +71,6 @@ public class FeedDTO {
 		this.feedHashTag = feedHashTag;
 	}
 
-	public String getFeedImage() {
-		return feedImage;
-	}
-
-	public void setFeedImage(String feedImage) {
-		this.feedImage = feedImage;
-	}
-
 	public String getMemberNickname() {
 		return memberNickname;
 	}
@@ -85,12 +79,39 @@ public class FeedDTO {
 		this.memberNickname = memberNickname;
 	}
 
+	public String getMemberName() {
+		return memberName;
+	}
+
+	public void setMemberName(String memberName) {
+		this.memberName = memberName;
+	}
+
+	public String getProfileLocation() {
+		return profileLocation;
+	}
+
+	public void setProfileLocation(String profileLocation) {
+		this.profileLocation = profileLocation;
+	}
+
+	public String getProfileMarried() {
+		return profileMarried;
+	}
+
+	public void setProfileMarried(String profileMarried) {
+		this.profileMarried = profileMarried;
+	}
+
+	
+
 	@Override
 	public String toString() {
 		return "FeedDTO [feedId=" + feedId + ", feedContent=" + feedContent + ", feedRegisterDate=" + feedRegisterDate
 				+ ", feedUpdateDate=" + feedUpdateDate + ", feedLikeCount=" + feedLikeCount + ", feedReadCount="
-				+ feedReadCount + ", feedHashTag=" + feedHashTag + ", feedImage=" + feedImage + ", memberNickname="
-				+ memberNickname + "]";
+				+ feedReadCount + ", feedHashTag=" + feedHashTag + ", memberNickname=" + memberNickname
+				+ ", memberName=" + memberName + ", profileLocation=" + profileLocation + ", profileMarried="
+				+ profileMarried + "]";
 	}
 
 	@Override
@@ -117,5 +138,5 @@ public class FeedDTO {
 			return false;
 		return true;
 	}
-	
-}
+
+}	

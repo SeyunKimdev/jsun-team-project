@@ -18,10 +18,12 @@ public class FeedFrontController extends HttpServlet {
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null; 
 		
-		System.out.println("1. "+ target);
-		
-		if (target.equals("/feedDetail")) {
-			result = new FeedDetailController().execute(req, resp);
+		if (target.equals("/feedDetailOk")) {
+			result = new FeedDetailOkController().execute(req, resp);
+			
+		}else if (target.equals("/feedDetail")) {
+			result = new Result();
+			result.setPath("templates/feed/feedDetail.jsp");
 			
 		}else if (target.equals("/feedList")) {
 			result = new Result();
@@ -29,10 +31,14 @@ public class FeedFrontController extends HttpServlet {
 			
 		}else if (target.equals("/feedListOk")) {
 			result = new FeedListOkController().execute(req, resp);
+		}else if (target.equals("/feedWrite")) {
+			result = new Result();
+			result.setPath("templates/feed/feedInsert.jsp");
+		}else if (target.equals("/feedWriteOk")) {
+			result = new feedWriteOkController().execute(req, resp);
 		}else {
 			System.out.println(target);
 		}
-		
 		
 		
 		if(result != null) {

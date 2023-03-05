@@ -15,7 +15,7 @@ const $sortButton = $(".sortButton");
 // 최신순, 인기순 버튼 누르면 폰트 변경
 $sortButton.click(function(){
 	let i = $sortButton.index($(this));
-	location.href=`${contextPath}/feedListOk.feed?sort=${i == 0 ? 'recent' : 'popular'}`;
+	location.href=`${contextPath}/feedListOk.feed?sort=${i == 0 ? 'recent' : 'popular'}&keyword=${keyword}`;
 });
 
 
@@ -57,12 +57,16 @@ function showFeedList(){
 				`
 				if(files[feed.feedId]){
 					text +=	`<source class="feedPictureSource" type="image/webp" sizes="(min-width: 1024px) 300px, 50vw" />
+					<a href="javascript:location.href='${contextPath}/feedDetailOk.feed?feedId=${feed.feedId}&page=${page}&sort=${sort}&keyword=${keyword}'">
 					<img class="feedImage" sizes="(min-width: 1024px) 300px, 50vw" src="${contextPath}/upload/${files[feed.feedId].fileSystemName}"/>
+					</a>
 				`
 				}else{
 					text +=	`<source class="feedPictureSource" type="image/webp" sizes="(min-width: 1024px) 300px, 50vw" /images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/375xauto 375w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/750xauto 750w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/960xauto 960w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/1440xauto 1440w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2048xauto 2048w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2880xauto 2880w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/autoxauto 5120w " />
+					<a href="javascript:location.href='${contextPath}/feedDetailOk.feed?feedId=${feed.feedId}&page=${page}&sort=${sort}&keyword=${keyword}'">
 					<img class="feedImage" sizes="(min-width: 1024px) 300px, 50vw" srcset="https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/375xauto 375w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/750xauto 750w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/960xauto 960w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/1440xauto 1440w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2048xauto 2048w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2880xauto 2880w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/autoxauto 5120w"
 				 			src="${contextPath}/upload/${files[feed.feedId].fileSystemName}"/>
+				 	</a>		
 				`
 				}		
 		text+=	`					</picture>

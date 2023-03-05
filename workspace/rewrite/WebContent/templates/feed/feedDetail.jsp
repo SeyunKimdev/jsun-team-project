@@ -43,7 +43,7 @@
 												fill="#fd3049"></path>
 											</svg>
 									</div>
-									<span class="feedLikeCount">286</span>
+									<span class="feedLikeCount">${feed.feedLikeCount}</span>
 								</button>
 								<!-- 댓글 버튼 -->
 								<button type="button" class="feedReplyButton">
@@ -91,64 +91,17 @@
 												style="width: 405px;">
 												<!-- 피드 이미지 컨테이너 -->
 												<picture class="feedMainImageContainer">
-												<source type="image/webp"
-													srcset="
-                                                        https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/640xauto.webp   640w,
-                                                        https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/750xauto.webp   750w,
-                                                        https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/828xauto.webp   828w,
-                                                        https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/1080xauto.webp 1080w,
-                                                        https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/1200xauto.webp 1200w,
-                                                        https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/1920xauto.webp 1920w,
-                                                        https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/2048xauto.webp 2048w,
-                                                        https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/3840xauto.webp 3840w
-                                                    "
-													/
-													sizes="(min-width: 1024px) 405px, 100vw"
-													>
-												<img
-													srcset="
-                                                        https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/640xauto   640w,
-                                                        https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/750xauto   750w,
-                                                        https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/828xauto   828w,
-                                                        https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/1080xauto 1080w,
-                                                        https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/1200xauto 1200w,
-                                                        https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/1920xauto 1920w,
-                                                        https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/2048xauto 2048w,
-                                                        https://cdn.class101.net/images/fc30f587-561a-475a-a4e2-7582e36172cb/3840xauto 3840w
-                                                    "
-													sizes="(min-width: 1024px) 405px, 100vw"
-													src="https://cdn.class101.net/images/49d8488c-27c7-4fc4-be0f-fa07dc8edebd"
-													class="feedMainImage"></picture>
+													<source type="image/webp" sizes="(min-width: 1024px) 405px, 100vw" />
+													<img sizes="(min-width: 1024px) 405px, 100vw" src="${pageContext.request.contextPath}/upload/${files[0].fileSystemName}"
+														class="feedMainImage">
+												</picture>
 												<!-- 피드 내용 컨테이너 -->
 												<div class="feedContentContainer">
 
 													<div class="feedContentWrapper">
-														<div class="hashTagContainer" color="#FFF"
-															backgroundcolor="rgba(0, 0, 0, 0.56)">
-															<div color="#FFF" class="hashTagContent">#일상</div>
+														<div class="feedMainContent">
+														<c:out value="${feed.feedContent}"/>
 														</div>
-														<div class="hashTagContainer" color="#FFF"
-															backgroundcolor="rgba(0, 0, 0, 0.56)">
-															<div color="#FFF" class="hashTagContent">#여행</div>
-														</div>
-														<div class="hashTagContainer" color="#FFF"
-															backgroundcolor="rgba(0, 0, 0, 0.56)">
-															<div color="#FFF" class="hashTagContent">#소통</div>
-														</div>
-														<div class="hashTagContainer" color="#FFF"
-															backgroundcolor="rgba(0, 0, 0, 0.56)">
-															<div color="#FFF" class="hashTagContent">#취미</div>
-														</div>
-														<div class="hashTagContainer" color="#FFF"
-															backgroundcolor="rgba(0, 0, 0, 0.56)">
-															<div color="#FFF" class="hashTagContent">#맛집</div>
-														</div>
-														<div class="hashTagContainer" color="#FFF"
-															backgroundcolor="rgba(0, 0, 0, 0.56)">
-															<div color="#FFF" class="hashTagContent">#카페</div>
-														</div>
-														<div class="feedMainContent">메모를 돈 버는데 활용합니다. 메모를 돈
-															버는데 활용합니다. 메모를 돈 버는데 활용합니다. 메모를 돈 버는데 활용합니다.</div>
 													</div>
 
 												</div>
@@ -167,7 +120,7 @@
 				</div>
 			</section>
 			<div class="backgroundImgWrap">
-				<div class="backgroundImg"></div>
+				<div class="backgroundImg" style="background-image : url('${pageContext.request.contextPath}/upload/${files[0].fileSystemName}');"></div>
 			</div>
 		</div>
 	</div>
@@ -331,7 +284,7 @@
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
 	let contextPath = `${pageContext.request.contextPath}`
+	let $feedTag = `${feed.feedHashTag}`;
 </script>
-<script
-	src="${pageContext.request.contextPath}/static/js/feed/feedDetail.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/feed/feedDetail.js"></script>
 </html>

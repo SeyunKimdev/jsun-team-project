@@ -46,6 +46,7 @@
 		profile_child, profile_married, file_id, file_original_name, file_system_name, file_register_date 
 		from view_member_dto
 		<include refid="search"/>
+		limit #{startRow}, #{rowCount}
 	</select>
 </mapper>
 

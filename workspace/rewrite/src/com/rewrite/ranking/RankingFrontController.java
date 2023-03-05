@@ -20,10 +20,10 @@ public class RankingFrontController extends HttpServlet{
 		System.out.println(target);
 		
 		if(target.equals("/ranking")) {
-			System.out.println("들어옴");
 			result = new RankingController().execute(req, resp);
+		} else if(target.equals("/rankingFilterAction")) {
+			result = new RankingFilterActionController().execute(req, resp);
 		} else {
-			System.out.println("안들어옴");
 		}
 		
 		if(result != null) {

@@ -304,118 +304,9 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         <div class="container">
             <div class="containerDiv educate-content">
                 <section class="containerSection section">
-                    <!-- <div class="containerDivDiv"> -->
                     <div class="containerDivDivDiv paper">
+                     <!-- 공지 작성 란 -->
                         <div class="list">
-                            <!-- 공지 작성 란 -->
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
-
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
-
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
-
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >홈페이지 개편 안내(2023년1월23일부터 적용)</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
-
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span
-                                                >class101 <br />
-                                                1주일 전에 업데이트됨
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
                         </div>
                     </div>
                 </section>
@@ -603,6 +494,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script>
         let contextPath = `${pageContext.request.contextPath}`;
+        let notices = `${notices}`;
     </script>
     <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
     <script src="${pageContext.request.contextPath}/static/js/notice/notice.js"></script>

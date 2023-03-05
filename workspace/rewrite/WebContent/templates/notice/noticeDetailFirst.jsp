@@ -308,34 +308,30 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                 <div class="containerSectionDiv paper">
                     <div class="ContainerSectionDivDiv content__narrow">
                         <div class="ContainerSectionDivDivDiv intercom-force-break">
-                            <div class="ContainerSectionDivDivDivDiv" dir="ltr">
-                                <h1 class="ContainerSectionDivDivDivDivH1">
+                            <div class="notice-title-wrap" dir="ltr">
+                                <h1 class="notice-title">
                                     홈페이지 개편 안내(2023년1월23일부터 적용)
                                 </h1>
                                 <div class="ContainerSectionDivDivDivDivDiv"></div>
 
-                                <div class="writer">
-                                    <!-- <div class="writerDiv o__ltr">
-                              
-
-                           </div> -->
+                                <div class="notice-admin-wrap">
                                     <div class="writerDiv2">
                                         <div>
-                                            <span class="writerDiv2Span">작성자:</span>reWrite
+                                            <span class="notice-admin">작성자:reWrite</span>
                                             <br />
-                                            1주일 전에 업데이트됨
+                                            <span class="notice-register-date">1주일 전에 업데이트됨</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <article dir="article">
-                                <p class="articleP">
+                                <p class="notice-title-p">
                                     <b>🟨홈페이지 개편 안내(2022년11월23일부터 적용)</b>
                                 </p>
                                 <p class="articleP"></p>
                                 <ol>
-                                    <li>
-                                        <p class="articleP">
+                                    <li class="notice-content-li">
+                                        <p class="notice-title-p notice-content-p">
                                             항상 reWrite를 사랑해 주시는 클래스메이트님께 진심으로
                                             감사드립니다😍 홈페이지가 개편됨에 따라
                                             클래스메이트님들의 원활한 서비스 이용을 위해 몇 가지
@@ -344,15 +340,6 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                                         </p>
                                     </li>
                                 </ol>
-
-                                <p class="articleP">
-                                    2022년 11월 23일 이후, 건건별로 판매하던 매칭서비스가 '무제한
-                                    매칭 서비스'로 개편되었습니다. 월 19,900원의 금액으로 4,000개
-                                    이상의 클래스를 '무제한으로 매칭할 수 있는 매칭 서비스로
-                                    개편됩니다' 입니다.
-                                </p>
-                                <p class="articleP"></p>
-
                                 <hr />
                             </article>
                         </div>

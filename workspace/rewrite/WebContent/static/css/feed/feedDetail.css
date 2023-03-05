@@ -219,11 +219,14 @@ span {
 }
 
 .feedDetailHeader {
+	display: flex;
+	justify-content : space-between;
 	z-index: 12;
 	position: absolute;
 	top: 26px;
 	left: 16px;
 	list-style: none;
+	width: 90%;
 }
 
 .feedLikeButton:not(:disabled):not(.disabled) {
@@ -1500,10 +1503,54 @@ span {
 	display: none;
 }
 
+.delete-modal-box-layout {
+	display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+	z-index: 9999;
+	overflow: hidden;
+}
 
+.delete-modal-box {
+	display: none;
+	position: fixed;
+    width: 400px;
+    height: 200px;
+    left: 37%;
+    top: 34%;
+    z-index: 9998;
+    background: #fff;
+    border-radius: 20px;
+}
 
+.delete-modal {
+	text-align: center;
+    padding: 39px 53px;
+    height: 200px;
+}
 
+.delete-title-box {
+	margin-top : 20px;
+}
 
+.delete-title {
+	color: #edacb1;
+}
 
+.delete-button-box-layout {
+	padding: 20px 0;	
+	display: flex;
+}
 
-
+.delete-button-box {
+	width: 50%;
+}
+ 	
+.delete-button {
+	width: 100%;
+	height: 30px;
+	font-size: 20px;
+	font-weight: 400;
+	cursor: pointer;
+}

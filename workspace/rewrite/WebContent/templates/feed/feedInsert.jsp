@@ -305,7 +305,7 @@
 							<div class="feedContentWrap">
 								<textarea class="feedContentBox"
 									placeholder="무단 홍보, 비방 글은 삭제될 수 있습니다." name="content"
-									autocomplete="off"></textarea>
+									autocomplete="off">${feed.feedContent}</textarea>
 							</div>
 						</div>
 					</div>
@@ -463,7 +463,7 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
-	let contextPath = `${pageContext.request.contextPath}`
+	let contextPath = `${pageContext.request.contextPath}`;
 </script>
 <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/feed/feedInsert.js"></script>

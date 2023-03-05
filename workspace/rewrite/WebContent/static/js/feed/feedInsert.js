@@ -81,4 +81,6 @@ $(".hashTagContent").on("change", function(){
 		$hashTagAll.val($hashTagAll.val().replace($("input[name='hashtag']").eq(i).val(),"").replace(/ /g, ''));
 		$hashTagContainer.eq(i).css("backgroundColor","rgba(0, 0, 0, 0.4)");
 	}
+	$hashTagAll.val().trim();
 });
+

@@ -36,7 +36,6 @@ $(".likeButton").each((i, e) => {
 /*피드 목록 가져오기*/	
 
 showFeedList();
-console.log(files);
 function showFeedList(){
 	feeds = JSON.parse(feeds);
 	files = JSON.parse(files);
@@ -63,7 +62,7 @@ function showFeedList(){
 				`
 				}else{
 					text +=	`<source class="feedPictureSource" type="image/webp" sizes="(min-width: 1024px) 300px, 50vw" /images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/375xauto 375w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/750xauto 750w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/960xauto 960w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/1440xauto 1440w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2048xauto 2048w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2880xauto 2880w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/autoxauto 5120w " />
-					<a href="javascript:location.href='${contextPath}/feedDetailOk.feed?feedId=${feed.feedId}&page=${page}&sort=${sort}&keyword=${keyword}'">
+					<a href="javascript:location.href='${contextPath}/feedDetailOk.feed?feedId=${feed.feedId}&page=${page}&sort=${sort}&keyword=${keyword == null ? null : keyword}';">
 					<img class="feedImage" sizes="(min-width: 1024px) 300px, 50vw" srcset="https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/375xauto 375w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/750xauto 750w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/960xauto 960w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/1440xauto 1440w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2048xauto 2048w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2880xauto 2880w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/autoxauto 5120w"
 				 			src="${contextPath}/upload/${files[feed.feedId].fileSystemName}"/>
 				 	</a>		

@@ -34,3 +34,22 @@ heart.style.display = "none";
 		});		
 		
 	}
+	
+	
+/* 나가기 버튼*/
+const $deleteModalButton = $(".deleteButton");
+const $deleteModalExitButton = $(".delete-cancel");
+const $deleteModalBox = $(".delete-modal-box");
+
+
+$deleteModalButton.click(function(){
+	$deleteModalBox.fadeIn();
+});
+
+$deleteModalExitButton.click(function(){
+	$deleteModalBox.fadeOut();
+});
+
+
+
+	

@@ -12,6 +12,7 @@ public class FeedDTO {
 	private String memberName;
 	private String profileLocation;
 	private String profileMarried;
+	private Long memberId;
 	
 	public FeedDTO() {;}
 
@@ -25,6 +26,14 @@ public class FeedDTO {
 
 	public String getFeedContent() {
 		return feedContent;
+	}
+	
+	public void setMemberId(Long memberId) {
+		this.memberId = memberId;
+	}
+	
+	public Long getMemberId() {
+		return memberId;
 	}
 
 	public void setFeedContent(String feedContent) {
@@ -103,15 +112,13 @@ public class FeedDTO {
 		this.profileMarried = profileMarried;
 	}
 
-	
-
 	@Override
 	public String toString() {
-		return "FeedDTO [feedId=" + feedId + ", feedContent=" + feedContent + ", feedRegisterDate=" + feedRegisterDate
-				+ ", feedUpdateDate=" + feedUpdateDate + ", feedLikeCount=" + feedLikeCount + ", feedReadCount="
-				+ feedReadCount + ", feedHashTag=" + feedHashTag + ", memberNickname=" + memberNickname
-				+ ", memberName=" + memberName + ", profileLocation=" + profileLocation + ", profileMarried="
-				+ profileMarried + "]";
+		return "FeedDTO [feedId=" + feedId + ", memberId=" + memberId + ", feedContent=" + feedContent
+				+ ", feedRegisterDate=" + feedRegisterDate + ", feedUpdateDate=" + feedUpdateDate + ", feedLikeCount="
+				+ feedLikeCount + ", feedReadCount=" + feedReadCount + ", feedHashTag=" + feedHashTag
+				+ ", memberNickname=" + memberNickname + ", memberName=" + memberName + ", profileLocation="
+				+ profileLocation + ", profileMarried=" + profileMarried + "]";
 	}
 
 	@Override

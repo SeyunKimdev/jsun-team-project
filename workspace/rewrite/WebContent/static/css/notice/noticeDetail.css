@@ -492,10 +492,10 @@ section {
 .intercom-force-break {
     word-wrap: break-word;
 }
-.ContainerSectionDivDivDivDiv {
+.notice-title-wrap {
     margin-bottom: 30px;
 }
-.ContainerSectionDivDivDivDivH1 {
+.notice-title {
     margin: 0 0 17px;
     font-size: 33px;
     font-weight: normal;
@@ -506,13 +506,13 @@ section {
     margin-bottom: 17px;
     color: #8f919d;
 }
-.writer {
+.notice-admin-wrap {
     font-size: 13px;
     color: #8f919d;
     margin-top: 4px;
 }
-.writer:before,
-.writer:after {
+.notice-admin-wrap:before,
+.notice-admin-wrap:after {
     content: ' ';
     display: table;
 }
@@ -528,14 +528,14 @@ section {
 .writerDiv2 {
     line-height: 1.4;
 }
-.writerDiv2Span {
-    color: #4f5e6b;
+.notice-admin {
+    color: rgb(0, 0, 64);
 }
-.writer:after {
+.notice-admin-wrap:after {
     clear: both;
 }
-.writer:before,
-.writer:after {
+.notice-admin-wrap:before,
+.notice-admin-wrap:after {
     content: ' ';
     display: table;
 }
@@ -553,7 +553,7 @@ section {
     text-align: start !important;
     text-align-last: start !important;
 }
-.articleP {
+.notice-title-p {
     margin-bottom: 0;
     min-height: 1.53em;
 }
@@ -628,4 +628,10 @@ article img {
 }
 .footerDivDivDiv:after {
     clear: both;
+}
+
+/* notice 등록일자 */
+.notice-register-date {
+	font-size: 10px;
+	color : gray;
 }

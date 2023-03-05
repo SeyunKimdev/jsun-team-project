@@ -19,11 +19,15 @@ public class NoticeFrontController extends HttpServlet{
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
 
-		if (target.equals("/notice")) {
-			result = new NoticeOkController().execute(req, resp);
-		} else {
+		if (target.equals("/noticeListOk")) {
+			result = new NoticeListOkController().execute(req, resp);
+		}else if(target.equals("/notice")){
+			result = new Result();
+			result.setPath(req.getContextPath() + "/noticeListOk.notice");
+		}else {
 			System.err.println(target);
 		}
+		
 		if (result != null) {
 			if (result.isRedirect()) {
 				resp.sendRedirect(result.getPath());

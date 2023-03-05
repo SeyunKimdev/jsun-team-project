@@ -15,7 +15,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         />
         <link
             rel="stylesheet"
-            href="${pageContext.request.contextPath}/static/css/notice/notice.css"
+            href="${pageContext.request.contextPath}/static/css/notice/qna.css"
         />
         <link
             rel="stylesheet"
@@ -309,14 +309,14 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                     <div class="containerDivDivDiv paper">
                         <div class="list">
                             <!-- 공지 작성 란 -->
-                            <a href="" class="listA paper">
+                            <a href="" class="faq-wrap-A paper">
                                 <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
+                                    <h2 class="faq-title-h2">
+                                        <span class="faq-title-span"
                                             >팀장일은 원래 힘든 건가요?</span
                                         >
                                     </h2>
-                                    <span class="listADivh2Span2"></span>
+                                    <span class="faq-title-span"></span>
 
                                     <div class="listADivDiv">
                                         <div class="ListADivDivDiv">
@@ -326,91 +326,11 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                                                 class="ListADivDivDivImg"
                                             />
                                         </div>
-                                        <div class="listADivDiv2">
+                                        <div class=faq-member-div>
                                             <div>
-                                                <span class="listADivDiv2Span">작성자:</span>오태양
+                                                <span class="faq-member-span">작성자:오태양</span>
                                                 <br />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >지욱이는 원래 귀여운가요?</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
-
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span>정지욱
-                                                <br />
-                                                방금 업데이트됨
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >강사님이 2팀 팀장님이신가요?</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
-
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span>이영준
-                                                <br />
-                                                2달전 업데이트됨
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="" class="listA paper">
-                                <div class="listADiv" dir="ltr">
-                                    <h2 class="listADivh2">
-                                        <span class="listADivh2Span"
-                                            >오늘은 일찍자도 괜찮을까요?</span
-                                        >
-                                    </h2>
-                                    <span class="listADivh2Span2"></span>
-
-                                    <div class="listADivDiv">
-                                        <div class="ListADivDivDiv">
-                                            <img
-                                                src="${pageContext.request.contextPath}/static/images/favicon.png"
-                                                alt=""
-                                                class="ListADivDivDivImg"
-                                            />
-                                        </div>
-                                        <div class="listADivDiv2">
-                                            <div>
-                                                <span class="listADivDiv2Span">작성자:</span>HDS
-                                                <br />
-                                                매일 업데이트
+                                                <span class="faq-date-span">1시간 전 등록</span>
                                             </div>
                                         </div>
                                     </div>
@@ -605,5 +525,5 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         let contextPath = `${pageContext.request.contextPath}`;
     </script>
     <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
-    <script src="${pageContext.request.contextPath}/static/js/notice/notice.js"></script>
+    <script src="${pageContext.request.contextPath}/static/js/notice/qna.js"></script>
 </html>

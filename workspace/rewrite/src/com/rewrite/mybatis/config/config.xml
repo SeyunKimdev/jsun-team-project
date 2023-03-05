@@ -43,6 +43,7 @@
 		<mapper resource="com/rewrite/mybatis/mapper/profileMapper.xml"/>
 		<mapper resource="com/rewrite/mybatis/mapper/eventMapper.xml"/>
 		<mapper resource="com/rewrite/mybatis/mapper/fileMapper.xml"/>
+		<mapper resource="com/rewrite/mybatis/mapper/noticeMapper.xml"/>
 	</mappers>
 </configuration>
 

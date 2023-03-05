@@ -37,9 +37,8 @@ public SqlSession sqlSession;
 	}
 	
 // 피드 상세보기
-	public FeedDTO feedSelect() {
-		
-	}
+	public FeedDTO feedSelect(Long feedId) {
+		return sqlSession.selectOne("feed.feedSelect", feedId);
 	}
 	
 }

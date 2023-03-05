@@ -31,11 +31,20 @@ public class FeedFrontController extends HttpServlet {
 			
 		}else if (target.equals("/feedListOk")) {
 			result = new FeedListOkController().execute(req, resp);
+			
 		}else if (target.equals("/feedWrite")) {
 			result = new Result();
 			result.setPath("templates/feed/feedInsert.jsp");
+			
 		}else if (target.equals("/feedWriteOk")) {
-			result = new feedWriteOkController().execute(req, resp);
+			result = new FeedWriteOkController().execute(req, resp);
+			
+		}else if (target.equals("/feedDeleteOk")) {
+			result = new FeedDeleteOkController().execute(req, resp);
+			
+		}else if (target.equals("/feedModify")) {
+			result = new FeedModifyController().execute(req, resp);
+			
 		}else {
 			System.out.println(target);
 		}

@@ -41,4 +41,15 @@ public SqlSession sqlSession;
 		return sqlSession.selectOne("feed.feedSelect", feedId);
 	}
 	
+//	피드 수정
+	public void feedUpdate(FeedVO feedVO) {
+		System.out.println(feedVO);
+		sqlSession.update("feed.feedUpdate", feedVO);
+	}
+// 피드 삭제
+	public void feedDelete(Long feedId) {
+		sqlSession.delete("feed.feedUpdate", feedId);
+	}
+		
+	
 }

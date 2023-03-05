@@ -199,7 +199,7 @@
 			<form action="${pageContext.request.contextPath}/feedWriteOk.feed" class="mainContainerForm"  method="post" enctype="multipart/form-data">
 				<div class="mainContainerFormDiv">
 					<div class="mainContainerFormDivDiv">
-						<h2 md="Headline3" class="mainContainerFormDivDivH2">피드 작성하기</h2>
+						<h2 md="Headline3" class="mainContainerFormDivDivH2">피드 수정하기</h2>
 					</div>
 					<div class="mainContainerFormDivDiv2">
 						<div class="mainContainerFormDivDiv2Div">
@@ -211,10 +211,10 @@
 										</picture>
 									</span>
 								</div>
-								<div md="Body2" class="mainContainerFormDivDiv2DivDivDiv2">Classmate</div>
+								<div md="Body2" class="mainContainerFormDivDiv2DivDivDiv2"><c:out value="${feed.memberName}"/></div>
 							</div>
 							<div class="mainContainerFormDivDiv2DivDiv2">
-								<label class="mainContainerFormDivDiv2DivDiv2Label">
+								<label class="mainContainerFormDivDiv2DivDiv2Label" style="display:none;">
 								<input type="file" class="mainContainerFormDivDiv2DivDiv2LabelInput" id="attach" name="upload">
 									<button type="button" icon-position="0"
 										class="mainContainerFormDivDiv2DivDiv2LabelButton"
@@ -235,9 +235,9 @@
 							</div>
 						</div>
 						<div class=""></div>
-						<div top="8" right="0" bottom="0" left="0" class="fileContainer">
+						<div top="8" right="0" bottom="0" left="0" class="fileContainer" style="display: block;">
 							<div class="fileContainerDiv">
-								<div class="fileTest"></div>
+								<div class="fileTest" style="background-image : url('${pageContext.request.contextPath}/upload/${files[0].fileSystemName}');"></div>
 								<button type="button" icon-position="2"
 									class="fileContainerDivButton " color="transparent">
 									<span class="fileContainerDivButtonSpan"><svg
@@ -299,7 +299,7 @@
 								<input type="checkbox" name="hashtag" class="hashtagCheckBox" style="display: none;" value="#기타">
 								#기타</div>
 							</label>
-							<input type="text" name="hashTagAll" class="hashTagAll" style="display:none;">
+							<input type="text" name="hashTagAll" class="hashTagAll" style="display:none;" value="${feed.feedHashTag}">
 						</div>
 						<div class="feedContentContainer">
 							<div class="feedContentWrap">
@@ -464,6 +464,7 @@
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
 	let contextPath = `${pageContext.request.contextPath}`;
+	let $hashTags = `${feed.feedHashTag}`;
 </script>
 <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/feed/feedInsert.js"></script>

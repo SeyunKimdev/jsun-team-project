@@ -17,7 +17,7 @@ import com.rewrite.file.dao.FileDAO;
 import com.rewrite.file.domain.FeedFileVO;
 import com.rewrite.file.domain.FileVO;
 
-public class feedWriteOkController implements Action {
+public class FeedWriteOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {

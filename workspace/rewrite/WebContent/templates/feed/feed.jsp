@@ -208,7 +208,7 @@
 						</button>
 					</section>
 					<div class="feedWriteWrap">
-						<button type="button" class="writeButton">
+						<button type="button" class="writeButton" onclick="location.href='${pageContext.request.contextPath}/feedWrite.feed'">
 							<h4 class="writeButtonText">작성하기</h4>
 						</button>
 					</div>
@@ -403,8 +403,9 @@
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
 	let contextPath = "${pageContext.request.contextPath}";
-	let page = `${page}`, sort = `${sort}`;
+	let page = `${page}`, keyword = `${keyword}` || null,  sort = `${sort}`;
 	let feeds = `${feeds}`;
+	let files = `${files}`;
 </script>
 <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/feed/feed.js"></script>

@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.rewrite.Result;
-import com.rewrite.feed.FeedDetailController;
+import com.rewrite.feed.FeedDetailOkController;
 
 public class FileFrontController extends HttpServlet{
 	
@@ -23,7 +23,7 @@ public class FileFrontController extends HttpServlet{
 		
 		if (target.equals("")) {
 			System.out.println("2. "+ target);
-			result = new FeedDetailController().execute(req, resp);
+			result = new FeedDetailOkController().execute(req, resp);
 		}else if (target.equals("")) {
 			System.out.println("2. "+ target);
 			

@@ -10,6 +10,5 @@ create table tbl_member(
 	member_email varchar(500) not null,
 	member_birth date not null,
 	member_gender char(1) not null,
-	member_profile_image varchar(500) not null,
 	member_status char(1) default 'y'
 );

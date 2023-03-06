@@ -38,7 +38,7 @@ public class LoginOkController implements Action {
 				resp.addCookie(memberPasswordCookie);
 			}
 			session.setAttribute("memberId", memberId);
-			path = req.getContextPath() + "/feed/feedListOk.feed";
+			path = req.getContextPath() + "/templates/main/main.jsp";
 		}else {
 			path = req.getContextPath() + "/login.member?login=false";
 		}

@@ -17,7 +17,7 @@ public class MemberFrontController extends HttpServlet{
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
 		
-		if(target.equals("join")) {
+		if(target.equals("/join")) {
 			result = new Result();
 			result.setPath("/templates/member/join.jsp");
 			
@@ -32,7 +32,9 @@ public class MemberFrontController extends HttpServlet{
 			
 		}else if(target.equals("/checkPhoneOk")) {
 			new CheckPhoneOkController().execute(req, resp);
-			
+		}
+		else if(target.equals("/smsOk")) {
+			new SmsOkController().execute(req, resp);
 		}
 		else if(target.equals("/login")) {
 			result = new LoginController().execute(req, resp);

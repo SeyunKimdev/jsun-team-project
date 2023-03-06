@@ -23,9 +23,8 @@ public class ReplyFrontController extends HttpServlet{
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null; 
 		
-		if (target.equals("/feedDetailOk")) {
-			result = new FeedDetailOkController().execute(req, resp);
-			
+		if (target.equals("/replyListOk")) {
+			result = new ReplyListOkController().execute(req, resp);
 		}else {
 			System.out.println(target);
 		}

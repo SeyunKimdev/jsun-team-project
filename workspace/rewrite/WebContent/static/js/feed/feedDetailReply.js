@@ -19,7 +19,32 @@ $(".likeButton").each((i, e) => {
 	        }
 	   })
 	});
-
+/*=========================================================================================================*/
+const replyService = (function(){
+	function write(reply, callback){
+		$.ajax({
+			url: contextPath + "/reply/writeOk.reply",
+			data: reply,
+			success: function(){
+				if(callback) {callback();}
+			}
+		});
+	}
+	
+	function list(callback) {
+		$.ajax({
+			url: contextPath + "/reply/listOk.reply",
+			data: {boardId: boardId, page: page},
+			dataType: "json",
+			success: function(replies){
+				if(callback){
+					callback(replies);
+				}
+			}
+		});
+	}
+	return {write: write, list: list};
+})();
 	
 	
 function reply(){

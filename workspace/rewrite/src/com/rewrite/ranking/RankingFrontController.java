@@ -17,8 +17,6 @@ public class RankingFrontController extends HttpServlet{
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
 		
-		System.out.println(target);
-		
 		if(target.equals("/ranking")) {
 			result = new RankingController().execute(req, resp);
 		} else if(target.equals("/rankingFilterAction")) {

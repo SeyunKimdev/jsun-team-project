@@ -111,7 +111,7 @@ const app = {
                               class="RankMainUl1Li1Div1Div1A1Div2Div5Div1Span1Svg1Path1"></path></svg
                         ></span>
                         <div class="RankMainUl1Li1Div1Div1A1Div2Div5Div1Div1"></div>
-                        <p class="RankMemberLike">${member.memberLikeConut}</p>
+                        <p class="RankMemberLike">${member.memberLikeCount}</p>
                       </div>
                     </div>
                   </div>

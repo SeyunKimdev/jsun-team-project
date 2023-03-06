@@ -1,15 +1,19 @@
 package com.rewrite.reply.domain;
 
-public class ReplyVO {
+public class ReplyDTO {
 	private Long replyId;
 	private String replyContent;
-	private String replyRegisterDate;
+	private String replyRegitserDate;
 	private String replyUpdateDate;
 	private Long replyLikeCount;
 	private Long memberId;
 	private Long feedId;
+	private String memberIdentification;
+	private String memberName;
+	private String memberNickName;
+	private String memberPhoneNumer;
 	
-	public ReplyVO() {;}
+	public ReplyDTO() {;}
 
 	public Long getReplyId() {
 		return replyId;
@@ -27,12 +31,12 @@ public class ReplyVO {
 		this.replyContent = replyContent;
 	}
 
-	public String getReplyRegisterDate() {
-		return replyRegisterDate;
+	public String getReplyRegitserDate() {
+		return replyRegitserDate;
 	}
 
-	public void setReplyRegisterDate(String replyRegisterDate) {
-		this.replyRegisterDate = replyRegisterDate;
+	public void setReplyRegitserDate(String replyRegitserDate) {
+		this.replyRegitserDate = replyRegitserDate;
 	}
 
 	public String getReplyUpdateDate() {
@@ -67,11 +71,45 @@ public class ReplyVO {
 		this.feedId = feedId;
 	}
 
+	public String getMemberIdentification() {
+		return memberIdentification;
+	}
+
+	public void setMemberIdentification(String memberIdentification) {
+		this.memberIdentification = memberIdentification;
+	}
+
+	public String getMemberName() {
+		return memberName;
+	}
+
+	public void setMemberName(String memberName) {
+		this.memberName = memberName;
+	}
+
+	public String getMemberNickName() {
+		return memberNickName;
+	}
+
+	public void setMemberNickName(String memberNickName) {
+		this.memberNickName = memberNickName;
+	}
+
+	public String getMemberPhoneNumer() {
+		return memberPhoneNumer;
+	}
+
+	public void setMemberPhoneNumer(String memberPhoneNumer) {
+		this.memberPhoneNumer = memberPhoneNumer;
+	}
+
 	@Override
 	public String toString() {
-		return "ReplyVO [replyId=" + replyId + ", replyContent=" + replyContent + ", replyRegisterDate="
-				+ replyRegisterDate + ", replyUpdateDate=" + replyUpdateDate + ", replyLikeCount=" + replyLikeCount
-				+ ", memberId=" + memberId + ", feedId=" + feedId + "]";
+		return "ReplyDTO [replyId=" + replyId + ", replyContent=" + replyContent + ", replyRegitserDate="
+				+ replyRegitserDate + ", replyUpdateDate=" + replyUpdateDate + ", replyLikeCount=" + replyLikeCount
+				+ ", memberId=" + memberId + ", feedId=" + feedId + ", memberIdentification=" + memberIdentification
+				+ ", memberName=" + memberName + ", memberNickName=" + memberNickName + ", memberPhoneNumer="
+				+ memberPhoneNumer + "]";
 	}
 
 	@Override
@@ -90,7 +128,7 @@ public class ReplyVO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		ReplyVO other = (ReplyVO) obj;
+		ReplyDTO other = (ReplyDTO) obj;
 		if (replyId == null) {
 			if (other.replyId != null)
 				return false;
@@ -98,5 +136,5 @@ public class ReplyVO {
 			return false;
 		return true;
 	}
-	
+
 }

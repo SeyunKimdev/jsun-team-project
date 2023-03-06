@@ -1,6 +1,6 @@
-package com.rewrite.feed.domain;
+package com.rewrite.reply.domain;
 
-public class FeedReplyVO {
+public class ReplyVO {
 	private Long replyId;
 	private String replyContent;
 	private String replyRegisterDate;
@@ -9,7 +9,7 @@ public class FeedReplyVO {
 	private Long memberId;
 	private Long feedId;
 	
-	public FeedReplyVO() {;}
+	public ReplyVO() {;}
 
 	public Long getReplyId() {
 		return replyId;
@@ -90,7 +90,7 @@ public class FeedReplyVO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		FeedReplyVO other = (FeedReplyVO) obj;
+		ReplyVO other = (ReplyVO) obj;
 		if (replyId == null) {
 			if (other.replyId != null)
 				return false;

@@ -81,6 +81,14 @@
   	<servlet-name>notice</servlet-name>
   	<url-pattern>*.notice</url-pattern>
   </servlet-mapping>
+    <servlet>
+  	<servlet-name>reply</servlet-name>
+  	<servlet-class>com.rewrite.reply.ReplyFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>reply</servlet-name>
+  	<url-pattern>*.reply</url-pattern>
+  </servlet-mapping>
   
   
   

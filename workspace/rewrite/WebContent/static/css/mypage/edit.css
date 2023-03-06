@@ -1,0 +1,556 @@
+@charset "utf-8";
+
+.editContainer {
+    position: relative;
+    max-width: 640px;
+    margin: 0px auto;
+}
+
+.editDiv {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    padding: 24px;
+}
+
+.editDivDiv1 {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: normal;
+    margin: 0px;
+    color: rgb(162, 162, 162);
+}
+
+.editDivDiv2 {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 24px 0px;
+}
+
+.editDivDiv2Label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.inputDeleter {
+    text-align: center;
+    display: none;
+    width: 17px;
+    height: 20px;
+    position: absolute;
+    left: 350px;
+    top: 50px;
+    z-index: 10;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: #00000094;
+}
+
+.editDivDiv2Label input[type="file"] {
+    display: none;
+}
+
+.profileImage {
+    position: relative;
+    width: 88px;
+    height: 88px;
+}
+
+.editDivDiv2LabelDivDiv1 {
+    position: relative;
+    width: 88px;
+    height: 88px;
+}
+
+.editDivDiv2LabelDivDiv1Span {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(248, 248, 248);
+    border-radius: 100%;
+    line-height: 0;
+    transform: rotate(0deg);
+    display: block;
+    position: relative;
+    overflow: hidden;
+    font-size: 0px;
+    background: rgb(238, 238, 238);
+}
+
+.editDivDiv2LabelDivDiv1SpanPicture {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.editDivDiv2LabelDivDiv1SpanPicture img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.1s linear 0s;
+    background-size: contain;
+    object-fit: cover;
+    opacity: 1;
+}
+
+.editDivDiv2LabelDivDiv2 {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    border-radius: 14px;
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.editInputForm {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.editDivFormDivDiv {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 16px;
+}
+
+.editDivFormDivDiv1 {
+    display: flex;
+}
+
+.editDivFormDivDiv4 {
+    margin-top: 26px;
+}
+
+.editDivFormDivDiv1>div {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+}
+
+.editDivFormDivDiv1>button {
+    height: 48px;
+    border-top: 1px solid rgb(239, 239, 239);
+    border-right: 1px solid rgb(239, 239, 239);
+    border-bottom: 1px solid rgb(239, 239, 239);
+    border-image: initial;
+    border-left: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.editDivFormDivDiv1Button {
+    width: auto;
+    display: inline-flex;
+    vertical-align: middle;
+    border-radius: 3px;
+    color: rgb(26, 26, 26);
+    background-color: rgb(248, 248, 248);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    padding: 0px 16px;
+    height: 40px;
+    transition: background-color 0.1s ease 0s;
+    text-decoration-line: none;
+    outline: none;
+    margin: 0px;
+    flex: initial;
+    box-sizing: border-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.editDivFormDivDivLabel {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px 0px 4px;
+    color: rgb(26, 26, 26);
+}
+
+.editDivFormDivDivDiv {
+    display: block;
+}
+
+.editDivFormDivDivDivInput {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    border: 1px solid rgb(239, 239, 239);
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    width: 100%;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+}
+
+.editText {
+	font-size: 12px;
+    margin: 5px;
+}
+
+.editDivFormDivDivDivInput:focus {
+	outline: 1px solid;
+}
+
+.editDivFormDivDivHr {
+    box-shadow: rgb(248 248 248) 0px -1px 0px inset;
+    border: none;
+    height: 1px;
+    margin: 0px !important;
+}
+
+.editDivFormDivLabel {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.editDivFormDivLabelSpan1 {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px 9px 0px 0px;
+    color: rgb(26, 26, 26);
+    flex: 1 1 auto;
+}
+
+.editDivFormDivLabelSpan1Span {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px 9px 0px 0px;
+    color: rgb(26, 26, 26);
+}
+
+.editDivFormDivLabelInput {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    z-index: -1;
+}
+
+.editDivFormDivLabelDiv1 {
+    display: flex;
+    position: relative;
+    padding: 2px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 23px;
+    transition: background-color 0.15s ease-out 0.08s;
+    width: 36px;
+    height: 22px;
+    background-color: rgb(229, 229, 229);
+}
+
+.editDivFormDivLabelDiv1::after {
+    content: "";
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: white;
+    transform: translate(0px, 0px);
+    transition: transform 0.15s ease-out 0.08s;
+    box-shadow: rgb(41 42 43 / 10%) 0px 1px 3px, rgb(0 0 0 / 4%) 0px 0px 0.5px;
+    width: 18px;
+    height: 18px;
+}
+
+.editDivFormDivDiv2 {
+    margin-top: 30px;
+}
+
+.editDivFormDivLabelSpan2 {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px 9px 0px 0px;
+    color: rgb(229, 229, 229);
+    flex: 1 1 auto;
+}
+
+.editDivFormDivLabelSpan2Span {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px 9px 0px 0px;
+    color: rgb(229, 229, 229);
+}
+
+.editDivFormDivLabelDiv2 {
+    display: flex;
+    position: relative;
+    padding: 2px;
+    box-sizing: border-box;
+    cursor: not-allowed;
+    border-radius: 23px;
+    transition: background-color 0.15s ease-out 0.08s;
+    width: 36px;
+    height: 22px;
+    background-color: rgb(248, 248, 248);
+}
+
+.editDivFormDivLabelDiv2::after {
+    content: "";
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: white;
+    transform: translate(0px, 0px);
+    transition: transform 0.15s ease-out 0.08s;
+    box-shadow: rgb(41 42 43 / 10%) 0px 1px 3px, rgb(0 0 0 / 4%) 0px 0px 0.5px;
+    width: 18px;
+    height: 18px;
+}
+
+.editDivFormDivDiv3 {
+    margin-top: 28px;
+}
+
+.withdrawalButton {
+	cursor: pointer;
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    border-radius: 3px;
+    color: rgb(26, 26, 26);
+    background-color: rgb(248, 248, 248);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    padding: 0px 16px;
+    height: 40px;
+    transition: background-color 0.1s ease 0s;
+    text-decoration-line: none;
+    border: 0px;
+    outline: none;
+    margin: 0px;
+    flex: initial;
+    box-sizing: border-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.withdrawalButton:hover {
+	background-color: #e0dcdc;
+}
+
+.editDivFormDivDivButtonSpan {
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.sendFormButton {
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+.editDivFormDiv2Button {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 242, 233);
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    padding: 0px 16px;
+    height: 40px;
+    transition: background-color 0.1s ease 0s;
+    text-decoration-line: none;
+    border: 0px;
+    outline: none;
+    margin: 0px;
+    flex: initial;
+    box-sizing: border-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.editDivFormDiv2Button:not(:disabled):hover {
+	background-color: rgb(204, 69, 0);
+}
+
+.editDivFormDiv2Button:not(:disabled) {
+    cursor: pointer;
+    background-color: rgb(255, 93, 0);
+}
+
+.editDivFormDiv2ButtonSpan {
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.editDiv2 {
+    background-color: rgb(248, 248, 248);
+    width: 100%;
+    height: 8px;
+}
+
+.editDivDiv {
+    display: flex;
+    flex: 1 1 0%;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.selectBox {
+    position: relative;
+    left: 353px;
+    appearance: none;
+    border-radius: 5px;
+    width: 185px;
+    text-align: center;
+    height: 32px;
+    border-color: rgb(255, 93, 0);
+}
+
+.selectBox:focus {
+	outline: 1px solid rgb(255, 93, 0);
+}
+
+.labelSpan {
+    display: inline-block;
+    width: 50px;
+}
+
+
+
+/* radio 스타일 바꾸기 */
+
+.checks {
+    right: 23px;
+    position: absolute;
+}
+
+.checks input[type="radio"] {
+    /* 실제 체크박스는 화면에서 숨김 */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0
+}
+
+.checks input[type="radio"]+label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.checks.etrans input[type="radio"]+label {
+    margin-left: 7px;
+    padding-left: 30px;
+}
+
+.checks input[type="radio"]+label:before {
+    /* 가짜 체크박스 */
+    content: ' ';
+    display: inline-block;
+    width: 21px;
+    /* 체크박스의 너비를 지정 */
+    height: 21px;
+    /* 체크박스의 높이를 지정 */
+    line-height: 21px;
+    /* 세로정렬을 위해 높이값과 일치 */
+    margin: -2px 8px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    background: #fafafa;
+    border: 1px solid #cacece;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+}
+
+.checks.etrans input[type="radio"]+label:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 0;
+    opacity: .6;
+    box-shadow: none;
+    border-color: rgb(255, 93, 0);
+    -webkit-transition: all .12s, border-color .08s;
+    transition: all .12s, border-color .08s;
+}
+
+.checks input[type="radio"]+label:active:before,
+.checks input[type="radio"]:checked+label:active:before {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.checks input[type="radio"]:checked+label:before {
+    /* 체크박스를 체크했을때 */
+    content: '\2714';
+    /* 체크표시 유니코드 사용 */
+    color: #99a1a7;
+    text-shadow: 1px 1px #fff;
+    background: #e9ecee;
+    border-color: #adb8c0;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+}
+
+.checks.etrans input[type="radio"]:checked+label:before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    top: -5px;
+    left: 5px;
+    border-radius: 0;
+    opacity: 1;
+    background: transparent;
+    border-color: transparent rgb(255, 93, 0) rgb(255, 93, 0) transparent;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

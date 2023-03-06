@@ -1,0 +1,479 @@
+@charset "utf-8";
+
+.wholeCoinContainer {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-color: #E5E5E5;
+}
+
+.wholeCoinWrapper {
+    display: flex;
+    flex: 1 1 0%;
+    min-height: auto;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.mbpoint {
+    position: sticky;
+    top: 0px;
+}
+
+.mbpointDiv {
+    display: none;
+}
+
+.mbpointDivDiv {
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(229, 229, 229);
+}
+
+.mbpointDivDivDiv {
+    display: flex;
+    min-height: 56px;
+    padding: 20px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.mbpointDivDivDivH5 {
+    border-width: 0px;
+    color: var(--system-on-color);
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.375rem;
+}
+
+.mbpointDivDivDivBut {
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 2px;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-width: 0px;
+    cursor: pointer;
+    width: auto;
+}
+
+.mbpointDivDivDivButDiv {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.mbpointDivDivDivButDivSpan {
+    width: 20px;
+    height: 20px;
+}
+
+.mbpointDivDivDivButDivSpanSvg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: #000000;
+}
+
+.mpDiv1 {
+    padding: 0px;
+    margin-bottom: 32px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+.CoinContainer {
+    display: flex;
+    flex: 1 1 0%;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.mpDiv1Div1Div1 {
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column
+}
+
+.mpDiv1Div1Div1P {
+    border-width: 0px;
+    color: rgb(91, 91, 91);
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+}
+
+.mpDiv1Div1Div1PBut {
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 2px;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-width: 0px;
+    width: auto;
+}
+
+.mpDiv1Div1Div1PButDiv {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.mpDiv1Div1Div1PButDivSpan {
+    color: rgb(102, 102, 102);
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+}
+
+.mpDiv1Div1Div1PButDivSpanDiv {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.mpDiv1Div1Div1PButDivSpanDivDiv {
+    width: 4px;
+    display: flex;
+}
+
+.mpDiv1Div1Div1PButDivSpanDivSpan {
+    display: block;
+    width: 10px;
+    height: 10px;
+}
+
+.mpDiv1Div1Div1PButDivSpanDivSpanSvg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: rgb(91, 91, 91);
+}
+
+.mpDiv1Div1Div2 {
+    height: 4px;
+    display: flex;
+}
+
+.CoinWrapper	 {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-end;
+    flex-direction: row;
+}
+
+.mpDiv1Div1Div3Div {
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.currentCoinContainer {
+    line-height: 2.75rem;
+    font-weight: 800;
+    font-size: 2.125rem;
+    border-width: 0px;
+    color: var(--system-on-color);
+    margin: 0px;
+    padding: 0px;
+}
+
+.currentCoinWrapper {
+    display: flex;
+    margin-bottom: 4px;
+    flex: 1 1 0%;
+    min-width: 50%;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.executedCoin {
+    line-height: 1.125rem;
+    font-weight: 400;
+    font-size: 0.8125rem;
+    border-width: 0px;
+    color: rgb(148, 148, 148);
+    margin: 0px;
+    padding: 0px;
+}
+
+.mpDiv1Div1Div3DivmDiv {
+    display: none;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.mpDiv1Div1Div3DivmDivBut {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-width: 0px;
+    border-radius: 2px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    display: inline-flex;
+    position: relative;
+}
+
+.mpDiv1Div1Div3DivmDivButDiv {
+    display: flex;
+    visibility: inherit;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.mpDiv1Div1Div3DivmDivButDivDiv {
+    width: 4px;
+    display: flex;
+}
+
+.mpDiv1Div1Div3DivmDivButDivSpan {
+    line-height: 1.125rem;
+    font-size: 0.875rem;
+    border-width: 0px;
+    color: var(--system-on-color);
+    margin: 0px;
+    padding: 0px;
+    font-weight: 700;
+}
+
+.mpDiv1Div2 {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+
+.mpDiv1Div2Div {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    height: auto;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.mpDiv1Div2DivDiv {
+    min-width: 172px;
+    display: flex;
+    flex: 1 1 0%;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.mpDiv1Div2DivDivButton {
+    color: rgb(255, 255, 255);
+    --system-on-color: #ffffff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 14px;
+    padding-right: 14px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 0;
+    background-color: rgb(255, 93, 0);
+    border-width: 0px;
+    border-radius: 2px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    display: inline-flex;
+    position: relative;
+}
+
+.mpDiv1Div2DivDivButton::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0px;
+    opacity: 0;
+    transition: opacity 0.2s ease 0s;
+    background-color: rgb(255, 255, 255);
+    content: "";
+}
+
+.mpDiv1Div2DivDivButtonDiv {
+    display: flex;
+    visibility: inherit;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.mpDiv1Div2DivDivButtonDivDiv {
+    width: 4px;
+    display: flex;
+}
+
+.mpDiv1Div2DivDivButtonDivSpan {
+    border-width: 0px;
+    color: var(--system-on-color);
+    margin: 0px;
+    padding: 0px;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+}
+
+.mpDiv2 {
+    height: 36px;
+    display: flex;
+}
+
+.mpDiv3 {
+    position: sticky;
+    top: 56px;
+}
+
+.mpDiv3Div {
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(229, 229, 229);
+}
+
+.mpDiv3DivDiv {
+    padding: 0px;
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.mpDiv3DivDivH5 {
+    line-height: 1.625rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    border-width: 0px;
+    color: var(--system-on-color);
+    margin: 0px;
+    padding: 0px;
+}
+
+.CoinUsedContainer {
+    display: flex;
+    overflow: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    flex: 1 1 0%;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.CoinUsedWrapper {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex: 1 1 0%;
+}
+
+
+.CoinUsedContent {
+    line-height: 1.25rem;
+    font-weight: 400;
+    font-size: 1rem;
+    border-width: 0px;
+    color: rgb(148, 148, 148);
+    margin: 0px;
+    padding: 0px;
+}
+
+.mpDiv5 {
+    position: sticky;
+    bottom: 0px;
+}
+
+.mpDiv5Div1 {
+    display: none;
+    flex: 0 0 auto;
+    background-color: rgb(248, 248, 248);
+    width: 100%;
+    height: 1px;
+}
+
+.mpDiv5Div2 {
+    padding: 0px;
+    display: none;
+    width: 100%;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.mpbodyDiv3 {
+    margin-top: 24px;
+    margin-bottom: 64px;
+}
+
+.mpbodyDiv3AsideSection {
+    display: none;
+}

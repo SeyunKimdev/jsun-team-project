@@ -22,6 +22,7 @@
 		<typeAlias type="com.rewrite.review.domain.ReviewDTO" alias="reviewDTO"/>
 		<typeAlias type="com.rewrite.review.domain.ReviewVO" alias="reviewVO"/>
 		<typeAlias type="com.rewrite.notice.domain.NoticeVO" alias="noticeVO"/>
+		<typeAlias type="com.rewrite.mypage.domain.MypageDTO" alias="mypageDTO"/>
 	</typeAliases>
 	
 	<environments default="mysql">
@@ -47,6 +48,7 @@
 		<mapper resource="com/rewrite/mybatis/mapper/fileMapper.xml"/>
 		<mapper resource="com/rewrite/mybatis/mapper/noticeMapper.xml"/>
 		<mapper resource="com/rewrite/mybatis/mapper/replyMapper.xml"/>
+		<mapper resource="com/rewrite/mybatis/mapper/mypageMapper.xml"/>
 	</mappers>
 </configuration>
 

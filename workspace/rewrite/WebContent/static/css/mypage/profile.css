@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+dl,
+ul,
+ol,
+menu,
+li {
+    list-style: none;
+}
+
+.profileContainer {
+    margin-top: 10px;
+    padding-bottom: 80px;
+}
+
+.profileWrapper {
+    margin-top: 30px;
+}
+
+.profileFirstContainer {
+    text-align: left;
+    border-bottom: 0;
+    overflow: hidden;
+    margin: 20px 0 0;
+    position: relative;
+    color: #252525;
+}
+
+.profileFirstContainer::after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+    clear: both;
+    content: '';
+}
+
+.profileFirstContainer .profileDiv1Div2 .profileList {
+    overflow: hidden;
+    padding-top: 13px;
+    box-sizing: border-box;
+}
+
+.profileDiv1Div {
+    left: 37px;
+    position: relative;
+    float: left;
+    width: 80px;
+    margin-right: 30px;
+}
+
+.profileDiv1Div1 {
+    position: relative;
+    float: left;
+    width: 80px;
+    margin-right: 30px;
+}
+
+.profileDiv1Div1Div {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.simpleProfileImage {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.profileDiv1Div1DivSpan {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    background: url("https://accounts.kakao.com/assets/weblogin/techin/retina/mask_bg_40x40-e33b97d84816e9cd102861314caa2648acf240e348a6eafa761a39fc2d5cb7b2.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+.profileDiv1Div2 {
+    margin: 0;
+}
+
+.profileList {
+    position: relative;
+}
+
+.profileList dt {
+    font-size: 12px;
+    color: #252525;
+}
+
+.profileList dd {
+    position: relative;
+    padding: 5px 60px 1px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.profileListName {
+    font-size: 16px;
+}
+
+.profileListContainer {
+    margin-top: 40px;
+}
+
+.profileListContainer .profileList {
+    margin-top: 20px;
+}
+
+.profileListContainer .profileList .profileListName {
+    display: block;
+    padding: 5px 126px 1px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+
+
+.profileListContainer .profileList dd {
+    padding: 0;
+    border-bottom: 0 none;
+}

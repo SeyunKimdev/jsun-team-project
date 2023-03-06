@@ -280,10 +280,8 @@ h1 {
     margin-inline-end: 0px;
     font-weight: bold;
 }
-.right_sideLanguage .locale-picker {
-    margin: 0px;
-}
-.header_container .locale-picker {
+
+.header_container {
     color: inherit;
     border: none;
     background-color: transparent;
@@ -295,39 +293,8 @@ h1 {
 element.style {
     width: 82px;
 }
-.locale-picker {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    height: 36px;
-    box-sizing: border-box;
-    font-family: proxima-nova;
-    border-radius: 100px;
-    -webkit-appearance: none;
-    background-repeat: no-repeat, no-repeat;
-    background-size: 14px, 16px;
-    transition: border-color 0.25s, outline 0.25s;
-    cursor: pointer;
-}
-.locale-picker option {
-    color: black;
-}
-#locale-picker-for-width-calculation {
-    display: none;
-}
-.locale-picker option {
-    color: black;
-}
-.right_sideLanguage_icon #locale-picker-arrow {
-    right: 0;
-}
-.right_sideLanguage_icon svg {
-    position: absolute;
-    margin-top: 12px;
-    margin-left: 0px;
-    margin-right: 0px;
-    pointer-events: none;
-}
+
+
 
 .headerHeadline {
     font-size: 35px;
@@ -429,10 +396,11 @@ element.style {
 }
 
 .container {
-    padding-left: 40px;
-    padding-right: 40px;
-    flex: 1 0 auto;
-    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    height: 100%;
+    margin: 0 auto;
 }
 .containerDiv {
     max-width: 100%;
@@ -485,13 +453,16 @@ section {
 .content__narrow {
     width: 640px;
 }
-.ContainerSectionDivDivDiv {
-    font-size: 17px;
+.notice-detail-wrap {
+	font-size: 17px;
     line-height: 1.53;
+    padding: 60px;
+    background-color: white;
+    border: 1px solid #8080801f;
+    margin: 100px auto;
+    min-width: 1000px
 }
-.intercom-force-break {
-    word-wrap: break-word;
-}
+
 .notice-title-wrap {
     margin-bottom: 30px;
 }
@@ -516,15 +487,7 @@ section {
     content: ' ';
     display: table;
 }
-.footer {
-    margin-top: 35px;
-    padding: 40px 0;
-    text-align: left;
-    font-size: 14px;
-    flex-shrink: 0;
-    background: #ffffff;
-    color: #a3abb5;
-}
+
 .writerDiv2 {
     line-height: 1.4;
 }
@@ -554,81 +517,15 @@ section {
     text-align-last: start !important;
 }
 .notice-title-p {
-    margin-bottom: 0;
+    margin-bottom: 10px;
     min-height: 1.53em;
+    
 }
 article img {
     margin-top: 0;
     margin-bottom: 34px;
 }
-.articlefooter {
-    backface-visibility: hidden;
-    padding: 12px;
-    text-align: center;
-    color: #777;
-    background-color: #f0f3f5;
-    margin: 60px -44px -44px -44px;
-    border-radius: 8px;
-}
-.articlefooterDiv .articlefooter {
-    padding-top: 9px;
-    padding-bottom: 4px;
-    text-align: center;
-}
-.articlefooter .articlefooterButton {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: none;
-    width: 50px;
-    height: 100%;
-    display: inline-block;
-    text-align: center;
-    font-size: 32px;
-    transition: transform 0.16s cubic-bezier(0.65, 0.61, 0.18, 1.8) 0.02s, filter 0.32s linear;
-    cursor: pointer;
-    transform-origin: 50% 60%;
-}
-.articlefooter .articlefooterButton span {
-    cursor: pointer;
-    line-height: 55px;
-}
-.footerDiv {
-    padding-left: 40px;
-    padding-right: 40px;
-    flex: 1 0 auto;
-}
-.footerDivDiv {
-    max-width: 100%;
-    width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.footerDivDivDiv:before,
-.footerDivDivDiv:after {
-    content: ' ';
-    display: table;
-}
-.footerDivDivDivDiv {
-    height: 50px;
-    line-height: 30px;
-    text-align: center;
-    vertical-align: middle;
-}
-.footer a {
-    color: #909aa5;
-    text-decoration: none;
-}
-.footerDivDivDivDiv img {
-    max-height: 32px;
-    filter: grayscale(100%) contrast(80%);
-}
-.footerDivDivDiv:after {
-    clear: both;
-}
+
 
 /* notice 등록일자 */
 .notice-register-date {

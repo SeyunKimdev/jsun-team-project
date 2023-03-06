@@ -1,0 +1,610 @@
+@charset "UTF-8";
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+    font-family: 'pretendard';
+}
+element.style {
+    color: rgb(243, 243, 243);
+    --system-on-color: #f3f3f3;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+button, input, select {
+    margin: 0;
+}
+body {
+    margin: 0;
+    overflow-wrap: anywhere;
+    line-height: 1;
+    overflow-wrap: anywhere;
+}
+
+div {
+    display: block;
+}
+
+form {
+    display: block;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body>div {
+    position: relative;
+    z-index: 0;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+img, video {
+    max-width: 100%;
+}
+input {
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    border-image: initial;
+}
+p{
+	display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+label {
+    cursor: default;
+    display: inline-block;
+}
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.mainSection {
+	margin-top: unset;
+    margin-bottom: unset;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+
+.mainContainer {
+	max-width: 480px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 0;
+    margin: 0px auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(229, 229, 229);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.joinContainer {
+	min-height: 392px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.joinTextWrap {
+	display: flex;
+	-webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.joinText {
+	border-width: 0px;
+    color: rgb(12, 12, 12);
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.joinTextMargin {
+	flex: 1 1 20px;
+    display: flex;
+}
+
+.joinFormWrap {
+	display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.joinForm {
+	margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    width: auto;
+    height: auto;
+}
+
+.joinFormDiv {
+	display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.idWrap, .passwordWrap, .nicknameWrap, .phoneWrap, .nameWrap, .emailWrap, .birthWrap, .genderWrap {
+	display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    margin-bottom: 8px;
+}
+
+.idText, .passwordText, .nicknameText, .phoneText, .nameText, .emailText, .birthText, .genderText {
+	border-width: 0px;
+    color: rgb(58, 58, 58);
+    margin: 0px;
+    padding: 0px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.125rem;
+}
+
+.womanText, .manText {
+	border-width: 0px;
+    color: rgb(58, 58, 58);
+    margin: 0px;
+    padding: 0px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.125rem;
+}
+
+.formTextMargin {
+	width: 0px;
+    height: 10px;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.inputBoxWrap {
+	display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.inputBox {
+	background-color: rgb(255, 255, 255);
+    border-radius: 2px;
+    outline-style: none;
+    border-color: rgba(0, 0, 0, 0.15);
+    width: 100%;
+    height: 100%;
+    padding: 13px 16px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.125rem;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.joinFormLabelMargin {
+	margin-top: 8px;
+}
+
+.passwordInfoWrap {
+	display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    margin-top: 4px;
+}
+
+.passwordInfo {
+	border-width: 0px;
+    color: rgb(162, 162, 162);
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+input[type="radio"] {
+    border: 0px;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0px;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.checkWrap {
+	display: flex;
+	justify-content: center;
+	border: solid 1px rgba(0, 0, 0, 0.15);
+}
+
+.checkLabel {
+	display: flex;
+    padding: 8px 10px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    cursor: pointer;
+}
+
+.checkLabelMargin {
+	width: 80px;
+	display: inline-block;
+}
+
+.pText {
+	display: flex;
+	border-width: 0px;
+    margin-left: 8px;
+    padding: 0px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.125rem;
+}
+
+.formBottomMargin {
+	margin-top: 20px;
+}
+
+.nextButton {
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+    overflow: hidden;
+    z-index: 0;
+    background-color: rgb(255, 93, 0);
+    border-width: 0px;
+    border-radius: 2px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    display: inline-flex;
+    padding: 13px 12px;
+    position: relative;
+}
+
+.formLine {
+	flex: none;
+    background-color: #00000026;
+    width: 100%;
+    height: 1px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.kakaoButtonWrap {
+	display: flex;
+    width: 100%;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+.kakaoButton {
+	cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    background-color: #0000000d;
+    border-width: 0;
+    border-radius: 2px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    display: inline-flex;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.kakaoBeginWrap {
+	display: flex;
+    visibility: inherit;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.kakaoBegin {
+	width: 2px;
+    display: flex;
+}
+
+.kakaoLogo {
+	width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.kakaoLogoSvg {
+	display: block;
+    width: 100%;
+    height: 100%;
+    fill: #0c0c0c;
+}
+
+.kakaoLogoSvgPath {
+	fill: #FEE500;
+}
+
+.kakaoBeginTextWrap {
+	line-height: 1.25rem;
+	font-size: 16px;
+	border-width: 0;
+    color: #0c0c0c;
+    margin-left: 8px;
+    padding: 0;
+    font-weight: 700;
+}
+
+.kakaoButtonBottomMargin {
+	flex: 1 1 20px;
+	display: flex;
+}
+
+.alreadyExistSection {
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	align-items: center;
+}
+
+.alreadyExistWrap {
+	display: flex;
+	-webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.alreadyExistText {
+	border-width: 0;
+    color: #949494;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+.alreadyExistSpace {
+	width: 8px;
+    height: 0;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.loginText {
+	border-width: 0;
+    color: #0c0c0c;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+p.help {
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+    color: rgb(255, 64, 62);
+}
+
+.inputBoxWrap span {
+	position: relative;
+    display: block;
+}
+
+.checkImg {
+	position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 16px;
+}
+
+.phoneCheckWrap{
+	flex-direction: row;
+}
+
+.setPhoneCheckWrap {
+	flex-direction: row;
+}
+
+.phoneInputBoxWrap {
+	-webkit-box-flex: 1;
+    flex-grow: 1;
+    display: block;
+}
+
+.phoneCheckMargin {
+	width: 16px;
+    height: 0;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.getPhoneCheck:hover {
+	background-color: rgb(223, 223, 223);
+}
+
+.getPhoneCheck {
+	height: 43.3px;
+    border-top: 1px solid rgb(239, 239, 239);
+    border-right: 1px solid rgb(239, 239, 239);
+    border-bottom: 1px solid rgb(239, 239, 239);
+    border-image: initial;
+    border-left: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    width: auto;
+    display: inline-flex;
+    vertical-align: middle;
+    border-radius: 3px;
+    color: rgb(26, 26, 26);
+    background-color: rgb(248, 248, 248);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    padding: 0px 16px;
+    transition: background-color 0.1s ease 0s;
+    text-decoration-line: none;
+    outline: none;
+    margin: 0px;
+    flex: initial;
+    box-sizing: border-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.getPhoneCheckText {
+	flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.setPhoneCheck:hover {
+	background-color: rgb(223, 223, 223);
+}
+
+.setPhoneCheck {
+	height: 43.3px;
+    border-top: 1px solid rgb(239, 239, 239);
+    border-right: 1px solid rgb(239, 239, 239);
+    border-bottom: 1px solid rgb(239, 239, 239);
+    border-image: initial;
+    border-left: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    width: auto;
+    display: inline-flex;
+    vertical-align: middle;
+    border-radius: 3px;
+    color: rgb(26, 26, 26);
+    background-color: rgb(248, 248, 248);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    padding: 0px 16px;
+    transition: background-color 0.1s ease 0s;
+    text-decoration-line: none;
+    outline: none;
+    margin: 0px;
+    flex: initial;
+    box-sizing: border-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.setPhoneCheckText {
+	flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+@keyframes popUp {
+    from {scale: 0;}
+    to {scale: 1;}
+}
+
+@keyframes popDown {
+    from {scale: 1;}
+    to {scale: 0;}
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    inset: 0px;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #8586898a;
+}
+
+.warnModal {
+    box-sizing: border-box;
+    position: unset;
+    width: 288px;
+    margin: 20vh 0px;
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(33 35 41 / 12%) 0px 2px 12px;
+    border-radius: 8px;
+}
+
+.warnModal {
+    padding: 24px;
+}
+
+#contentWrap span{
+    display: block;
+}

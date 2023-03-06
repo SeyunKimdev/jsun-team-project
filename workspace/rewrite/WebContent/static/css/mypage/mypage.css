@@ -1,0 +1,333 @@
+@charset "utf-8";
+
+.mypageContainer {
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+
+.mypageWrapper {
+    max-width: 1176px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mypageHeader {
+    padding: 72px 0px 48px;
+}
+
+.simpleProfileContainer {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-pack: start;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.simpleProfileWrapper {
+    width: 320px;
+    margin-right: 78px;
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.memberNicknameWrapper {
+    display: inline-block;
+}
+
+.memberNickname {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+    color: rgb(26, 26, 26);
+    margin-bottom: 0px;
+}
+
+
+.mpheadDivDiv2 {
+
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.mpheadDivDiv2Div {
+    border-radius: 0px;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(229, 229, 229);
+}
+
+.mpheadDivDiv2DivDiv {
+    display: flex;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.mpheadDivDiv2DivDivDiv1 {
+    display: none;
+    place-content: stretch flex-start;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    -webkit-box-pack: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.mpheadDivDiv2DivDivDiv1Pic {
+    width: 335px;
+    height: 80px;
+    display: block;
+    position: relative;
+}
+
+.mpheadDivDiv2DivDivDiv2 {
+
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.mpheadDivDiv2DivDivDiv2Pic {
+    width: 594px;
+    height: 80px;
+    display: block;
+    position: relative;
+}
+
+.mpheadDivDiv2DivDivDiv3 {
+    display: flex;
+    place-content: stretch center;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    margin-left: 24px;
+    -webkit-box-pack: center;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+
+.mpheadDivDiv2DivDivDiv3Div1 {
+    flex-direction: row;
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.mpheadDivDiv2DivDivDiv3Div1H3 {
+    text-align: left;
+    color: rgb(255, 255, 255);
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 700;
+}
+
+.mpheadDivDiv2DivDivDiv3Div2 {
+    display: flex;
+    align-content: stretch;
+    flex-shrink: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 4px;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.mpheadDivDiv2DivDivDiv3Div2Span {
+    text-align: left;
+    color: rgb(255, 255, 255);
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    font-size: 0.6875rem;
+    line-height: 0.875rem;
+    font-weight: 400;
+}
+
+.mpbody {
+    display: flex;
+    padding-bottom: 64px;
+}
+
+.mpbodyAside {
+    min-width: 320px;
+    margin-right: 78px;
+}
+
+.mpbodyAsideSection {
+    margin-bottom: 48px;
+}
+
+.mpbodyAsideSection:last-of-type {
+    margin-bottom: 24px;
+}
+
+.AsideSectionName {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 16px;
+    font-size: 18px;
+    color: rgb(26, 26, 26);
+    line-height: 24px;
+    letter-spacing: -0.45px;
+}
+
+.sideMenuContainer {
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 8px 0px;
+}
+
+
+.sideMenuTitle {
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(26, 26, 26);
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+}
+
+.sideMenuTitle:hover {
+	font-weight: 700;
+	color: gray;
+}
+
+
+.mpbodyAsideSectionH4ADiv2 {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.mpbodyAsideSectionH4ADiv2Div {
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(26, 26, 26);
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+}
+
+.mpbodyAsideSectionH4ADiv2Div:hover {
+	font-weight: 700;
+	color: gray;
+}
+
+.mpbodyAsideSectionH4ADiv2Svg {
+    display: block;
+    margin-left: 4px;
+}
+
+
+
+
+
+
+
+
+.mpbodyDiv2 {
+    flex: 1 1 0%;
+    min-width: 0px;
+}
+
+.mpbodyDiv2H4 {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(26, 26, 26);
+    line-height: 34px;
+    letter-spacing: -0.4px;
+    margin: 0px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #7c7c7c;
+}
+
+.mpbodyDiv2H4A {
+    margin-right: 18px;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+
+
+.mpbodyHr {
+    display: none;
+    border-bottom: 12px solid rgb(240, 240, 240);
+    margin: 0px -24px;
+}
+
+.mpbodyDivButton {
+    position: absolute;
+    color: rgb(240, 240, 240);
+    right: 172px;
+    width: 125px;
+    height: 36px;
+    background: rgb(255, 93, 0);
+    border: 0.5px;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+}

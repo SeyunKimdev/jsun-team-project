@@ -89,7 +89,13 @@
   	<servlet-name>reply</servlet-name>
   	<url-pattern>*.reply</url-pattern>
   </servlet-mapping>
-  
-  
+   <servlet>
+  	<servlet-name>mypage</servlet-name>
+  	<servlet-class>com.rewrite.mypage.MypageFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>mypage</servlet-name>
+  	<url-pattern>*.mypage</url-pattern>
+  </servlet-mapping>
   
 </web-app>

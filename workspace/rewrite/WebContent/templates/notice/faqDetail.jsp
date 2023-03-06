@@ -10,12 +10,12 @@
 <link rel="icon" type="image/png" sizes="32x32"
 	href="${pageContext.request.contextPath}/static/images/favicon.png" />
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/static/css/notice/noticeDetail.css" />
+	href="${pageContext.request.contextPath}/static/css/notice/qnaDetail.css" />
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/header/newHeader.css" />
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/footer/newFooter.css" />
-<title>공지사항 - 상세</title>
+<title>FAQ - 상세</title>
 </head>
 <body class="bodysection">
 	<!-- Header -->
@@ -209,10 +209,10 @@
 			<!--헤더 위아래 마진빼고 센터부분 -->
 			<div class="content">
 				<!-- 헤더 내용이 들어있는부분 -->
-				<h1 class="headerHeadline">공지사항</h1>
+				<h1 class="headerHeadline">자주 묻는 질문</h1>
 				<form action="" autocomplete="off" class="header__form search">
 					<input type="text" autocomplete="off" class="headlineSerchInput"
-						placeholder="공지사항 검색 중..." tabindex="1" name="q" value="" />
+						placeholder="답변 검색 중..." tabindex="1" name="q" value="" />
 					<div class="search_icons">
 						<button type="submit" class="search_submit_button"></button>
 						<a class="search-text-icon"> <svg class="search-text-icon-svg"
@@ -228,7 +228,194 @@
 		</div>
 	</header>
 	<!-- 내용 부분 -->
-	<div class="container">
+	<div class="container" style="display:none;">
+		<div class="containerDiv educate-content">
+			<div class="containerSectionDiv paper">
+				<div class="ContainerSectionDivDiv content__narrow">
+					<div class="ContainerSectionDivDivDiv intercom-force-break">
+						<div class="ContainerSectionDivDivDivDiv" dir="ltr">
+							<h1 class="ContainerSectionDivDivDivDivH1">매칭은 어떻게 진행하는 건가요?
+							</h1>
+							<div class="ContainerSectionDivDivDivDivDiv"></div>
+
+							<div class="writer">
+								<div class="writerDiv2">
+									<div>
+										<span class="writerDiv2Span">작성자:</span>rewrite
+									</div>
+								</div>
+							</div>
+						</div>
+						<article dir="article">
+							<p class="articleP">
+								<b>🟨매칭 진행 과정</b>
+							</p>
+							<p class="articleP"></p>
+							<ol>
+								<li>
+									<p class="articleP">매칭 진행은 필터에서 원하는 이상형을 선택하여 직접 쪽지를 보내 매칭이
+										되는 시스템입니다.</p>
+								</li>
+							</ol>
+
+							<p class="articleP">
+								<br />원하시는 이상형과 매칭되기를 기원합니다.<br />
+							</p>
+							<p class="articleP"></p>
+
+							<hr />
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 내용2  -->
+	<div class="container" style="display:none;">
+		<div class="containerDiv educate-content">
+			<div class="containerSectionDiv paper">
+				<div class="ContainerSectionDivDiv content__narrow">
+					<div class="ContainerSectionDivDivDiv intercom-force-break">
+						<div class="ContainerSectionDivDivDivDiv" dir="ltr">
+							<h1 class="ContainerSectionDivDivDivDivH1">이상형 선택의 기준이 어떻게
+								되나요?</h1>
+							<div class="ContainerSectionDivDivDivDivDiv"></div>
+
+							<div class="writer">
+								<div class="writerDiv2">
+									<div>
+										<span class="writerDiv2Span">작성자:</span>rewrite
+									</div>
+								</div>
+							</div>
+						</div>
+						<article dir="article">
+							<p class="articleP">
+								<b>🟨이상형 선택 기준이란?</b>
+							</p>
+							<p class="articleP"></p>
+							<ol>
+								<li>
+									<p class="articleP">피드 시스템을 통해 다양한 이성을 경험하여 원하는 이상형을 선택할 수
+										있게 하였습니다. REWRITE의 다양한 서비스를 경험해 보세요</p>
+								</li>
+							</ol>
+
+							<p class="articleP">
+								<br />원하시는 이상형과 매칭되기를 기원합니다.<br />
+							</p>
+							<p class="articleP"></p>
+
+							<hr />
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 내용3 -->
+	<div class="container" style="display:none;">
+		<div class="containerDiv educate-content">
+			<div class="containerSectionDiv paper">
+				<div class="ContainerSectionDivDiv content__narrow">
+					<div class="ContainerSectionDivDivDiv intercom-force-break">
+						<div class="ContainerSectionDivDivDivDiv" dir="ltr">
+							<h1 class="ContainerSectionDivDivDivDivH1">결제 시스템은 어떻게 되나요?
+							</h1>
+							<div class="ContainerSectionDivDivDivDivDiv"></div>
+
+							<div class="writer">
+								<div class="writerDiv2">
+									<div>
+										<span class="writerDiv2Span">작성자:</span>rewrite
+									</div>
+								</div>
+							</div>
+						</div>
+						<article dir="article">
+							<p class="articleP">
+								<b>🟨결제 과정</b>
+							</p>
+							<p class="articleP"></p>
+							<ol>
+								<li>
+									<p class="articleP">원하는 수량의 코인을 결제하여 쪽지를 보낼때마다 일정한 수의 코인이
+										차감되는 형식으로 진행됩니다.</p>
+								</li>
+							</ol>
+
+							<p class="articleP">
+								<br />원하시는 이상형과 매칭되기를 기원합니다.<br />
+							</p>
+							<p class="articleP"></p>
+
+							<hr />
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 내용4 -->
+	<div class="container" style="display:none;">
+		<div class="containerDiv educate-content">
+			<div class="containerSectionDiv paper">
+				<div class="ContainerSectionDivDiv content__narrow">
+					<div class="ContainerSectionDivDivDiv intercom-force-break">
+						<div class="ContainerSectionDivDivDivDiv" dir="ltr">
+							<h1 class="ContainerSectionDivDivDivDivH1">어떻게 해야 이성의 선택을 받을
+								수 있나요?</h1>
+							<div class="ContainerSectionDivDivDivDivDiv"></div>
+
+							<div class="writer">
+								<div class="writerDiv2">
+									<div>
+										<span class="writerDiv2Span">작성자:</span>rewrite
+									</div>
+								</div>
+							</div>
+						</div>
+						<article dir="article">
+							<p class="articleP">
+								<b>🟨이성에게 선택받는 꿀팁</b>
+							</p>
+							<p class="articleP"></p>
+							<ol>
+								<li>
+									<p class="articleP">1. 이성이 만족할 만큼의 자산을 가지기</p>
+									<p class="articleP">2. 잘생김</p>
+									<p class="articleP">3. 예쁨</p>
+									<p class="articleP">4. 잘생기거나 예쁘기</p>
+								</li>
+							</ol>
+
+							<p class="articleP">
+								<br />원하시는 이상형과 매칭되기를 기원합니다.<br />
+							</p>
+							<p class="articleP"></p>
+
+							<hr />
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="articlefooter" dir="ltr">
+		<div class="articlefooterDiv">답변을 찾으셨나요?</div>
+
+		<button class="articlefooterButton" data-reaction-text="disappointed"
+			tabindex="0" aria-label="Disappointed Reaction">
+			<span data-emoji="disappointed" title="Disappointed">😞</span>
+		</button>
+		<button class="articlefooterButton" data-reaction-text="neutral_face"
+			tabindex="0" aria-label="Neutral face Reaction">
+			<span data-emoji="neutral_face" title="Neutral face">😐</span>
+		</button>
+		<button class="articlefooterButton" data-reaction-text="smiley"
+			tabindex="0" aria-label="Smiley Reaction">
+			<span data-emoji="smiley" title="Smiley">😃</span>
+		</button>
 	</div>
 	<!-- Footer  -->
 	<footer class="footContainer">
@@ -372,11 +559,10 @@
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
 	let contextPath = `${pageContext.request.contextPath}`;
-	let notice = `${notice}`;
-	let noticeId = `${noticeId}`;
+	let i = `${param.i}`
 </script>
 <script
-	src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
+	src="${pageContext.request.contextPath}/static/js/notice/faqDetail.js"></script>
 <script
-	src="${pageContext.request.contextPath}/static/js/notice/noticeDetail.js"></script>
+	src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
 </html>

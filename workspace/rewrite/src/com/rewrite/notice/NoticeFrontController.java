@@ -30,6 +30,13 @@ public class NoticeFrontController extends HttpServlet{
 		}else if(target.equals("/noticeDetail")){
 			result = new Result();
 			result.setPath(req.getContextPath() + "/noticeDetail.notice");
+		}else if(target.equals("/faq")){
+			result = new Result();
+			result.setPath("/templates/notice/faq.jsp");
+		}else if (target.equals("/faqDetail")) {
+			result = new Result();
+			result.setPath("/templates/notice/faqDetail.jsp");
+			
 		}
 		else {
 			System.err.println(target);

@@ -6,7 +6,7 @@ const $rankFilter = $('div.rankFilterWrapper');
 /*=======================================================================*/
 const app = {
   loadMember: (function () {
-    function execute(members, callback) {
+    function execute(members) {
       members = JSON.parse(members);
       if (members.length == 0) {
         alert('결과가 없습니다.');
@@ -82,7 +82,7 @@ const app = {
                     </div>
                     <div class="RankMemberRankContainer">
                       <div class="RankMainUl1Li1Div1Div1A1Div1Div2Div1"></div>
-                      <h1 class="RankMemberRank">1</h1>
+                      <h1 class="RankMemberRank"></h1>
                     </div>
                     <div class="RankMemberMarriageContainer">
                       <span class="RankMemberMarriage">

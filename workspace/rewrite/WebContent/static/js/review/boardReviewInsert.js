@@ -37,14 +37,33 @@ file.addEventListener('change', function (e) {
         }
     };
 });
+/*----------------------------------------------------------------------*/
 
+
+/*textarea 부분 focus 효과*/
 const $textArea = $('.massage-content');
+const $textAreaTitle = $('.massage-title')
 const AreaBox = document.querySelector('.massage-content-wrap');
+const $titleWrap = $('.massage-title-wrap');
 
 $textArea.on('focus', function () {
     AreaBox.style.border = '1px solid';
 });
 
+$textAreaTitle.on('focus', () => {
+	$titleWrap.css('border','1px solid');
+});
+
 $textArea.on('blur', function () {
     AreaBox.style.border = '';
 });
+
+$textAreaTitle.on('blur', () => {
+	$titleWrap.css('border','');
+});
+/*----------------------------------------------------------------------*/
+
+
+
+
+

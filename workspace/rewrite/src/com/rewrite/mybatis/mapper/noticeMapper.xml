@@ -5,5 +5,10 @@
 	<select id="selectAll" resultType="noticeVO">
 		select notice_id, notice_title, notice_content, notice_admin, notice_register_date
 		from tbl_notice
-	</select>	
+	</select>
+	<select id="select" parameterType="long" resultType="noticeVO">
+		select notice_title, notice_content, notice_admin, notice_register_date
+		form tbl_notice
+		where notice_id = ${noticeId};
+	</select>
 </mapper>

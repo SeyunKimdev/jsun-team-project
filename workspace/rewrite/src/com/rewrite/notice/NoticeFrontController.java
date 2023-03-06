@@ -24,10 +24,12 @@ public class NoticeFrontController extends HttpServlet{
 		}else if(target.equals("/notice")){
 			result = new Result();
 			result.setPath(req.getContextPath() + "/noticeListOk.notice");
-		}else {
+		}else if(target.equals("/noticeDetail")){
+			result = new NoticeDetailOkController().execute(req, resp);
+		}
+		else {
 			System.err.println(target);
 		}
-		
 		if (result != null) {
 			if (result.isRedirect()) {
 				resp.sendRedirect(result.getPath());

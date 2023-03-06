@@ -179,7 +179,7 @@
 													<div class="mpDivDiv2"></div>
 													<div class="mpDivDiv3">
 														<div class="mpDivDiv3Div1">
-															<p class="mpDivDiv3Div1P">로그아웃</p>
+															<a href="${pageContext.request.contextPath}/logout.member" class="mpDivDiv3Div1P">로그아웃</a>
 														</div>
 														<div class="mpDivDiv3Div2"></div>
 														<div class="mpDivDiv3Div3">

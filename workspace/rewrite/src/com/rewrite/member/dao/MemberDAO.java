@@ -5,10 +5,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
+import org.json.simple.JSONObject;
 
 import com.rewrite.member.domain.MemberDTO;
 import com.rewrite.member.domain.MemberVO;
 import com.rewrite.mybatis.config.MyBatisConfig;
+
+import net.nurigo.java_sdk.api.Message;
+import net.nurigo.java_sdk.exceptions.CoolsmsException;
 
 public class MemberDAO {
 	
@@ -37,7 +41,9 @@ public class MemberDAO {
 	}
 	
 //	휴대폰 인증
-	
+	public boolean sms(String code) {
+		return sqlSession.selectOne("member.sms", code) != null;
+	}
 	
 //	회원가입
 	public void join(MemberVO memberVO) {

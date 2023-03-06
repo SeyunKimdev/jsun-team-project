@@ -212,9 +212,9 @@
                                                         <div class="mpDivDiv2"></div>
                                                         <div class="mpDivDiv3">
                                                             <div class="mpDivDiv3Div1">
-                                                                <p class="mpDivDiv3Div1P">
+                                                                <a href="${pageContext.request.contextPath}/logout.member" class="mpDivDiv3Div1P">
                                                                     로그아웃
-                                                                </p>
+                                                                </a>
                                                             </div>
                                                             <div class="mpDivDiv3Div2"></div>
                                                             <div class="mpDivDiv3Div3">
@@ -305,7 +305,7 @@
                                     </section>
                             </label>
 							<div class="findPasswordSection">
-								<a href="/ko/reset-password/request">
+								<a href="javascript:location.href='${pageContext.request.contextPath}/findPw.member'">
 									<p class="findPasswordText">비밀번호를 잊으셨나요?</p>
 								</a>
 							</div>
@@ -394,7 +394,7 @@
 				</div>
 				<div class="snsLoginMargin"></div>
 				<div class="goJoinWrap">
-					<a href="" class="goJoinTextWrap">
+					<a href="javascript:location.href='${pageContext.request.contextPath}/join.member'" class="goJoinTextWrap">
 						<div class="goJoinText">
 							<h6 class="userChekText">아직 클래스101 회원이 아니신가요?</h6>
 							<div class="goJoinTextMargin"></div>

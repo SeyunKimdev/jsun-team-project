@@ -16,6 +16,7 @@ const $phoneCheck = $(".getPhoneCheck");
 const $checks = $("input[name='memberGender']");
 const $genderCheckImg = $(".genderCheckImg");
 let phoneNumberCheck;
+const code = "123456";
 
 let joinBlurMessages = ["아이디를 입력하세요.", "비밀번호를 입력하세요.",
 	"비밀번호 확인을 위해 한번 더 입력하세요.", "닉네임을 입력하세요.", "이름을 입력하세요.",
@@ -41,36 +42,31 @@ $joinInputs.eq(7).on("focus", function() {
 $(".setPhoneCheckWrap").hide();
 $(".help").eq(6).hide();
 
-$(".getPhoneCheck").on("click", function() {
+/*var code = "";*/
+
+/*$(".getPhoneCheck").on("click", function() {
 	if (phoneNumberCheck) {
 		$(".setPhoneCheckWrap").show();
 		$(".help").eq(6).show();
+		alert('인증번호 발송이 완료되었습니다.\n휴대폰에서 인증번호 확인을 해주십시오.');
+		var phone = $("#phone").val();
+		$.ajax({
+			type: "POST",
+			url: contextPath + "/smsOk.member",
+			data: {phoneNumber: phone },
+			cache: false,
+			success: function(data) {
+				if (data == "error") {
+					alert("휴대폰 번호가 올바르지 않습니다.")
+				} else {
+					alert("휴대폰 전송이 됨.")
+					code = data;
+				}
+			}
+
+		});
 	}
-});
-
-
-
-//휴대폰 번호 인증
-var code = "";
-$(".getPhoneCheck").click(function(){
-    alert('인증번호 발송이 완료되었습니다.\n휴대폰에서 인증번호 확인을 해주십시오.');
-    var phone = $("#phone").val();
-    $.ajax({
-        url: contextPath + "/checkPhone.member", // controller 위치
-        data: {memberPhone:phone}, // 전송할 ㅔ이터값
-        cache : false,
-        success:function(data){
-            if(data == "error"){ //실패시 
-                alert("휴대폰 번호가 올바르지 않습니다.")
-            }else{            //성공시        
-                alert("휴대폰 전송이  됨.")
-                code = data; // 성공하면 데이터저장
-            }
-        }
-        
-    });
-});
- 
+});*/
 
 $joinInputs.on("blur", function() {
 	let i = $joinInputs.index($(this));
@@ -215,9 +211,12 @@ $joinInputs.on("blur", function() {
 						$joinHelp.eq(i).css('color', 'red')
 					} else {
 						phoneNumberCheck = true;
+						$(".setPhoneCheckWrap").show();
+						$(".help").eq(6).show();
 						message = "사용 가능한 휴대폰 번호입니다.";
 						$joinHelp.eq(i).css('color', '#2bb673')
 						icon = contextPath + "/static/images/pass.png";
+						
 					}
 					$joinHelp.eq(i).text(message);
 					showHelp($joinInputs.eq(i), icon);

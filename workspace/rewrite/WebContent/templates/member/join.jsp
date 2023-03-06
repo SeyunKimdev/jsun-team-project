@@ -402,7 +402,7 @@
 				</div>
 				<div class="kakaoButtonBottomMargin"></div>
 				<div class="alreadyExistSection">
-					<a href="">
+					<a href="${pageContext.request.contextPath}/login.member">
 						<div class="alreadyExistWrap">
 							<h6 class="alreadyExistText">이미 계정이 있으신가요?</h6>
 							<div class="alreadyExistSpace"></div>

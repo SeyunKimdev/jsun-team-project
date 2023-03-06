@@ -174,6 +174,7 @@ function send(){
 	$("input[name='memberPassword']").val(btoa($("input[name='memberPassword']").val()));
 	$("#password-check").val(btoa($("#password-check").val()));
 
+	$("input[type=radio][name=memberGender]:checked").val();
     document.join.submit();
 }
 

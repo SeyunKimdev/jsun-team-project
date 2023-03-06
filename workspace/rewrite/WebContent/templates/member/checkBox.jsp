@@ -312,7 +312,7 @@
 							</div>
 						</div>
 						<div class="margin"></div>
-						<button class="submitbutton" style="color: rgb(148, 148, 148)">
+						<button class="submitbutton" type="button" style="color: rgb(148, 148, 148)">
 							<div class="submitbuttonDiv">
 								<div class="submitbuttonDivDiv"></div>
 								<span class="submitbuttonDivSpan">다음</span>

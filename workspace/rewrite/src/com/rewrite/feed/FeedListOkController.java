@@ -80,6 +80,7 @@ public class FeedListOkController implements Action {
 				e.printStackTrace();
 			}	
 		});
+		
 		req.setAttribute("feeds", feedJsons.toString());
 		req.setAttribute("files", fileJsons.toString());
 		req.setAttribute("startPage", startPage);

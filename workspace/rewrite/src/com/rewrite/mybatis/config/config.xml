@@ -24,6 +24,8 @@
 		<typeAlias type="com.rewrite.notice.domain.NoticeVO" alias="noticeVO"/>
 		<typeAlias type="com.rewrite.mypage.domain.MypageDTO" alias="mypageDTO"/>
 		<typeAlias type="com.rewrite.mypage.domain.ReceiveMessageDTO" alias="receiveMessageDTO"/>
+		<typeAlias type="com.rewrite.like.domain.FeedLikeVO" alias="feedLikeVO"/>
+		<typeAlias type="com.rewrite.like.domain.ReplyLikeVO" alias="replyLikeVO"/>
 	</typeAliases>
 	
 	<environments default="mysql">
@@ -51,6 +53,7 @@
 		<mapper resource="com/rewrite/mybatis/mapper/replyMapper.xml"/>
 		<mapper resource="com/rewrite/mybatis/mapper/mypageMapper.xml"/>
 		<mapper resource="com/rewrite/mybatis/mapper/receiveMessageMapper.xml"/>
+		<mapper resource="com/rewrite/mybatis/mapper/LikeMapper.xml"/>
 	</mappers>
 </configuration>
 

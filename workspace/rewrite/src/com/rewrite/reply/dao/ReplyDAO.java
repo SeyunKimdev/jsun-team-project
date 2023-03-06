@@ -44,4 +44,9 @@ public class ReplyDAO {
 	public ReplyVO replySelect(Long replyId) {
 		return sqlSession.selectOne("reply.replySelect", replyId);
 	}
+
+// 댓글 갯수
+	public Integer replyCount(Long feedId) {
+		return sqlSession.selectOne("reply.replyCount",feedId);
+	}
 }

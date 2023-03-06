@@ -20,6 +20,7 @@ import com.rewrite.feed.dao.FeedDAO;
 import com.rewrite.feed.domain.FeedDTO;
 import com.rewrite.file.dao.FileDAO;
 import com.rewrite.file.domain.FeedFileVO;
+import com.rewrite.reply.dao.ReplyDAO;
 
 public class FeedDetailOkController implements Action {
 
@@ -27,9 +28,11 @@ public class FeedDetailOkController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Long feedId = Long.valueOf(req.getParameter("feedId"));
 		Result result = new Result();
+		ReplyDAO replyDAO = new ReplyDAO();
 		FeedDAO feedDAO = new FeedDAO();
 		FileDAO fileDAO = new FileDAO();
-		System.out.println(feedId);
+		
+		req.setAttribute("replyCount",replyDAO.replyCount(feedId) );
 		req.setAttribute("feed", feedDAO.feedSelect(feedId));
 		req.setAttribute("page", req.getParameter("page"));
 		req.setAttribute("keyword", req.getParameter("keyword"));

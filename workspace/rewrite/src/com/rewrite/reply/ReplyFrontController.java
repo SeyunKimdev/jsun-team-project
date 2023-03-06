@@ -35,6 +35,9 @@ public class ReplyFrontController extends HttpServlet{
 		}else if(target.equals("/reply/replyDeleteOk")){
 			new replyDeleteOkController().execute(req, resp);
 			
+		}else if(target.equals("/reply/replyCountOk")){
+			new replyCountOkController().execute(req, resp);
+			
 		}else {
 			System.out.println(target);
 		}

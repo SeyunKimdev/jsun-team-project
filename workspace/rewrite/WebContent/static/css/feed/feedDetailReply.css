@@ -327,6 +327,7 @@ h3 {
     flex-direction: row;
     -webkit-box-align: center;
     align-items: center;
+    justify-content: space-between;
 }
 
 .replyNickname {
@@ -653,13 +654,73 @@ h3 {
 }
 
 
+.modify-button {
+	display: flex;
+	margin-right: 5px;
+	
+}
 
 
+.reply-button {
+	font-weight: bold;
+	font-size: 8px;
+	background: none;
+	margin : 0 6px;
+	cursor: pointer;
+}
 
+.reply-modify-box {
+	position: relative;
+    display: block;
+    border-radius: 25px;
+    padding: 0px 10px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(229, 229, 229);
+}
 
+.reply-modify-layout {
+	display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 48px;
+    width: 100%;	
+}
 
+.reply-modify-textarea {
+	overflow-x: hidden;
+    overflow-wrap: break-word;
+    height: 48px;
+	font-size: 14px;
+    font-weight: normal;
+    color: rgb(26, 26, 26);
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    width: 100%;
+    overflow: hidden;
+    padding: 14px 10px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    resize: none;
+	
+}
 
+.reply-write-button-box {
+	width: 83px;
+    height: 34px;
+    text-align:center;
+	background-color: #a840ff;	
+}
 
+.reply-write-button {
+	background: none;
+	border: none;	
+	width: 100%;
+    height: 100%;
+    color: #fff;
+}
 
 
 

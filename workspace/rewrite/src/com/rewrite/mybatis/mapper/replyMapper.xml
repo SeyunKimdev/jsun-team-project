@@ -4,7 +4,7 @@
 	<insert id="insert" parameterType="replyVO">
 		insert into tbl_reply
 		(reply_content, member_id, feed_id)
-		values(#{replyContent}, #{mebmerId}, #{feedId});
+		values(#{replyContent}, #{memberId}, #{feedId});
 	</insert>
 	
 	<select id="selectAll" parameterType="map" resultType="replyDTO">
@@ -14,6 +14,29 @@
 		where feed_id = #{feedId}
 		order by reply_id desc 
 		limit #{startRow}, #{rowCount}
+	</select>
+	
+	<select id="isNextPage" parameterType="map" resultType="replyVO">
+		select reply_id 
+		from tbl_reply
+		where feed_id = #{feedId} 
+		limit #{nextStartRow}, #{rowCount}
+	</select>
+	
+	<update id="replyUpdate" parameterType="replyVO">
+		update tbl_reply
+		set reply_content = #{replyContent}, reply_update_date = current_timestamp()
+		where reply_id = #{replyId}
+	</update>
+	
+	<delete id="replyDelete" parameterType="long">
+		delete from tbl_reply where reply_id = #{replyId}
+	</delete>
+	
+	<select id="replySelect" parameterType="long" resultType="replyVO">
+		select reply_id, reply_content, reply_register_date, reply_update_date, feed_id, member_id 
+		from tbl_reply
+		where reply_id = #{replyId}
 	</select>
 	
 </mapper>

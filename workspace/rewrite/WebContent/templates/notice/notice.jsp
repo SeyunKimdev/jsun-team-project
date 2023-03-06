@@ -276,7 +276,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                             type="text"
                             autocomplete="off"
                             class="headlineSerchInput"
-                            placeholder="답변 검색 중..."
+                            placeholder="공지사항 검색중..."
                             tabindex="1"
                             name="q"
                             value=""

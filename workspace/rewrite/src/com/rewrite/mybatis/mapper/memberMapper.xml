@@ -40,12 +40,13 @@
 	</select>
 	
 	<select id="selectAll" parameterType="map" resultType="memberDTO">
-		select member_id, member_identification, member_password, 
+		select member_id, member_identification, member_password, member_like_count,
 		member_nickname, member_name, member_phone, member_email, member_birth, member_gender, member_status,
 		profile_location, profile_job, profile_salary, profile_hobby, profile_mbti, profile_height, 
 		profile_child, profile_married, file_id, file_original_name, file_system_name, file_register_date 
 		from view_member_dto
 		<include refid="search"/>
+		order by member_like_count desc
 		limit #{startRow}, #{rowCount}
 	</select>
 </mapper>

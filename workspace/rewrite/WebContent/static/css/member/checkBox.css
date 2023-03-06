@@ -1,0 +1,505 @@
+@charset "UTF-8";
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+    font-family: 'pretendard';
+}
+
+/* 원래 */
+element.style {
+    color: rgb(243, 243, 243);
+    --system-on-color: #f3f3f3;
+}
+a {
+    text-decoration: none;
+}
+
+a {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    color: inherit;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+button,
+input,
+select {
+    margin: 0;
+    font-size: 16px;
+}
+button {
+    appearance: auto;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    margin: 0em;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
+body {
+    margin: 0;
+    overflow-wrap: anywhere;
+    line-height: 1;
+}
+body {
+    display: block;
+    margin: 8px;
+}
+main {
+    display: block;
+}
+div {
+    display: block;
+}
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body > div {
+    position: relative;
+    z-index: 0;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+caption,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+img,
+video {
+    max-width: 100%;
+}
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+/* input[checkbox] */
+.loginStaySpan {
+    border-width: 0px;
+    color: rgb(12, 12, 12);
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.887rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+    text-align: left;
+}
+
+.checkBoxLabel {
+    cursor: pointer;
+    padding: 8px 0px;
+}
+
+.stayloginSection {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+input[type='checkbox'] {
+    border: 0px;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0px;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.checkBoxSpan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    text-align: center;
+    transition: all 150ms ease 0s;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.checkAllImg {
+    filter: invert(1);
+}
+
+.checkBoxText {
+    font-weight: 400;
+    color: black;
+    padding: 0 8px;
+    margin: 6px 0;
+    letter-spacing: 0.4px;
+}
+
+@keyframes popUp {
+    from {
+        scale: 0;
+    }
+    to {
+        scale: 1;
+    }
+}
+
+@keyframes popDown {
+    from {
+        scale: 1;
+    }
+    to {
+        scale: 0;
+    }
+}
+
+/* 1 */
+.contentContainer {
+    display: flex;
+    flex: 1;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+}
+/* 1 */
+.contentContainerDiv {
+    display: flex;
+    width: 100%;
+    margin-top: 25px;
+    flex-direction: column;
+    margin-bottom: unset;
+    webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 25px;
+    background-color: #f8f8f9;
+}
+/* 1 */
+.contentContainerDivMargin {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    height: 600px;
+    max-width: 450px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 0;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(229, 229, 229);
+    border: 1px solid #8080801f;
+    border-style: outset;
+}
+/* 1 */
+.formsectionContainer {
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    min-height: 373px;
+    padding-top: 36px;
+}
+/* 1 */
+.formsectionHead {
+    display: flex;
+    padding-bottom: 20px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    padding-top: 0;
+}
+/* 1 */
+.formsectionHeadH3 {
+    border-width: 0;
+    color: rgb(12, 12, 12);
+    margin: 0;
+    padding: 0;
+    font-size: 1.625rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+}
+/* 1 */
+.formsectionContent {
+    flex: 1 1 20px;
+    display: flex;
+}
+/* 1 */
+.formSectionContentDiv {
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* 1 */
+.divided {
+    flex: 0 0 auto;
+    background-color: rgb(215, 215, 215);
+    width: 100%;
+    height: 1px;
+}
+/* 1 */
+.dividedDiv {
+    height: 16px;
+    display: flex;
+}
+/* 1 */
+.checkboxes {
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+/* 1 */
+.checkboxesDiv {
+    display: flex;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+/* 1 */
+.checkboxes1 {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+/* 1 */
+.checkboxes1Div {
+    display: flex;
+    min-width: 16px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+/* 1 */
+.checkboxes1DivSp {
+    flex: 1 1 0%;
+    display: flex;
+}
+/* 1 */
+.checkboxes1DivDiv {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    cursor: pointer;
+}
+/* 1 */
+.checkboxes1DivDivSpan {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+/* 1 */
+.checkboxesSvg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: rgb(12, 12, 12);
+}
+/* 1 */
+.checkboxesPath {
+    fill: rgb(12, 12, 12);
+}
+/* 1 */
+.checkbox2Div {
+    width: 0;
+    height: 4px;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+/* 1 */
+.checkbox3DivDiv2 {
+    flex: 1;
+    display: flex;
+}
+
+/* 1 */
+.margin {
+    height: 24px;
+    display: flex;
+}
+/* 1 */
+.submitbutton {
+    cursor: default;
+    background-color: #ff5d00;
+    border-width: 0;
+    border-radius: 2px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    display: inline-flex;
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 14px;
+    padding-right: 14px;
+    width: 100%;
+}
+/* 1 */
+.submitbuttonDiv {
+    display: flex;
+    visibility: inherit;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+/* 1 */
+.submitbuttonDivDiv {
+    width: 4px;
+    display: flex;
+}
+/* 1 */
+.submitbuttonDivSpan {
+    border-width: 0;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+/* 1 */
+.submitbuttonDiv2 {
+    width: 4px;
+    display: flex;
+}

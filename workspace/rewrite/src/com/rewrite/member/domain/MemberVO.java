@@ -8,7 +8,8 @@ public class MemberVO {
 	private String memberNickname;
 	private String memberName;
 	private String memberPhone;
-	private String memberEmailmemberBirth;
+	private String memberEmail;
+	private String memberBirth;
 	private String memberGender;
 	private String memberProfileImage;
 	private String memberStatus;
@@ -63,12 +64,20 @@ public class MemberVO {
 		this.memberPhone = memberPhone;
 	}
 
-	public String getMemberEmailmemberBirth() {
-		return memberEmailmemberBirth;
+	public String getMemberEmail() {
+		return memberEmail;
 	}
 
-	public void setMemberEmailmemberBirth(String memberEmailmemberBirth) {
-		this.memberEmailmemberBirth = memberEmailmemberBirth;
+	public void setMemberEmail(String memberEmail) {
+		this.memberEmail = memberEmail;
+	}
+
+	public String getMemberBirth() {
+		return memberBirth;
+	}
+
+	public void setMemberBirth(String memberBirth) {
+		this.memberBirth = memberBirth;
 	}
 
 	public String getMemberGender() {
@@ -99,7 +108,7 @@ public class MemberVO {
 	public String toString() {
 		return "MemberVO [memberId=" + memberId + ", memberIdentification=" + memberIdentification + ", memberPassword="
 				+ memberPassword + ", memberNickname=" + memberNickname + ", memberName=" + memberName
-				+ ", memberPhone=" + memberPhone + ", memberEmailmemberBirth=" + memberEmailmemberBirth
+				+ ", memberPhone=" + memberPhone + ", memberEmail=" + memberEmail + ", memberBirth=" + memberBirth
 				+ ", memberGender=" + memberGender + ", memberProfileImage=" + memberProfileImage + ", memberStatus="
 				+ memberStatus + "]";
 	}
@@ -128,10 +137,7 @@ public class MemberVO {
 			return false;
 		return true;
 	}
-	
-	
-	
-	
+
 }
 
 

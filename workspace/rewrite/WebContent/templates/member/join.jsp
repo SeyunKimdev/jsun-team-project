@@ -206,7 +206,7 @@
 				<div class="joinTextMargin"></div>
 				<div class="joinFormWrap">
 					<form action="${pageContext.request.contextPath}/joinOk.member" name="join" method="post" 
-					class="joinForm" style="width: auto; height: auto;">
+					class="joinForm" style="width: auto; height: auto;" autocomplete="off">
 						<div class="joinFormDiv">
 							<label>
 								<div class="idWrap">
@@ -250,7 +250,7 @@
 									<div class="formTextMargin"></div>
 									<div class="passwordInputBoxContainer">
 										<div class="inputBoxWrap">
-											<span> <input id="password"
+											<span> <input id="passwordCheck"
 												placeholder="비밀번호를 한 번 더 입력해주세요." name="memberPassword"
 												type="password" class="inputBox" value=""> <img
 												class="checkImg">
@@ -353,7 +353,7 @@
 									<div class="formTextMargin"></div>
 									<div class="checkWrap">
 										<label class="checkLabel"> <input type="radio"
-											name="memberGender" value="man" class="manCheck"
+											name="memberGender" value="m" class="manCheck"
 											checked="checked"> <span class="genderCheckbox">
 												<img src="${pageContext.request.contextPath}/static/images/checked.png" width="15px" class="genderCheckImg">
 										</span>
@@ -361,7 +361,7 @@
 										</label>
 										<div class="checkLabelMargin"></div>
 										<label class="checkLabel"> <input type="radio"
-											name="memberGender" value="woman" class="womanCheck">
+											name="memberGender" value="w" class="womanCheck">
 											<span class="checkbox"> <img src="${pageContext.request.contextPath}/static/images/check.png"
 												width="15px" class="genderCheckImg">
 										</span>

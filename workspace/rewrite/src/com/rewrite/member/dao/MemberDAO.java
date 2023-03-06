@@ -26,6 +26,16 @@ public class MemberDAO {
 		return sqlSession.selectOne("member.checkId", memberIdentification) != null;
 	}
 	
+// 닉네임 중복검사
+	public boolean checkNickname(String memberNickname) {
+		return sqlSession.selectOne("member.checkNickname", memberNickname) != null;
+	}
+	
+//	휴대폰 중복검사
+	public boolean checkPhone(String memberPhone) {
+		return sqlSession.selectOne("member.checkPhone", memberPhone) != null;
+	}
+	
 //	회원가입
 	public void join(MemberVO memberVO) {
 		sqlSession.insert("member.join", memberVO);

@@ -29,9 +29,17 @@
 		select member_id from tbl_member where member_identification = #{memberIdentification}
 	</select>
 	
+	<select id="checkNickname" parameterType="string" resultType="long">
+		select member_id from tbl_member where member_nickname = #{memberNickname}
+	</select>
+	
+	<select id="checkPhone" parameterType="string" resultType="long">
+		select member_id from tbl_member where member_phone = #{memberPhone}
+	</select>
+	
 	<insert id="join" parameterType="memberVO">
-		insert into tbl_member(member_identification, member_password, member_name, member_birth, member_phone, member_email)
-		values(#{memberIdentification}, #{memberPassword}, #{memberName}, date_format(#{memberBirth}, '%Y-%m-%d'), #{memberPhone}, #{memberEmail})
+		insert into tbl_member(member_identification, member_password, member_nickname, member_name, member_phone, member_email, member_birth, member_gender)
+		values(#{memberIdentification}, #{memberPassword}, #{memberNickname}, #{memberName}, #{memberPhone}, #{memberEmail}, date_format(#{memberBirth}, '%Y-%m-%d'), #{memberGender})
 	</insert>
 	
 	<select id="login" parameterType="map" resultType="long">

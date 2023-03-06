@@ -28,7 +28,7 @@ let joinRegexMessages = ["영문 혹은 영문과 숫자를 조합하여 4자~20
 const $joinHelp = $("p.help");
 
 let joinCheck;
-let joinCheckAll = [false, false, false, false, false, false, false, false];
+let joinCheckAll = [false, false, false, false, false, false, false, false, false];
 
 $joinInputs.eq(5).on("focus", function() {
 	$(this).val($(this).val().replaceAll("-", ""));
@@ -57,10 +57,10 @@ $joinInputs.on("blur", function() {
 
 	if (!value) {
 		$joinHelp.eq(i).text(joinBlurMessages[i]);
+		$joinHelp.eq(i).css('color', 'red');
 		showHelp($(this), contextPath + "/static/images/error.png");
 		joinCheck = false;
 		joinCheckAll[i] = joinCheck;
-		console.log(i);
 		return;
 	}
 
@@ -99,13 +99,10 @@ $joinInputs.on("blur", function() {
 			break;
 		case 5:
 			joinCheck = phoneRegex.test(value);
-			if (joinCheck) {
-				$(this).val(value.replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`));
-				phoneNumberCheck = true;
-			} else {
-				phoneNumberCheck = false;
-			}
-			break;
+			if(joinCheck){
+                $(this).val(value.replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`));
+            }
+            break;
 		case 6:
 			joinCheck = $(this).val().length == 6;
 			break;
@@ -128,10 +125,81 @@ $joinInputs.on("blur", function() {
 		showHelp($(this), contextPath + "/static/images/error.png");
 		return;
 	}
-
-	$joinHelp.eq(i).text("");
-	showHelp($(this), contextPath + "/static/images/pass.png");
-
+	
+	if(i != 0 && i != 3 && i != 5) {
+	    $joinHelp.eq(i).text("");
+	    showHelp($(this), contextPath + "/static/images/pass.png");
+	}else if(i == 0){
+		/*중복 검사*/
+		$.ajax({
+			url: contextPath + "/checkIdOk.member",
+			data: {memberIdentification: value},
+			success: function(result){
+				let message, icon;
+				result = JSON.parse(result);
+				if(result.check){
+					message = "중복된 아이디입니다.";
+					icon = contextPath + "/static/images/error.png";
+					$joinHelp.eq(i).css('color', 'red');
+					joinCheckAll[i] = !result.check;
+				}else{
+					message = "사용 가능한 아이디입니다.";
+					$joinHelp.eq(i).css('color', '#2bb673')
+					icon = contextPath + "/static/images/pass.png";
+					joinCheckAll[i] = true;
+				}
+				$joinHelp.eq(i).text(message);
+	    		showHelp($joinInputs.eq(i), icon);
+				console.log("asda" + i);
+				console.log(joinCheckAll[i]);
+			}
+		});
+	}else if(i == 3){
+		$.ajax({
+			url: contextPath + "/checkNicknameOk.member",
+			data: {memberNickname: value},
+			success: function(result){
+				let message, icon;
+				result = JSON.parse(result);
+				if(result.check){
+					message = "중복된 닉네임입니다.";
+					icon = contextPath + "/static/images/error.png";
+					$joinHelp.eq(i).css('color', 'red')
+				}else{
+					message = "사용 가능한 닉네임입니다.";
+					$joinHelp.eq(i).css('color', '#2bb673')
+					icon = contextPath + "/static/images/pass.png";
+				}
+				$joinHelp.eq(i).text(message);
+	    		showHelp($joinInputs.eq(i), icon);
+				joinCheckAll[i] = !result.check
+			}
+		});
+	}else if(i == 5){
+		$.ajax({
+			url: contextPath + "/checkPhoneOk.member",
+			data: {memberPhone: value.replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`)},
+			success: function(result){
+				let message, icon;
+				result = JSON.parse(result);
+				if(result.check){
+					phoneNumberCheck = false;
+					message = "중복된 휴대폰 번호입니다.";
+					icon = contextPath + "/static/images/error.png";
+					$joinHelp.eq(i).css('color', 'red')
+				}else{
+					phoneNumberCheck = true;
+					message = "사용 가능한 휴대폰 번호입니다.";
+					$joinHelp.eq(i).css('color', '#2bb673')
+					icon = contextPath + "/static/images/pass.png";
+				}
+				$joinHelp.eq(i).text(message);
+	    		showHelp($joinInputs.eq(i), icon);
+				joinCheckAll[i] = !result.check
+			}
+		});
+	}
+	
 });
 
 function showHelp($joinInputs, fileName) {
@@ -158,10 +226,6 @@ $checks.on("change", function() {
 	}
 });
 
-$phoneCheck.on("click", function() {
-
-});
-
 function send(){
     $joinInputs.trigger("blur");
     if(joinCheckAll.filter(check => check).length != $joinInputs.length){
@@ -172,10 +236,11 @@ function send(){
 	
 	/*비밀번호 암호화*/
 	$("input[name='memberPassword']").val(btoa($("input[name='memberPassword']").val()));
-	$("#password-check").val(btoa($("#password-check").val()));
+	$("#passwordCheck").val(btoa($("#passwordCheck").val()));
 
 	$("input[type=radio][name=memberGender]:checked").val();
     document.join.submit();
+
 }
 
 

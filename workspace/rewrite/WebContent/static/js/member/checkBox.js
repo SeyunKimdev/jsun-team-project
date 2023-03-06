@@ -14,6 +14,7 @@
 const $checkboxs = $("input[type='checkbox']");
 const $checkAll = $("input[name='checkAll']");
 const $checks = $("input[name='check']");
+const $options = $(".optionSection input[name='check']");
 
 $checkAll.on('change', function () {
     let isChecked = $(this).prop('checked');
@@ -34,6 +35,11 @@ $checks.on('change', function () {
         $(this).css('border-color', '');
         $(this).css('background-color', '');
     }
+});
+
+$options.on("change", function(){
+    $(".optionSection input[type='checkbox']").prop("checked", $options.filter(":checked").length);
+    $(".optionSection .checkBoxSpan img").attr("src", "/static/images/" + ($(".optionSection input[type='checkbox']").prop("checked") ? "check_all.png" : "check.png"));
 });
 
 $checkboxs.on('change', function () {
@@ -57,9 +63,12 @@ function allNotCheck() {
 }
 
 function checked($img) {
-    $img.attr('src', contextPath + "/static/images/check.png");
+    $img.attr('src', contextPath + "/static/images/check_all.png");
 }
 
 function notChecked($img) {
-    $img.attr('src', contextPath + "/static/images/check_all.png");
+    $img.attr('src', contextPath + "/static/images/check.png");
 }
+
+
+

@@ -47,7 +47,7 @@
 										<span class="feedLikeCount">${feed.feedLikeCount}</span>
 									</button>
 									<!-- 댓글 버튼 -->
-									<button type="button" class="feedReplyButton" onclick="location.href='${pageContext.request.contextPath}/reply/replyList.reply?feedId=${feed.feedId}'">
+									<button type="button" class="feedReplyButton">
 										<div class="feedReplyIcon">
 											<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
 												fill="none" viewBox="0 0 24 24">
@@ -55,7 +55,7 @@
 													d="M2.368 21.632l.594-5.347A9.967 9.967 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.967 9.967 0 01-4.285-.962l-5.347.594zm2.264-2.264l3.452-.384.268.137A7.96 7.96 0 0012 20a8 8 0 100-16 8 8 0 00-8 8 7.96 7.96 0 00.878 3.648l.138.268-.384 3.452zM8 13a1 1 0 110-2 1 1 0 110 2zm4 0a1 1 0 110-2 1 1 0 110 2zm4 0a1 1 0 110-2 1 1 0 110 2z"
 													fill="#3a3a3a"></path></svg>
 										</div>
-										<span class="feedReplyCount">5</span>
+										<span class="feedReplyCount"><c:out value='${replyCount}'/></span>
 									</button>
 								<!-- 유저 프로필 버튼 -->
 								<button type="button" class="userProfileButton">
@@ -80,7 +80,7 @@
 										<button type="button" icon-position="2" class=exitButton
 											color="default"  onclick="location.href='${pageContext.request.contextPath}/feedListOk.feed?page=${page}&sort=${sort}&keyword=${keyword}'">
 											<span class="exitButtonIcon"><svg
-													xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+													xmlns="http://www.w3.org/2000/svg" width="15" height="24"
 													fill="none" viewBox="0 0 24 24">
 												<path
 														d="M18.5 4L12 10.5 5.5 4 4 5.5l6.5 6.5L4 18.5 5.5 20l6.5-6.5 6.5 6.5 1.5-1.5-6.5-6.5L20 5.5 18.5 4z"
@@ -158,4 +158,11 @@
 	let $replyAll = `${reply}`;
 </script>
 <script src="${pageContext.request.contextPath}/static/js/feed/feedDetail.js"></script>
+<script>
+	const $replyButton = $(".feedReplyButton");
+	
+	$replyButton.click(function(){
+		location.href=`${contextPath}/reply/replyList.reply?feedId=${feed.feedId}&page=${param.page}&sort=${param.sort}&keyword=${param.keyword}`;
+	});
+</script>
 </html>

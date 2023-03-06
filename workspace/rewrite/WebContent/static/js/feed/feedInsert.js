@@ -83,6 +83,6 @@ $(".hashTagContent").on("change", function(){
 		$hashTagContainer.eq(i).css("backgroundColor","rgba(0, 0, 0, 0.4)");
 		
 	}
-	$hashTagAll.val($hashTagAll.val().trim());
+	$hashTagAll.val().trim();
 });
 

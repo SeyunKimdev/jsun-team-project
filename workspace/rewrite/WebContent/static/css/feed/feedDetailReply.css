@@ -670,10 +670,11 @@ h3 {
 }
 
 .reply-modify-box {
+	display: none;
 	position: relative;
-    display: block;
     border-radius: 25px;
     padding: 0px 10px;
+    margin: 0px 15px 9px 0px;
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(229, 229, 229);
 }
@@ -712,6 +713,7 @@ h3 {
     height: 34px;
     text-align:center;
 	background-color: #a840ff;	
+	border-radius: 11px;
 }
 
 .reply-write-button {
@@ -720,12 +722,46 @@ h3 {
 	width: 100%;
     height: 100%;
     color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.reply-input-button-box {
+		font-weight: 500;
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration-line: none;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-width: 0px;
+    cursor: pointer;
+    color: rgb(102, 102, 102);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 11px;
+    top: 24px;
+    transform: translateY(-50%);
+    padding: 0px;
+    background: none;
+    border: 0px;
+    line-height: 1;
+    box-shadow: none;
 }
 
 
+.update-cancel {
+	display: none;	
+}
 
+li, ul{
+	text-decoration: none;
+	list-style: none;
+}
 
-
-
-
+.replyCount {
+	margin-left: 10px;
+}
 

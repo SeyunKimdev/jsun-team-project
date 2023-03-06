@@ -39,4 +39,8 @@
 		where reply_id = #{replyId}
 	</select>
 	
+	<select id="replyCount" parameterType="long" resultType="int">
+		select count(reply_id) from tbl_reply where feed_id = #{feedId}
+	</select>
+	
 </mapper>

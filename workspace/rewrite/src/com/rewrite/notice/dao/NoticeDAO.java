@@ -19,5 +19,10 @@ public SqlSession sqlSession;
 	public List<NoticeVO> selectAll() {
 		return sqlSession.selectList("notice.selectAll");
 	}
+	
+//	공지사항 상세 페이지
+	public NoticeVO select(Long noticeId) {
+		return sqlSession.selectOne("notice.select", noticeId);
+	}
 
 }

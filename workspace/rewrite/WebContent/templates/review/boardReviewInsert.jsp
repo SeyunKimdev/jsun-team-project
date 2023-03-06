@@ -369,11 +369,16 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                                     </button>
                                 </div>
                             </div>
+                            <div class="massage-title-wrap">
+                            <!-- title 입력  -->
+                            	<textarea class = "massage-title" name = "title" placeholder="제목을 입력해주세요.." autocomplete="off"></textarea>
+                            </div>
                             <div class="massage-content-wrap">
                                 <div class="mainContainerFormDivDiv2Div2Div">
+                                <!-- content 입력  -->
                                     <textarea
                                         class="massage-content"
-                                        placeholder="무단 홍보, 비방 글은 삭제될 수 있습니다."
+                                        placeholder="리뷰 내용을 입력해주세요..."
                                         name="content"
                                         autocomplete="off"
                                     ></textarea>

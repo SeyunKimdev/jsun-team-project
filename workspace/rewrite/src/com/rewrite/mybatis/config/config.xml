@@ -12,7 +12,7 @@
 		<typeAlias type="com.rewrite.event.domain.EventVO" alias="eventVO"/>
 		<typeAlias type="com.rewrite.feed.domain.FeedVO" alias="feedVO"/>
 		<typeAlias type="com.rewrite.feed.domain.FeedDTO" alias="feedDTO"/>
-		<typeAlias type="com.rewrite.feed.domain.FeedDTO" alias="feedReplyVO"/>
+		<typeAlias type="com.rewrite.reply.domain.ReplyVO" alias="replyVO"/>
 		<typeAlias type="com.rewrite.file.domain.FileVO" alias="fileVO"/>
 		<typeAlias type="com.rewrite.file.domain.FeedFileVO" alias="feedFileVO"/>
 		<typeAlias type="com.rewrite.matching.domain.MatchingVO" alias="matchingVO"/>
@@ -45,6 +45,7 @@
 		<mapper resource="com/rewrite/mybatis/mapper/eventMapper.xml"/>
 		<mapper resource="com/rewrite/mybatis/mapper/fileMapper.xml"/>
 		<mapper resource="com/rewrite/mybatis/mapper/noticeMapper.xml"/>
+		<mapper resource="com/rewrite/mybatis/mapper/replyMapper.xml"/>
 	</mappers>
 </configuration>
 

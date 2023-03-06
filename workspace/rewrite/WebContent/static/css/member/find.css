@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+
+.findFormContainer {
+	padding: 100px 10px;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: unset;
+    margin-bottom: unset;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.findFormWrapper, .inputNumberFormWrapper, .checkIdFormWrapper, .checkPasswordFormWrapper{
+	
+	max-width: 480px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-color: #E5E5E5;
+}
+
+.findExpressContainer, .inputNumberContainer, .checkIdContainer, .checkPasswordContainer{
+	
+	margin-top: 36px;
+    margin-bottom: 36px;
+	display: flex;
+    max-width: 100%;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    
+}
+
+
+.findExpressWrapper, .inputNumberWrapper, .checkIdWrapper, .checkPasswordWrapper {
+	display: flex;
+    padding-bottom: 20px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+
+.findExpressTitle, .inputNumberTitle, .checkIdTitle, .checkPasswordTitle {
+	border-width: 0;
+    color: #0c0c0c;
+    margin: 0;
+    padding: 0;
+    font-size: 1.625rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+}
+
+.spaceUnder {
+	width: 0px;
+    height: 20px;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.findDetailExpress, .inputNumberText, .checkIdText, .checkPasswordText {
+	border-width: 0px;
+    color: rgb(91, 91, 91);
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+}
+
+.inputBoxContainer, .idBoxContainer, .passwordBoxContainer {
+	display: flex;
+    padding-top: 20px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.inputBoxWrapper, .idBoxWrapper, .passwordBoxWrapper {
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.findFormInput, .numberInputBox {
+	background-color: #ffffff;
+    border-width: 0;
+    border-radius: 2px;
+    outline-style: none;
+    color: var(--system-on-color);
+    width: 100%;
+    height: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #00000026;
+}
+
+.findFormInput:focus ,.numberInputBox:focus {
+	border: 1px solid;
+}
+
+.spaceBetween {
+	display: flex;
+    height: 27px;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 10px 0px;
+}
+
+.findTextWrapper {
+	position: relative;
+	left: 298px;
+    top: 4px;
+}
+
+.noSendNumberWrapper {
+	position: relative;
+	left: 234px;
+    top: 4px;
+}
+
+.findPasswodWrapper {
+	position: relative;
+	left: 285px;
+    top: 4px;
+}
+
+.findIdText, .noSendNumber, .findPasswordText{
+	border-width: 0px;
+    color: rgb(148, 148, 148);
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.125rem;
+}
+
+.checkButton, .checkNumberButton, .goLoginButton {
+	
+	color: rgb(148, 148, 148);
+	cursor: default;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-width: 0px;
+    border-radius: 2px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    display: inline-flex;
+	padding: 15px 14px;
+    --system-on-color: #949494;
+    position: relative;
+}
+
+.checkButton:not(:disabled), .goLoginButton:not(:disabled){
+	cursor: pointer;
+	background-color: black;
+	color: white;
+}
+
+.buttonTextWrapper {
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: inherit;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.buttonText {
+	border-width: 0;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

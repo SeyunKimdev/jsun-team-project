@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/header/newHeader.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/footer/newFooter.css">
         <link rel="icon" type="image/png" sizes="32x32" href="${pageContext.request.contextPath}/static/images/favicon.png">
-        <title>나의 포인트</title>
+        <title>나의 코인</title>
     </head>
 
     <body>
@@ -188,7 +188,7 @@
                                                                 </div>
                                                                 <div class="mpDivDivDiv2">
                                                                     <p class="mpDivDivDiv2P">
-                                                                        Classmate
+                                                                        ${mypage.memberNickname}
                                                                     </p>
                                                                     <button
                                                                         class="mpDivDivDiv2Button"
@@ -263,7 +263,7 @@
                                 </div>
                             </div>
                             <a class="memberNicknameWrapper" href="">
-                                <h2 class="memberNickname">Classmate</h2>
+                                <h2 class="memberNickname">${mypage.memberNickname}</h2>
                             </a>
                         </div>
                         <div class="mpheadDivDiv2">
@@ -307,11 +307,11 @@
                     <aside class="mpbodyAside">
                         <section class="mpbodyAsideSection">
                             <h4 class="AsideSectionName">내 정보</h4>
-                            <a class="sideMenuContainer" href="">
+                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/editOk.mypage">
                                 <div class="sideMenuTitle">프로필수정</div>
                             </a>
-                            <a class="sideMenuContainer" href="">
-                                <div class="sideMenuTitle">내 포인트</div>
+                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/mycoinOk.mypage">
+                                <div class="sideMenuTitle">내 코인</div>
                             </a>
                             <a class="sideMenuContainer" href="">
                                 <div class="sideMenuTitle">나의 매칭 정보</div>
@@ -391,11 +391,11 @@
                                             <div class="mpDiv1Div1Div3Div">
                                                 <h2 class="currentCoinContainer">
                                                     <div class="currentCoinWrapper">
-                                                        <span>0</span>
+                                                        <span>${mypage.coinCount}</span>
                                                         개
                                                     </div>
                                                 </h2>
-                                                <p class="executedCoin">30일 이내 소멸 예정 코인 0개</p>
+                                                <p class="executedCoin">30일 이내 소멸 예정 코인 ${mypage.coinCount}개</p>
                                             </div>
                                             <!-- 모바일 반응형 용 -->
                                             <div class="mpDiv1Div1Div3DivmDiv">
@@ -421,7 +421,7 @@
                                 </div>
                                 <div class="CoinUsedContainer">
                                     <div class="CoinUsedWrapper">
-                                        <p class=CoinUsedContent>코인 이용 내역이 없습니다</p>
+                                        <p class=CoinUsedContent>${mypage.coinContent ? '${mypage.coinContent}' : '이용내역이 없습니다'}</p>
                                     </div>
                                 </div>
                                 <!-- 모바일 반응형 용 -->

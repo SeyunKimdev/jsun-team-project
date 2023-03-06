@@ -18,12 +18,14 @@ public class NoticeDetailOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		Long noticeId = Long.valueOf(req.getParameter("noticeId"));
 		Result result = new Result();
-		NoticeVO noticeVO = new NoticeVO();
 		NoticeDAO noticeDAO = new NoticeDAO();
-		noticeDAO.select(noticeVO.getNoticeId());
-		result.setPath("/noticeDetail.jsp");
-		return null;
+		req.setAttribute("notice", new JSONObject(noticeDAO.select(noticeId)));
+		result.setPath("templates/notice/noticeDetail.jsp");
+		return result;
 	}
 
 }
+
+

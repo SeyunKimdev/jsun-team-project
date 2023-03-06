@@ -18,9 +18,9 @@ function showList(){
 	notices = JSON.parse(notices);
 	const $div = $(".list");
 	let text = "";
-	notices.forEach((notice,i) => {
+	notices.forEach((notice) => {
 		text += `
-				    <a href="javascript:location.href=''" class="listA paper">
+				    <a href="javascript:location.href='${contextPath}/noticeDetailOk.notice?noticeId=${notice.noticeId}'" class="listA paper">
                                 <div class="listADiv" dir="ltr">
                                     <h2 class="listADivh2">
                                         <span class="listADivh2Span"

@@ -38,6 +38,7 @@ $(".likeButton").each((i, e) => {
 showFeedList();
 function showFeedList(){
 	feeds = JSON.parse(feeds);
+	console.log(files);
 	files = JSON.parse(files);
 	
 	const $feedUl = $(".feedListWrapper .feedList");	

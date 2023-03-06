@@ -12,6 +12,7 @@
 		<typeAlias type="com.rewrite.event.domain.EventVO" alias="eventVO"/>
 		<typeAlias type="com.rewrite.feed.domain.FeedVO" alias="feedVO"/>
 		<typeAlias type="com.rewrite.feed.domain.FeedDTO" alias="feedDTO"/>
+		<typeAlias type="com.rewrite.feed.domain.FeedDTO" alias="feedReplyVO"/>
 		<typeAlias type="com.rewrite.file.domain.FileVO" alias="fileVO"/>
 		<typeAlias type="com.rewrite.file.domain.FeedFileVO" alias="feedFileVO"/>
 		<typeAlias type="com.rewrite.matching.domain.MatchingVO" alias="matchingVO"/>

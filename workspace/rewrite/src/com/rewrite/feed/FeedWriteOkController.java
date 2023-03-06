@@ -32,7 +32,6 @@ public class FeedWriteOkController implements Action {
 		int fileSize = 1024 * 1024 * 5; //5M
 		Long feedCurrentSequence = 0L;
 		MultipartRequest multipartRequest = new MultipartRequest(req, uploadPath, fileSize, "UTF-8", new DefaultFileRenamePolicy());
-		System.out.println(multipartRequest.getParameter("hashTagAll"));
 		feedVO.setFeedHashTag(multipartRequest.getParameter("hashTagAll"));
 		feedVO.setFeedContent(multipartRequest.getParameter("content"));
 		// 로그인 하면은 이거 활성화

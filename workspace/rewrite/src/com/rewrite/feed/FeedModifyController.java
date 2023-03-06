@@ -19,7 +19,7 @@ public class FeedModifyController implements Action {
 		Result result = new Result();
 		FeedDAO feedDAO = new FeedDAO();
 		FileDAO fileDAO = new FileDAO();
-		System.out.println(feedId);
+		
 		req.setAttribute("feed", feedDAO.feedSelect(feedId));
 		req.setAttribute("files", fileDAO.select(feedId));
 		

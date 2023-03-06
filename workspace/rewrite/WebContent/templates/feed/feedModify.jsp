@@ -196,7 +196,7 @@
 	</section>
 	<div class="chatWholeContainer">
 		<div class="mainContainer">
-			<form action="${pageContext.request.contextPath}/feedWriteOk.feed" class="mainContainerForm"  method="post" enctype="multipart/form-data">
+			<form action="${pageContext.request.contextPath}/feedModifyOk.feed?feedId=${param.feedId}" class="mainContainerForm"  method="post" enctype="multipart/form-data">
 				<div class="mainContainerFormDiv">
 					<div class="mainContainerFormDivDiv">
 						<h2 md="Headline3" class="mainContainerFormDivDivH2">피드 수정하기</h2>
@@ -215,7 +215,7 @@
 							</div>
 							<div class="mainContainerFormDivDiv2DivDiv2">
 								<label class="mainContainerFormDivDiv2DivDiv2Label" style="display:none;">
-								<input type="file" class="mainContainerFormDivDiv2DivDiv2LabelInput" id="attach" name="upload">
+								<input type="file" class="mainContainerFormDivDiv2DivDiv2LabelInput" id="attach" name="upload" value="/${files[0].fileSystemName}">
 									<button type="button" icon-position="0"
 										class="mainContainerFormDivDiv2DivDiv2LabelButton"
 										color="default" fill="false">
@@ -467,5 +467,5 @@
 	let $hashTags = `${feed.feedHashTag}`;
 </script>
 <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/feed/feedInsert.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/feed/feedModify.js"></script>
 </html>

@@ -9,14 +9,11 @@ public class ReceiveMessageDTO {
 	private String profileMarried;
 	private String messageContent;
 	
-	
-	
-	
+
 	
 	public ReceiveMessageDTO() {;}
 
 
-	
 	public Long getMemberId() {
 		return memberId;
 	}
@@ -77,15 +74,13 @@ public class ReceiveMessageDTO {
 	}
 
 
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((memberId == null) ? 0 : memberId.hashCode());
+		result = prime * result + ((messageId == null) ? 0 : messageId.hashCode());
 		return result;
 	}
-
 
 
 	@Override
@@ -97,14 +92,13 @@ public class ReceiveMessageDTO {
 		if (getClass() != obj.getClass())
 			return false;
 		ReceiveMessageDTO other = (ReceiveMessageDTO) obj;
-		if (memberId == null) {
-			if (other.memberId != null)
+		if (messageId == null) {
+			if (other.messageId != null)
 				return false;
-		} else if (!memberId.equals(other.memberId))
+		} else if (!messageId.equals(other.messageId))
 			return false;
 		return true;
 	}
-	
 	
 	
 }

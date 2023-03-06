@@ -33,7 +33,11 @@ public SqlSession sqlSession;
 	
 //	내가 받은 메세지 보기
 	public List<ReceiveMessageDTO> selectAll() {
-		return sqlSession.selectOne("receiveMessage.selectAll");
+		return sqlSession.selectList("receiveMessage.selectAll");
 	}
 	
+//	받은 메세지 상세보기
+	public ReceiveMessageDTO select(Long messageId) {
+		return sqlSession.selectOne("receiveMessage.select", messageId);
+	}
 }

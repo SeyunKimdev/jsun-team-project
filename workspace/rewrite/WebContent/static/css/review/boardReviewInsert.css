@@ -253,6 +253,9 @@ hr {
 .mainContainer {
     background-color: rgb(255, 255, 255);
     min-height: calc(100vh - 60px);
+    width: 100%;
+    height: 100%;
+    margin: 30px 30px 30px 30px;
 }
 
 .mainContainerFormDiv {
@@ -417,6 +420,31 @@ hr {
 
 .mainContainerFormDivDiv2Div2Div {
     display: block;
+}
+.massage-title-wrap {
+	border: 1px solid rgb(239, 239, 239);
+    padding: 16px;
+    margin-bottom: 15px;
+}
+
+.massage-title {
+	resize: none;
+    padding: 0px;
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    color: rgb(26, 26, 26);
+    border-radius: 1px;
+    height: 30px;
+    min-height: 30px;
+    box-sizing: border-box;
 }
 
 .massage-content {

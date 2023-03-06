@@ -18,6 +18,7 @@ public class MypageFrontController extends HttpServlet{
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null; 
 		
+		System.out.println(target);
 		if (target.equals("/mypageOk")) {
 			result = new myPageOkController().execute(req, resp);
 			
@@ -32,10 +33,18 @@ public class MypageFrontController extends HttpServlet{
 			result = new Result();
 			result.setPath("/templates/mypage/edit.jsp");
 			
+		} else if(target.equals("/mycoinOk")) {
+			result = new mycoinOkController().execute(req, resp);
+			
+		} else if(target.equals("/mycoin")) {
+			result = new Result();
+			result.setPath("/templates/mypage/mycoin.jsp");
+			
+		} else if(target.equals("/receiveMessageOk")) {
+			System.out.println("receive체크");
+			result = new receiveMessageOkController().execute(req, resp);
 		}
-		
-		else {
-			System.out.println(target);
+			else {	
 		}
 		
 		if(result != null) {

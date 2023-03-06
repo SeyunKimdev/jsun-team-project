@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="receiveMessage">
+	<select id="selectAll" resultType="receiveMessageDTO">
+		select member_id, member_nickname, profile_location, profile_married, massage_content
+		from view_receive_message
+	</select>
+	<select id="select" parameterType="long" resultType="receiveMessageDTO">
+		select member_id, member_nickname, profile_location, profile_married, massage_content
+		from view_receive_message where = member_id = #{memberId}
+	</select>
+</mapper>

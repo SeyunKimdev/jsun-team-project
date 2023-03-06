@@ -5,7 +5,7 @@
 		select member_id, member_identification, member_password, member_name,
 		member_nickname, member_birth, member_email, profile_location, profile_job, profile_height,
 		profile_married, profile_child, profile_mbti, profile_hobby, profile_salary, coin_content, coin_count
-		from view_member_profile where member_id = ${memberId}
+		from view_member_profile where member_id = #{memberId}
 	</select>
 	<update id="updateEdit" parameterType="Long" >
 		update view view_member_profile

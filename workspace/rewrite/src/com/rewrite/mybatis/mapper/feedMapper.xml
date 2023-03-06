@@ -35,8 +35,8 @@
 	
 	<insert id="feedWrite" parameterType="feedVO">
 		insert into tbl_feed
-		(feed_content, feed_register_date, feed_update_date, feed_hash_tag, member_id)
-		values(#{feedContent}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, #{feedHashTag}, #{memberId});
+		(feed_content, feed_hash_tag, member_id)
+		values(#{feedContent}, #{feedHashTag}, #{memberId});
 	</insert>
 	
 	<select id="getCurrentSequence" resultType="long">

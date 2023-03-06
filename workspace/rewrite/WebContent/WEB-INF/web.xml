@@ -99,7 +99,7 @@
   </servlet-mapping>
   <servlet>
   	<servlet-name>like</servlet-name>
-  	<servlet-class>com.rewrite.mypage.LikeFrontController</servlet-class>
+  	<servlet-class>com.rewrite.like.LikeFrontController</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>like</servlet-name>

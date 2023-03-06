@@ -19,29 +19,15 @@ $sortButton.click(function(){
 });
 
 
-/* 좋아요 클릭 이벤트 */
-$(".likeButton").each((i, e) => {
-	   $(e).on("click", function() {
-	        var checkHeart = $($('.heartImg')[i]).css("display");
-	        if(checkHeart == "none"){
-	            $($('.heartImg')[i]).css("display", "block");
-	            $($('.emptyHeartImg')[i]).css("display", "none");
-	        } else {
-	        	$($('.heartImg')[i]).css("display", "none");
-	        	$($('.emptyHeartImg')[i]).css("display", "block");
-	        }
-	   })
-	});
-	
 /*피드 목록 가져오기*/	
+
+const $feedUl = $(".feedListWrapper .feedList");	
 
 showFeedList();
 function showFeedList(){
 	feeds = JSON.parse(feeds);
 	files = JSON.parse(files);
 	console.log(files);
-	
-	const $feedUl = $(".feedListWrapper .feedList");	
 	
 	let text = "";
 	
@@ -72,10 +58,11 @@ function showFeedList(){
 		text+=	`					</picture>
 								</span>
 				`;				/*좋아요 버튼*/
-		text += `				
+/*		text += `				
 								<div class="likeButtonWrap">
-									<button type="button" icon-position="2" class="likeButton" color="transparent">
-										<span class="likeButtonSpan"> <img class="emptyHeartImg" src="${contextPath}/static/images/emptyHeart.png">
+									<button type="button" icon-position="2" class="likeButton" color="transparent" this.onclick=null;>
+										<span class="likeButtonSpan" id="${feed.feedId}">
+											<img class="emptyHeartImg active" src="${contextPath}/static/images/emptyHeart.png">
 											<img class="heartImg" src="${contextPath}/static/images/heart.png">
 										</span>
 									</button>
@@ -106,7 +93,7 @@ function showFeedList(){
 													</path>
 	                                      		</svg>
 											</div>
-											${feed.feedLikeCount}
+											<span class="count">${feed.feedLikeCount}</span>
 										</div>
 									</div>
 								</div>
@@ -125,9 +112,12 @@ function showFeedList(){
 					</div>
 				</li>
 					`;
+					
+			getCount(feed.feedId);		
 	});			
 	 
 	$feedUl.append(text);
 }
 
-	
+
+

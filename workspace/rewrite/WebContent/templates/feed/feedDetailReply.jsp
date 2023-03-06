@@ -68,7 +68,7 @@
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
 	let contextPath = `${pageContext.request.contextPath}`;
-	let memberId = "${sessionScope.memberId}";
+	let memberId = "1";
 	let replys = `${replys}`;
 	let feedId = `${param.feedId}`;
 	let feedPage = `${param.page}`;

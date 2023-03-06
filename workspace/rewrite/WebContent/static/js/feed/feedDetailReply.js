@@ -1,6 +1,54 @@
 /**
  * feedDetailReply.jsp
  */
+/* 좋아요 모듈*/
+
+let likeService = (function(){
+
+	function likeUp(replyId, callback){
+		$.ajax({
+			url: contextPath + "/like/replyLikeUp.like",
+			data: {replyId : replyId, memberId : memberId},
+			dataType: "json",
+			success: function(check){
+				if(callback){
+					callback(check);
+				}
+			}
+		});
+	};
+	
+	function likeDown(replyId, callback){
+		$.ajax({
+			url: contextPath + "/like/replyLikeDown.like",
+			data: {replyId : replyId, memberId : memberId},
+			dataType: "json",
+			success: function(check){
+				if(callback){
+					callback(check);
+				}
+			}
+		});
+	}
+	
+	function likeCount(replyId, callback){
+		$.ajax({
+			url: contextPath + "/like/replyLikeCount.like",
+			data: {replyId : replyId},
+			dataType: "json",
+			success: function(count){
+				if(callback){
+					callback(count.likeCount);
+				}
+			}
+		});
+		
+	}
+
+	return {likeUp : likeUp, likeDown : likeDown, likeCount : likeCount};
+
+})();	
+
 
 const $writeButton = $(".reply-write-button");
 const $exitButton = $(".exitButton");
@@ -153,7 +201,7 @@ function showReplyAll(replyMoreDTO){
 		`
 	}else {
 	
-	replies.forEach(reply => {
+	replies.forEach((reply,i) => {
 	text += `	
 				<div class="replyContainer">
 					<div width="100%" class="replyWrap">
@@ -223,14 +271,16 @@ function showReplyAll(replyMoreDTO){
 											<img class="heartImg" src="${contextPath}/static/images/heart.png">
 										</span>
 									</button>
-									<div color="#cacaca" class="likeCount">0</div>
+									<div color="#cacaca" class="likeCount"></div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			`;
-			
+			likeService.likeCount(reply.replyId,function(result){
+				$($(".likeCount")[i]).text(result);
+			});
 		});
 	}
 	$replyListBox.append(text);
@@ -316,3 +366,37 @@ function count(feedId){
 		$relplyCount.text(result.count);
 	});
 }	
+
+
+$replyListBox.on("click", "button.likeButton",function(){
+	let i = $replyListBox.find(".likeButton").index($(this));
+	let $likeButton = $($("button.likeButton")[i]);
+	let replyId = $replyListBox.find("textarea").eq(i).attr("id");
+	
+	$likeButton.click(function(){
+		if($($(".emptyHeartImg")[i]).hasClass("active")){
+			$($(".heartImg")[i]).show();
+			$($(".emptyHeartImg")[i]).hide();
+			$($(".emptyHeartImg")[i]).removeClass("active");
+			
+			likeService.likeUp(replyId);
+			
+			likeService.likeCount(replyId, function(count){
+				$($(".likeCount")[i]).text(count);
+			});
+			
+		}else {
+			$($(".heartImg")[i]).hide();
+			$($(".emptyHeartImg")[i]).show();
+			$($(".emptyHeartImg")[i]).addClass("active");
+			likeService.likeDown(replyId);
+			
+			likeService.likeCount(replyId, function(count){
+				$($(".likeCount")[i]).text(count);
+			});
+		}
+		
+		
+	});
+	
+});

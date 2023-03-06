@@ -140,44 +140,6 @@
 						</div>
 					</div>
 				</div>
-				<div class="replyContainer">
-					<div width="100%" class="replyWrap">
-						<div class="replyProfileThumbnailWrap">
-							<div class="replyProfileThumbnail">
-								<span class="replyProfileThumbnailSpan"> <img
-									src="https://class101.net/images/default-user.png"
-									class="replyProfileThumbnailImg"></span></a>
-							</div>
-							<div class="replyNicknameDate">
-								<div class="replyNicknameWrap">
-									<div font-weight="600" color="#3a3a3a" class="replyNickname">그루브타는
-										허수아비</div>
-								</div>
-								<div class="replyDate">2022. 6. 7.</div>
-							</div>
-						</div>
-						<div class="replyContentWrap">
-							<div class="replyContent">
-								<pre>
-												<div class="replyContentText">응원합니다. 좋은 과정과 결과를 남겨주시길 바랍니다.</div>
-											</pre>
-							</div>
-						</div>
-						<div marginleft="0" class="likeContainer">
-							<div class="likeWrap">
-								<div class="likeAndCount">
-									<button type="button" class="likeButton" color="transparent">
-										<span class="likeButtonSpan"> <img
-											class="emptyHeartImg" src="${pageContext.request.contextPath}/static/images/emptyHeart.png"> <img
-											class="heartImg" src="${pageContext.request.contextPath}/static/images/heart.png">
-										</span>
-									</button>
-									<div color="#cacaca" class="likeCount">0</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 			<div class="replyInputContainer">
 				<form class="replyInputForm">

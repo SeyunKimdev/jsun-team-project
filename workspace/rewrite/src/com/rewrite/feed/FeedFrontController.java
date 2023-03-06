@@ -45,6 +45,9 @@ public class FeedFrontController extends HttpServlet {
 		}else if (target.equals("/feedModify")) {
 			result = new FeedModifyController().execute(req, resp);
 			
+		}else if (target.equals("/feedModifyOk")) {
+			result = new FeedModifyOkController().execute(req, resp);
+			
 		}else {
 			System.out.println(target);
 		}

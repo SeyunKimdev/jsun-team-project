@@ -138,7 +138,7 @@
 						</div>
 						<div class="delete-button-box-layout">
 							<div class="delete-button-box">
-								<button class="delete-ok delete-button" onclick="location.href='${pageContext.request.contextPath}/feedDeleteOk.feed'">Ok</button>
+								<button class="delete-ok delete-button" onclick="location.href='${pageContext.request.contextPath}/feedDeleteOk.feed?feedId=${feed.feedId}'">Ok</button>
 							</div>
 							<div class="delete-button-box">
 								<button class="delete-cancel delete-button">Cancel</button>

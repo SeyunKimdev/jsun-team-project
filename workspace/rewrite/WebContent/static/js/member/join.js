@@ -48,6 +48,30 @@ $(".getPhoneCheck").on("click", function() {
 	}
 });
 
+
+
+//휴대폰 번호 인증
+var code = "";
+$(".getPhoneCheck").click(function(){
+    alert('인증번호 발송이 완료되었습니다.\n휴대폰에서 인증번호 확인을 해주십시오.');
+    var phone = $("#phone").val();
+    $.ajax({
+        url: contextPath + "/checkPhone.member", // controller 위치
+        data: {memberPhone:phone}, // 전송할 ㅔ이터값
+        cache : false,
+        success:function(data){
+            if(data == "error"){ //실패시 
+                alert("휴대폰 번호가 올바르지 않습니다.")
+            }else{            //성공시        
+                alert("휴대폰 전송이  됨.")
+                code = data; // 성공하면 데이터저장
+            }
+        }
+        
+    });
+});
+ 
+
 $joinInputs.on("blur", function() {
 	let i = $joinInputs.index($(this));
 	let value = $(this).val();
@@ -99,12 +123,12 @@ $joinInputs.on("blur", function() {
 			break;
 		case 5:
 			joinCheck = phoneRegex.test(value);
-			if(joinCheck){
-                $(this).val(value.replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`));
-            }
-            break;
+			if (joinCheck) {
+				$(this).val(value.replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`));
+			}
+			break;
 		case 6:
-			joinCheck = $(this).val().length == 6;
+			joinCheck = $(this).val() == code;
 			break;
 		case 7:
 			joinCheck = emailRegex.test(value);
@@ -125,81 +149,84 @@ $joinInputs.on("blur", function() {
 		showHelp($(this), contextPath + "/static/images/error.png");
 		return;
 	}
-	
-	if(i != 0 && i != 3 && i != 5) {
-	    $joinHelp.eq(i).text("");
-	    showHelp($(this), contextPath + "/static/images/pass.png");
-	}else if(i == 0){
+
+	if (i != 0 && i != 3 && i != 5) {
+		$joinHelp.eq(i).text("");
+		showHelp($(this), contextPath + "/static/images/pass.png");
+	} else if (i == 0) {
 		/*중복 검사*/
 		$.ajax({
+			type: "POST",
 			url: contextPath + "/checkIdOk.member",
-			data: {memberIdentification: value},
-			success: function(result){
+			data: { memberIdentification: value },
+			success: function(result) {
 				let message, icon;
 				result = JSON.parse(result);
-				if(result.check){
+				if (result.check) {
 					message = "중복된 아이디입니다.";
 					icon = contextPath + "/static/images/error.png";
 					$joinHelp.eq(i).css('color', 'red');
 					joinCheckAll[i] = !result.check;
-				}else{
+				} else {
 					message = "사용 가능한 아이디입니다.";
 					$joinHelp.eq(i).css('color', '#2bb673')
 					icon = contextPath + "/static/images/pass.png";
 					joinCheckAll[i] = true;
 				}
 				$joinHelp.eq(i).text(message);
-	    		showHelp($joinInputs.eq(i), icon);
+				showHelp($joinInputs.eq(i), icon);
 				console.log("asda" + i);
 				console.log(joinCheckAll[i]);
 			}
 		});
-	}else if(i == 3){
+	} else if (i == 3) {
 		$.ajax({
 			url: contextPath + "/checkNicknameOk.member",
-			data: {memberNickname: value},
-			success: function(result){
+			data: { memberNickname: value },
+			success: function(result) {
 				let message, icon;
 				result = JSON.parse(result);
-				if(result.check){
+				if (result.check) {
 					message = "중복된 닉네임입니다.";
 					icon = contextPath + "/static/images/error.png";
 					$joinHelp.eq(i).css('color', 'red')
-				}else{
+				} else {
 					message = "사용 가능한 닉네임입니다.";
 					$joinHelp.eq(i).css('color', '#2bb673')
 					icon = contextPath + "/static/images/pass.png";
 				}
 				$joinHelp.eq(i).text(message);
-	    		showHelp($joinInputs.eq(i), icon);
+				showHelp($joinInputs.eq(i), icon);
 				joinCheckAll[i] = !result.check
 			}
 		});
-	}else if(i == 5){
-		$.ajax({
-			url: contextPath + "/checkPhoneOk.member",
-			data: {memberPhone: value.replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`)},
-			success: function(result){
-				let message, icon;
-				result = JSON.parse(result);
-				if(result.check){
-					phoneNumberCheck = false;
-					message = "중복된 휴대폰 번호입니다.";
-					icon = contextPath + "/static/images/error.png";
-					$joinHelp.eq(i).css('color', 'red')
-				}else{
-					phoneNumberCheck = true;
-					message = "사용 가능한 휴대폰 번호입니다.";
-					$joinHelp.eq(i).css('color', '#2bb673')
-					icon = contextPath + "/static/images/pass.png";
+	} else if (i == 5) {
+		$(".getPhoneCheck").click(function() {
+			$.ajax({
+				url: contextPath + "/checkPhoneOk.member",
+				data: { memberPhone: value.replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`) },
+				success: function(result) {
+					let message, icon;
+					result = JSON.parse(result);
+					if (result.check) {
+						phoneNumberCheck = false;
+						message = "중복된 휴대폰 번호입니다.";
+						icon = contextPath + "/static/images/error.png";
+						$joinHelp.eq(i).css('color', 'red')
+					} else {
+						phoneNumberCheck = true;
+						message = "사용 가능한 휴대폰 번호입니다.";
+						$joinHelp.eq(i).css('color', '#2bb673')
+						icon = contextPath + "/static/images/pass.png";
+					}
+					$joinHelp.eq(i).text(message);
+					showHelp($joinInputs.eq(i), icon);
+					joinCheckAll[i] = !result.check
 				}
-				$joinHelp.eq(i).text(message);
-	    		showHelp($joinInputs.eq(i), icon);
-				joinCheckAll[i] = !result.check
-			}
+			});
 		});
 	}
-	
+
 });
 
 function showHelp($joinInputs, fileName) {
@@ -226,38 +253,39 @@ $checks.on("change", function() {
 	}
 });
 
-function send(){
-    $joinInputs.trigger("blur");
-    if(joinCheckAll.filter(check => check).length != $joinInputs.length){
-        let modalMessage = "<span>모든 정보를 정확히 입력하셔야</span><span>가입이 완료됩니다.</span>";
-        showWarnModal(modalMessage);
-        return;
-    }
-	
+function send() {
+	$joinInputs.trigger("blur");
+	if (joinCheckAll.filter(check => check).length != $joinInputs.length) {
+		let modalMessage = "<span>모든 정보를 정확히 입력하셔야</span><span>가입이 완료됩니다.</span>";
+		showWarnModal(modalMessage);
+		return;
+	}
+
 	/*비밀번호 암호화*/
 	$("input[name='memberPassword']").val(btoa($("input[name='memberPassword']").val()));
 	$("#passwordCheck").val(btoa($("#passwordCheck").val()));
 
 	$("input[type=radio][name=memberGender]:checked").val();
-    document.join.submit();
+	document.join.submit();
 
 }
 
 
 let modalCheck;
-function showWarnModal(modalMessage){
-    modalCheck = false;
-    $("div#contentWrap").html(modalMessage)
-    $("div.warnModal").css("animation", "popUp 0.5s");
-    $("div.modal").css("display", "flex").hide().fadeIn(500);
-    setTimeout(function(){modalCheck = true;}, 500);
+function showWarnModal(modalMessage) {
+	modalCheck = false;
+	$("div#contentWrap").html(modalMessage)
+	$("div.warnModal").css("animation", "popUp 0.5s");
+	$("div.modal").css("display", "flex").hide().fadeIn(500);
+	setTimeout(function() { modalCheck = true; }, 500);
 }
 
-$("div.modal").on("click", function(){
-    if(modalCheck){
-        $("div.warnModal").css("animation", "popDown 0.5s");
-        $("div.modal").fadeOut(500);
-    }
+$("div.modal").on("click", function() {
+	if (modalCheck) {
+		$("div.warnModal").css("animation", "popDown 0.5s");
+		$("div.modal").fadeOut(500);
+	}
 });
+
 
 

@@ -36,6 +36,9 @@ public class MemberDAO {
 		return sqlSession.selectOne("member.checkPhone", memberPhone) != null;
 	}
 	
+//	휴대폰 인증
+	
+	
 //	회원가입
 	public void join(MemberVO memberVO) {
 		sqlSession.insert("member.join", memberVO);

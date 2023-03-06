@@ -6,10 +6,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 import com.rewrite.Action;
 import com.rewrite.Result;
 import com.rewrite.member.dao.MemberDAO;
 import com.rewrite.member.domain.MemberVO;
+
 
 public class JoinOkController implements Action {
 	@Override

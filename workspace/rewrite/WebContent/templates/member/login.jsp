@@ -261,7 +261,7 @@
 				</div>
 				<div class="loginContentWrap">
 					<div class="loginInputWrap">
-						<form action="" class="loginForm">
+						<form action="${pageContext.request.contextPath}/loginOk.member" class="loginForm" name="login">
 							<div class="loginInputWrap">
 								<label>
 									<div class="IdWrap">
@@ -269,7 +269,7 @@
 										<div class="IdMargin"></div>
 										<div class="IdInputWrap">
 											<span>
-												<input name="text" type="text" id="id"
+												<input name="memberIdentification" type="text" id="id"
 												placeholder="아이디를 입력하세요." class="IdInputbox" value="" />
 												<img width="16px"; />
 											</span>
@@ -285,7 +285,7 @@
 										<div class="passwordInputContainer">
 											<div class="passwordInputWrap">
 												<span>
-													<input placeholder="비밀번호를 입력하세요." id="password" name="text" type="password"
+													<input placeholder="비밀번호를 입력하세요." id="password" name="memberPassword" type="password"
 														class="passwordInputbox" value="">
 													<img width="16px"; />
 												</span>
@@ -545,7 +545,7 @@
 <script src="${pageContext.request.contextPath}/static/js/header/header.js"> </script>
 <script src="${pageContext.request.contextPath}/static/js/member/login.js"> </script>
 </html>
-<c:if test="${not empty param.loginInputWrap}">
+<c:if test="${not empty param.login}">
 	<script>
 		showWarnModal("아이디 또는 비밀번호를<br>확인해주세요");
 	</script>

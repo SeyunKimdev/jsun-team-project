@@ -459,7 +459,7 @@ svg:not(:root) {
 }
 /* 1 */
 .submitbutton {
-    cursor: default;
+    cursor: pointer;
     background-color: #ff5d00;
     border-width: 0;
     border-radius: 2px;

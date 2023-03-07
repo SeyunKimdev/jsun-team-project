@@ -319,7 +319,7 @@
                             <a class="sideMenuContainer" href="">
                                 <div class="sideMenuTitle">내 피드 목록</div>
                             </a>
-                            <a class="sideMenuContainer" href="">
+                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/receiveMessageOk.mypage">
                                 <div class="sideMenuTitle">쪽지함</div>
                             </a>
                         </section>

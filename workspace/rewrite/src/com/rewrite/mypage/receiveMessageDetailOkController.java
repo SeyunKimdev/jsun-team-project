@@ -19,19 +19,15 @@ public class receiveMessageDetailOkController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		System.out.println("detail들어옴");
+		Long messageId = Long.valueOf(req.getParameter("messageId"));
 		Result result = new Result();
-		ReceiveMessageDTO receiveMessageDTO = new ReceiveMessageDTO();
-		receiveMessageDTO.setMessageId(2L);
-		Long messageId = receiveMessageDTO.getMessageId();
 		MypageDAO mypageDAO = new MypageDAO();
 		
-		// 로그인 하면 아래쪽 ?
-//		 Long messageId = Long.valueOf(req.getParameter("messageId")); 
-//		 req.setAttribute("receiveMessage", new JSONObject(mypageDAO.select(messageId)));
-		 req.setAttribute("receiveMessage", mypageDAO.select(messageId));
+//		 req.setAttribute("receiveMessage", new JSONObject(mypageDAO.selectReceive(messageId)));
+		 req.setAttribute("receiveMessage", mypageDAO.selectReceive(messageId));
 		
 		System.out.println("넘어가기 전");
-		result.setPath("/receiveMessageDetail.mypage");
+		result.setPath("/templates/mypage/receiveMessageDetail.jsp");
 		
 		return result;
 	}

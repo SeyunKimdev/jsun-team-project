@@ -144,7 +144,7 @@
                                             <div id="mypageCont" class="myProContainer">
                                                 <div class="myProWrapper">
                                                     <div class="mpDiv">
-                                                        <a href="${pageContext.request.contextPath}/mypageOk.mypage">
+                                                        <a href="${pageContext.request.contextPath}/mypageOk.mypage?memberId=${mypage.memberId}">
                                                             <div class="mpDivDiv">
                                                                 <div class="mpDivDivDiv1">
                                                                     <div class="mpDivDivDiv1Div">
@@ -306,7 +306,7 @@
                     <aside class="mpbodyAside">
                         <section class="mpbodyAsideSection">
                             <h4 class="AsideSectionName">내 정보</h4>
-                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/editOk.mypage">
+                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/editOk.mypage?memberId=${mypage.memberId}">
                                 <div class="sideMenuTitle">프로필수정</div>
                             </a>
                             <a class="sideMenuContainer" href="${pageContext.request.contextPath}/mycoinOk.mypage">
@@ -318,7 +318,7 @@
                             <a class="sideMenuContainer" href="">
                                 <div class="sideMenuTitle">내 피드 목록</div>
                             </a>
-                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/receiveMessageOk.mypage">
+                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/receiveMessageOk.mypage?memberId=${mypage.memberId}">
                                 <div class="sideMenuTitle">쪽지함</div>
                             </a>
                         </section>
@@ -426,7 +426,7 @@
                                     <dl class="profileList">
                                         <dt>자녀</dt>
                                         <dd>
-                                            <span class="profileListName">${mypage.profileChild}</span>
+                                            <span class="profileListName">${mypage.profileChild == 'n' ? '없음' : '있음'}</span>
                                         </dd>
                                     </dl>
                                 </div>
@@ -574,7 +574,11 @@
         </footer>
     </body>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script>let contextPath = "${pageContext.request.contextPath}"</script>
+    <script>
+    	let contextPath = `${pageContext.request.contextPath}`;
+    	let memberId = `${mypage.memberId}`;
+    	let mypage = `${mypage}`;
+    </script>
     <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
 
     </html>

@@ -307,10 +307,10 @@
                     <aside class="mpbodyAside">
                         <section class="mpbodyAsideSection">
                             <h4 class="AsideSectionName">내 정보</h4>
-                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/editOk.mypage">
+                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/editOk.mypage?memberId=${mypage.memberId}">
                                 <div class="sideMenuTitle">프로필수정</div>
                             </a>
-                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/mycoinOk.mypage">
+                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/mycoinOk.mypage?${mypage.memberId}">
                                 <div class="sideMenuTitle">내 코인</div>
                             </a>
                             <a class="sideMenuContainer" href="">
@@ -319,7 +319,7 @@
                             <a class="sideMenuContainer" href="">
                                 <div class="sideMenuTitle">내 피드 목록</div>
                             </a>
-                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/receiveMessageOk.mypage">
+                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/receiveMessageOk.mypage?memberId=${mypage.memberId}">
                                 <div class="sideMenuTitle">쪽지함</div>
                             </a>
                         </section>
@@ -348,7 +348,7 @@
                     <div class="mpbodyDiv2">
                         <h4 class="mpbodyDiv2H4">
                             받은 메세지
-                            <input class="mpbodyDivButton" type="button" value="보낸 메세지">
+                            <input class="mpbodyDivButton" type="button" value="보낸 메세지" onclick="location.href='${pageContext.request.contextPath}/sendMessageOk.mypage?memberId=${memberId}'">
                         </h4>
                         <div class="feedListMargin"></div>
 							<div class="feedListContainer">
@@ -528,6 +528,7 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script>
     	let contextPath = `${pageContext.request.contextPath}`
+    	let memberId = `{memberId}`;
     	let receiveMessages = `${receiveMessages}`
     </script>
     

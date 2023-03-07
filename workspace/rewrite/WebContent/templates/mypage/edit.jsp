@@ -421,7 +421,9 @@
         </div>
     </body>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script>let contextPath = "${pageContext.request.contextPath}"</script>
+    <script>
+    	let contextPath = "${pageContext.request.contextPath}"
+    </script>
     <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
     <script src="${pageContext.request.contextPath}/static/js/mypage/edit.js"></script>
     </html>

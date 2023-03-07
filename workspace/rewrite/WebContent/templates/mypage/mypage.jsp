@@ -309,7 +309,7 @@
                             <a class="sideMenuContainer" href="${pageContext.request.contextPath}/editOk.mypage?memberId=${mypage.memberId}">
                                 <div class="sideMenuTitle">프로필수정</div>
                             </a>
-                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/mycoinOk.mypage">
+                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/mycoinOk.mypage?memberId=${mypage.memberId}">
                                 <div class="sideMenuTitle">내 코인</div>
                             </a>
                             <a class="sideMenuContainer" href="">

@@ -348,7 +348,7 @@
                     <div class="mpbodyDiv2">
                         <h4 class="mpbodyDiv2H4">
                             보낸 메세지
-                            <input class="mpbodyDivButton" type="button" value="받은 메세지">
+                            <input class="mpbodyDivButton" type="button" value="받은 메세지" onclick="location.href='${pageContext.request.contextPath}/receiveMessageOk.mypage?memberId=${mypage.memberId}'">
                         </h4>
 							<div class="feedListMargin"></div>
 							<div class="feedListContainer">
@@ -529,6 +529,7 @@
     <script>
     	let contextPath = "${pageContext.request.contextPath}"
     	let memberId = `${memberId}`;
+    	let mypage = `${mypage}`;
     	let sendMessages = `${sendMessages}`
     </script>
     <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>

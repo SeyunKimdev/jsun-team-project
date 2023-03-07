@@ -6,6 +6,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.JSONObject;
+
 import com.rewrite.Action;
 import com.rewrite.Result;
 import com.rewrite.mypage.dao.MypageDAO;
@@ -24,7 +26,8 @@ public class editOkController implements Action {
 		Result result = new Result();
 		MypageDAO mypageDAO = new MypageDAO();
 		
-		req.setAttribute("mypage", mypageDAO.editSelect(memberId));
+		req.setAttribute("mypage", new JSONObject(mypageDAO.editSelect(memberId)));
+//		req.setAttribute("mypage", mypageDAO.editSelect(memberId));
 		
 		result.setPath("/edit.mypage");
 		

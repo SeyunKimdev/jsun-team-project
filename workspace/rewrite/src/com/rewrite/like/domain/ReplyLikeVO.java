@@ -3,7 +3,7 @@ package com.rewrite.like.domain;
 public class ReplyLikeVO {
 	private Long replyLikeId;
 	private Long memberId;
-	private Long feedId;
+	private Long replyId;
 	
 	public ReplyLikeVO() {;}
 
@@ -23,17 +23,17 @@ public class ReplyLikeVO {
 		this.memberId = memberId;
 	}
 
-	public Long getFeedId() {
-		return feedId;
+	public Long getReplyId() {
+		return replyId;
 	}
 
-	public void setFeedId(Long feedId) {
-		this.feedId = feedId;
+	public void setReplyId(Long replyId) {
+		this.replyId = replyId;
 	}
 
 	@Override
 	public String toString() {
-		return "ReplyLikeVO [replyLikeId=" + replyLikeId + ", memberId=" + memberId + ", feedId=" + feedId + "]";
+		return "ReplyLikeVO [replyLikeId=" + replyLikeId + ", memberId=" + memberId + ", replyId=" + replyId + "]";
 	}
 
 	@Override
@@ -60,7 +60,6 @@ public class ReplyLikeVO {
 			return false;
 		return true;
 	}
-	
-	
+
 	
 }

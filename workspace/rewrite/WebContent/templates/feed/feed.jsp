@@ -406,6 +406,7 @@
 	let page = `${page}`, keyword = `${keyword}` || null,  sort = `${sort}`;
 	let feeds = `${feeds}`;
 	let files = `${files}`;
+	let memberId= "3";
 </script>
 <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/feed/feed.js"></script>

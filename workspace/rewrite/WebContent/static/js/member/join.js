@@ -16,7 +16,6 @@ const $phoneCheck = $(".getPhoneCheck");
 const $checks = $("input[name='memberGender']");
 const $genderCheckImg = $(".genderCheckImg");
 let phoneNumberCheck;
-const code = "123456";
 
 let joinBlurMessages = ["아이디를 입력하세요.", "비밀번호를 입력하세요.",
 	"비밀번호 확인을 위해 한번 더 입력하세요.", "닉네임을 입력하세요.", "이름을 입력하세요.",
@@ -42,30 +41,32 @@ $joinInputs.eq(7).on("focus", function() {
 $(".setPhoneCheckWrap").hide();
 $(".help").eq(6).hide();
 
-/*var code = "";*/
+var code = "";
 
-/*$(".getPhoneCheck").on("click", function() {
+$(".getPhoneCheck").on("click", function() {
 	if (phoneNumberCheck) {
 		$(".setPhoneCheckWrap").show();
 		$(".help").eq(6).show();
-		alert('인증번호 발송이 완료되었습니다.\n휴대폰에서 인증번호 확인을 해주십시오.');
-		var phone = $("#phone").val();
+		var phone = $("#phone").val().replaceAll("-", "");
+		console.log(phone);
 		$.ajax({
 			type: "POST",
 			url: contextPath + "/smsOk.member",
-			data: {phoneNumber: phone },
-			cache: false,
+			data: {memberPhone: phone},
 			success: function(data) {
-				if (data == "error") {
-					alert("휴대폰 번호가 올바르지 않습니다.")
-				} else {
-					alert("휴대폰 전송이 됨.")
-					code = data;
-				}
+				console.log(data);
+				code = data;
 			}
-
 		});
 	}
+});
+
+/*$(".setPhoneCheck").on("click", function(){
+	if($("#certificationNumber").val() == code){
+		joinCheck = true;
+		return;
+	}
+	joinCheck = false;
 });*/
 
 $joinInputs.on("blur", function() {
@@ -124,7 +125,8 @@ $joinInputs.on("blur", function() {
 			}
 			break;
 		case 6:
-			joinCheck = $(this).val() == code;
+			joinCheck = value == JSON.parse(code).code;
+			console.log(JSON.parse(code).code);
 			break;
 		case 7:
 			joinCheck = emailRegex.test(value);
@@ -260,7 +262,6 @@ function send() {
 		return;
 	}
 
-	/*비밀번호 암호화*/
 	$("input[name='memberPassword']").val(btoa($("input[name='memberPassword']").val()));
 	$("#passwordCheck").val(btoa($("#passwordCheck").val()));
 

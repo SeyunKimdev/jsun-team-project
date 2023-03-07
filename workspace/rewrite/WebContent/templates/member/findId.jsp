@@ -274,15 +274,13 @@
 		<div class="checkFormWrapper">
 			<div class="checkIdContainer">
 				<div class="checkIdWrapper">
-					<h3 class="checkIdTitle">홍길동<span>님의 아이디</span></h3>
-					<div class="spaceUnder"></div>
-					<p class="checkIdText">본인의 아이디를 확인하세요.</p>
+					<h4 class="checkIdTitle">본인의 아이디를 확인하세요.</h4>
 				</div>
 				<form style="width: auto; height: auto;">
 					<div class="idBoxContainer">
 						<label>
 							<div class="idBoxWrapper">
-								<h4>asd1234</h4>
+								<h4>${memberIdentification.member}</h4>
 							</div>
 						</label>
 						<div class="spaceBetween">

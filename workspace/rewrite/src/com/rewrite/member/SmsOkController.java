@@ -28,17 +28,17 @@ public class SmsOkController implements Action {
 		Message coolsms = new Message(api_key, api_secret);
 		PrintWriter out = resp.getWriter();
 		MemberDAO memberDAO = new MemberDAO();
-		String phoneNumber = req.getParameter("memberPhoneNumber");
+		String phone = req.getParameter("memberPhone");
 		String code = "";
 		JSONObject json = new JSONObject();
 		Random random = new Random();
 
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < 6; i++) {
 			code += random.nextInt(10);
 		}
 
 		HashMap<String, String> params = new HashMap<String, String>();
-		params.put("to", phoneNumber);
+		params.put("to", phone);
 		params.put("from", "01012341234");
 		params.put("type", "SMS");
 		params.put("text", "REWrite 인증번호 [ " + code + "] 입니다.");

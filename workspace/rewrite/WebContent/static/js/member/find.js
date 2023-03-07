@@ -11,9 +11,10 @@ const $button = $(".checkButton");
 const $numberButton = $(".checkNumberButton");
 const phoneRegex = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/
 const $inputNumber = $(".numberInputBox");
-const code = "123456";
 
 let inputCheck = false;
+
+var code = "";
 
 $findInput.on("blur", function() {
 	let value = $(this).val();
@@ -33,6 +34,19 @@ $findInput.on("blur", function() {
 	}
 });
 
+$(".checkButton").on("click", function() {
+	var phone = $(".findFormInput").val().replaceAll("-", "");
+	console.log(phone);
+	$.ajax({
+		type: "POST",
+		url: contextPath + "/smsOk.member",
+		data: { memberPhone: phone },
+		success: function(data) {
+			console.log(data);
+			code = data;
+		}
+	});
+});
 
 function goInputNumber() {
 	step = 2;
@@ -52,7 +66,7 @@ $inputNumber.on("blur", function() {
 	if (!value) {
 		numberCheck = false;
 	} else {
-		numberCheck = $(this).val() == code;
+		numberCheck = $(this).val() == JSON.parse(code).code;
 	}
 	if (numberCheck) {
 		alert("인증 성공");
@@ -64,8 +78,9 @@ $inputNumber.on("blur", function() {
 
 function goCheck() {
 	if (numberCheck == true) {
-		
+
 		step = 3;
+		
 		$(".inputNumberFormWrapper").hide();
 		$(".findFormWrapper").hide();
 		$(".checkFormWrapper").show();
@@ -75,3 +90,4 @@ function goCheck() {
 		}, 300);
 	}
 };
+

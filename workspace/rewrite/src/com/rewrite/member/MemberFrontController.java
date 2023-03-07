@@ -45,7 +45,17 @@ public class MemberFrontController extends HttpServlet{
 		}else if(target.equals("/logout")) {
 			result = new LogoutController().execute(req, resp);
 			
-		}else {
+		}else if(target.equals("/findPw")) {
+			result = new Result();
+			result.setPath("/templates/member/findPw.jsp");
+			
+		}
+		else if(target.equals("/findId")) {
+			result = new Result();
+			result.setPath("/templates/member/findId.jsp");
+			
+		}
+		else {
 			System.out.println(target);
 		}
 		

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -232,7 +233,7 @@
 								</div>
 							</label>
 							<div class="spaceBetween"></div>
-							<button class="checkButton" disabled>
+							<button type="button" class="checkButton" onclick="goInputNumber()" disabled>
 								<div class="buttonTextWrapper">
 									<span class="buttonText">인증번호 전송</span>
 								</div>
@@ -257,11 +258,11 @@
 							</div>
 						</label>
 						<div class="spaceBetween">
-							<a class="noSendNumberWrapper" href>
+							<a href="${pageContext.request.contextPath}/findId.member" class="noSendNumberWrapper">
 								<p class="noSendNumber">인증번호가 전송되지 않으셨나요?</p>
 							</a>
 						</div>
-						<button class="checkNumberButton" disabled>
+						<button type="button" class="checkNumberButton" onclick="goCheck()">
 							<div class="buttonTextWrapper">
 								<span class="buttonText">인증번호 확인</span>
 							</div>
@@ -270,10 +271,10 @@
 				</form>
 			</div>
 		</div>
-		<div class="checkIdFormWrapper">
+		<div class="checkFormWrapper">
 			<div class="checkIdContainer">
 				<div class="checkIdWrapper">
-					<h3 class="checkIdTitle">홍길동님의 아이디</h3>
+					<h3 class="checkIdTitle">홍길동<span>님의 아이디</span></h3>
 					<div class="spaceUnder"></div>
 					<p class="checkIdText">본인의 아이디를 확인하세요.</p>
 				</div>
@@ -281,15 +282,15 @@
 					<div class="idBoxContainer">
 						<label>
 							<div class="idBoxWrapper">
-								<h4>hong1234</h4>
+								<h4>asd1234</h4>
 							</div>
 						</label>
 						<div class="spaceBetween">
-							<a class="findPasswodWrapper" href>
+							<a class="findPasswodWrapper" href="${pageContext.request.contextPath}/findPw.member">
 								<p class="findPasswordText">비밀번호를 잊으셨나요?</p>
 							</a>
 						</div>
-						<button class="goLoginButton">
+						<button type="button" class="goLoginButton" onclick="location.href='${pageContext.request.contextPath}/login.member'">
 							<div class="buttonTextWrapper">
 								<span class="buttonText">로그인 하러가기</span>
 							</div>

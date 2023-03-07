@@ -2,10 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mypage">
 	<select id="mypageSelect" parameterType="Long" resultType="mypageDTO">
-		select member_id, member_identification, member_password, member_name,
-		member_nickname, member_birth, member_email, profile_location, profile_job, profile_height,
-		profile_married, profile_child, profile_mbti, profile_hobby, profile_salary, coin_content, coin_count
-		from view_member_profile where member_id = #{memberId}
+		select member_id, member_identification, member_password, member_nickname, member_name,
+		member_phone, member_email, member_birth, member_gender, member_status, profile_location, profile_job, profile_salary, 
+		profile_hobby, profile_mbti, profile_height, profile_child, profile_married, coin_content, coin_register_date,
+		coin_update_date, coin_count
+		from view_member_profile_coin where member_id = #{memberId}
 	</select>
 	<update id="updateEdit" parameterType="Long" >
 		update view view_member_profile

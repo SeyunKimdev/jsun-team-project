@@ -15,12 +15,12 @@ public class editOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		MypageDTO mypageDTO = new MypageDTO();
-		mypageDTO.setMemberId(1L);
-		Long memberId = mypageDTO.getMemberId();
+//		MypageDTO mypageDTO = new MypageDTO();
+//		mypageDTO.setMemberId(1L);
+//		Long memberId = mypageDTO.getMemberId();
 		
-		// 로그인 하면 아래쪽 ?
-		/* Long memberId = Long.valueOf(req.getParameter("memberId")); */
+
+		Long memberId = Long.valueOf(req.getParameter("memberId"));
 		Result result = new Result();
 		MypageDAO mypageDAO = new MypageDAO();
 		

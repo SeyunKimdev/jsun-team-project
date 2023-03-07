@@ -248,33 +248,6 @@
 	<div class="chatWholeContainer">
 		<div class="mainContainer">
 			<form action="#" class="mainContainerForm">
-				<div class="mainContainerFormDiv">
-					<div class="mainTitleContainer">
-						<h2 md="Headline3" class="mainTitle">보낸 메세지</h2>
-					</div>
-					<div class="MemberProfile">
-						<div class="MemberProfileContainer">
-							<div class="MemberProfileWrapper">
-								<div size="28" class="MemberProfileImageContainer">
-									<span class="mainContainerFormDivDiv2DivDivDivSpan"><picture
-											class="mainContainerFormDivDiv2DivDivDivSpanPicture">
-										<img sizes=" 100vw"
-											src="https://class101.net/images/default-user.png"
-											class="MemberProfileImage"></picture></span>
-								</div>
-								<div md="Body2" class="MemberProfileNickname">Classmate</div>
-							</div>
-						</div>
-						</div>
-						<div class="MainMessageContainer">
-							<span class="mainMessage">네. 안녕하세요. 좋아요. 그러면 어디서 만날까요?
-								  네. 안녕하세요. 좋아요. 그러면 어디서 만날까요?
-								  네. 안녕하세요. 좋아요. 그러면 어디서 만날까요?
-								  네. 안녕하세요. 좋아요. 그러면 어디서 만날까요?	
-							</span>
-						</div>
-					</div>
-				</div>
 			</form>
 		</div>
 	</div>
@@ -416,7 +389,11 @@
         </footer>
 </body>
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script>let contextPath = "${pageContext.request.contextPath}"</script>
+    <script>
+    	let contextPath = "${pageContext.request.contextPath}"
+    	let sendMessage = `${sendMessage}`;
+    </script>
     <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
+    <script src="${pageContext.request.contextPath}/static/js/mypage/sendMessageDetail.js"></script>
 
 </html>

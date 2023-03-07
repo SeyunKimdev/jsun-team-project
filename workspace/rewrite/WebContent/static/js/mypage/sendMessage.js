@@ -2,14 +2,15 @@
  * 
  */
 
+
 function showMessageList() {
-	receiveMessages = JSON.parse(receiveMessages);
+	sendMessages = JSON.parse(sendMessages);
 	const $ul = $(".feedList");
 	let text = "";
-	receiveMessages.forEach((receiveMessage) => {
+	sendMessages.forEach((sendMessage) => {
 		text += `
 			<li>
-				<a href="javascript:location.href='${contextPath}/receiveMessageDetailOk.mypage?messageId=${receiveMessage.messageId}'">
+				<a href="javascript:location.href='${contextPath}/sendMessageDetailOk.mypage?messageId=${sendMessage.messageId}'">
 					<div class="feedWrap">
 						<div class="feed">
 							<div class="feedThumbnail">
@@ -23,20 +24,20 @@ function showMessageList() {
 								<!-- 지역 이름 넣기 -->
 								<div class="locationWrap">
 									<div class="location" color="#FFF" backgroundcolor="#000">
-										<div color="#FFF" class="locationText">${receiveMessage.profileLocation}</div>
+										<div color="#FFF" class="locationText">${sendMessage.profileLocation}</div>
 								</div>
 							</div>
 						</div>	
 						<div class="feedInfo">
 							<div class="feedNickname">
 								<!-- 닉네임 -->
-								<p class="feedNicknameText">${receiveMessage.memberNickname}</p>
+								<p class="feedNicknameText">${sendMessage.memberNickname}</p>
 							</div>
 						</div>
 						<div class="feedInfoMargin"></div>
 							<div class="statusWrap">
 								<div class="status">
-									<p class="statusText">${receiveMessage.profileMarried == 'y' ? '기혼' : '미혼'}</p>
+									<p class="statusText">${sendMessage.profileMarried == 'y' ? '기혼' : '미혼'}</p>
 								</div>
 							</div>
 						</div>

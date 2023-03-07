@@ -20,6 +20,7 @@ public class MypageFrontController extends HttpServlet{
 		
 		System.out.println(target);
 		if (target.equals("/mypageOk")) {
+			System.out.println("이동");
 			result = new myPageOkController().execute(req, resp);
 			
 		} else if(target.equals("/mypage")) {
@@ -45,10 +46,14 @@ public class MypageFrontController extends HttpServlet{
 			
 		} else if(target.equals("/receiveMessageDetailOk")) {
 			result = new receiveMessageDetailOkController().execute(req, resp);
-		} else if(target.equals("/receiveMessageDetail")) {
-			System.out.println("detail들어와");
-			result = new Result();
-			result.setPath("/templates/mypage/receiveMessageDetail.jsp");
+			
+		} else if(target.equals("/sendMessageOk")) {
+			System.out.println("값 들어감");
+			result = new sendMessageOkController().execute(req, resp);
+			
+		} else if(target.equals("/sendMessageDetailOk")) {
+			result = new sendMessageDetailOkController().execute(req, resp);
+			
 		}
 		
 			else {	

@@ -6,14 +6,10 @@ public class ReviewVO {
 	private String reviewContent;
 	private String reviewRegisterDate;
 	private String reviewUpdateDate;
-	private String reviewLikeCount;
 	private String reviewReadCount;
-	private String reviewImage;
 	private String memberId;
-
-	public ReviewVO() {
-		;
-	}
+	
+	public ReviewVO() {;}
 
 	public Long getReviewId() {
 		return reviewId;
@@ -55,28 +51,12 @@ public class ReviewVO {
 		this.reviewUpdateDate = reviewUpdateDate;
 	}
 
-	public String getReviewLikeCount() {
-		return reviewLikeCount;
-	}
-
-	public void setReviewLikeCount(String reviewLikeCount) {
-		this.reviewLikeCount = reviewLikeCount;
-	}
-
 	public String getReviewReadCount() {
 		return reviewReadCount;
 	}
 
 	public void setReviewReadCount(String reviewReadCount) {
 		this.reviewReadCount = reviewReadCount;
-	}
-
-	public String getReviewImage() {
-		return reviewImage;
-	}
-
-	public void setReviewImage(String reviewImage) {
-		this.reviewImage = reviewImage;
 	}
 
 	public String getMemberId() {
@@ -91,8 +71,7 @@ public class ReviewVO {
 	public String toString() {
 		return "ReviewVO [reviewId=" + reviewId + ", reviewTitle=" + reviewTitle + ", reviewContent=" + reviewContent
 				+ ", reviewRegisterDate=" + reviewRegisterDate + ", reviewUpdateDate=" + reviewUpdateDate
-				+ ", reviewLikeCount=" + reviewLikeCount + ", reviewReadCount=" + reviewReadCount + ", reviewImage="
-				+ reviewImage + ", memberId=" + memberId + "]";
+				+ ", reviewReadCount=" + reviewReadCount + ", memberId=" + memberId + "]";
 	}
 
 	@Override
@@ -119,5 +98,6 @@ public class ReviewVO {
 			return false;
 		return true;
 	}
+	
 
 }

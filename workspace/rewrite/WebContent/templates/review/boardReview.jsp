@@ -209,6 +209,7 @@
 				<div top="24" right="0" bottom="0" left="0"
 					class="mainContainerDivDivDiv"></div>
 				<div class="mainContainerDivDivDiv2">
+				<!-- 후기 게시판 위에 개수 보여주는 곳 -->
 					<div top="0" right="0" bottom="0" left="0"
 						class="mainContainerDivDivDiv2Div">
 						<h3 md="Headline3" class="mainContainerDivDivDiv2DivH3">후기
@@ -236,31 +237,9 @@
 				<!-- 리뷰 사진올리는 곳 -->
 				<div class="mainContainerDivDivDiv6">
 					<a class="review_PictureA"
-						href="/products/6333b5e9118a330016c73d6e/reviews/r_B7CmCKr5DLiOxnqAN2"><span
-						class="mainContainerDivDivDiv6ASpan" ratio="1"><picture
-								ratio="0.75" class="review_Picture">
-							<source type="image/webp" sizes="(min-width: 1024px) 300px, 50vw"
-								srcset="
-                                            https://cdn.class101.net/images/9dba0edf-e8f1-4ce8-b1fa-be964ffb5517/375xauto.webp   375w,
-                                            https://cdn.class101.net/images/9dba0edf-e8f1-4ce8-b1fa-be964ffb5517/750xauto.webp   750w,
-                                            https://cdn.class101.net/images/9dba0edf-e8f1-4ce8-b1fa-be964ffb5517/960xauto.webp   960w,
-                                            https://cdn.class101.net/images/9dba0edf-e8f1-4ce8-b1fa-be964ffb5517/1440xauto.webp 1440w,
-                                            https://cdn.class101.net/images/9dba0edf-e8f1-4ce8-b1fa-be964ffb5517/2048xauto.webp 2048w,
-                                            https://cdn.class101.net/images/9dba0edf-e8f1-4ce8-b1fa-be964ffb5517/2880xauto.webp 2880w,
-                                            https://cdn.class101.net/images/9dba0edf-e8f1-4ce8-b1fa-be964ffb5517/autoxauto.webp 5120w
-                                        " />
-							<img sizes="(min-width: 1024px) 300px, 50vw"
-								class="review_PictureImg"
-								srcset="
-                                            https://cdn.class101.net/images/9dba0edf-e8f1-4ce8-b1fa-be964ffb5517/375xauto   375w,
-                                            https://cdn.class101.net/images/9dba0edf-e8f1-4ce8-b1fa-be964ffb5517/750xauto   750w,
-                                            https://cdn.class101.net/images/9dba0edf-e8f1-4ce8-b1fa-be964ffb5517/960xauto   960w,
-                                            https://cdn.class101.net/images/9dba0edf-e8f1-4ce8-b1fa-be964ffb5517/1440xauto 1440w,
-                                            https://cdn.class101.net/images/9dba0edf-e8f1-4ce8-b1fa-be964ffb5517/2048xauto 2048w,
-                                            https://cdn.class101.net/images/9dba0edf-e8f1-4ce8-b1fa-be964ffb5517/2880xauto 2880w,
-                                            https://cdn.class101.net/images/9dba0edf-e8f1-4ce8-b1fa-be964ffb5517/autoxauto 5120w
-                                        "
-								src="" alt="" /> </picture></span> </a>
+						href="">
+						<img src="${pageContext.request.contextPath}/static/images/profile.png" class = "review_whole_img">
+					</a>
 				</div>
 				<div top="0" right="0" bottom="24" left="0"
 					class="mainContainerDivDivDiv7"></div>
@@ -364,26 +343,6 @@
 									</div>
 									<div top="0" right="0" bottom="16" left="0"
 										class="mainContainerDivDivDiv12DivDivUlLiADiv8"></div>
-									<div class="mainContainerDivDivDiv12DivDivUlLiDiv">
-										<!-- 도움이 되요 버튼 -->
-										<button type="button" icon-position="0" class="like_Btn"
-											color="default" fill="false">
-											<span class="like_Svg_Span"><svg
-													xmlns="http://www.w3.org/2000/svg" width="11" height="11"
-													fill="#1B1C1D" viewBox="0 0 24 24"
-													class="mainContainerDivDivDiv12DivDivUlLiDivButtonSpanSvg">
-                                                        <path
-														fill-rule="evenodd" class="like_Svg"
-														d="M13.139 10l.844-5.066a2 2 0 00-1.279-2.205l-.419-.155-2.604 7.205V20h8.8l1.467-8.836A1 1 0 0018.961 10h-5.822zm-5.458-.571L11.089 0l2.308.853a4 4 0 012.559 4.41L15.5 8h3.461a3 3 0 012.96 3.491l-1.573 9.477C20.25 21.566 19.779 22 19.23 22H7.681V9.429z"></path>
-                                                        <path
-														d="M3.135 9.429C2.503 9.429 2 9.989 2 10.68v10.069C2 21.427 2.508 22 3.135 22h2.273V9.429H3.135z"
-														class="like_Svg"></path>
-                                                    </svg>
-												<div md="Caption1" font-weight="500"
-													class="mainContainerDivDivDiv12DivDivUlLiDivButtonSpanSvgDiv">
-													도움이 돼요</div></span>
-										</button>
-									</div>
 									<div class="mainContainerDivDivDiv12DivDivUlLiDiv2"></div>
 								</li>
 								<!-- ------------------------------------------------------------------------------------------------------------------------------------------------- -->

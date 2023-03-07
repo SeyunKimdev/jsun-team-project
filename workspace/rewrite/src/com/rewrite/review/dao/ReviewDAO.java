@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import com.rewrite.mybatis.config.MyBatisConfig;
+import com.rewrite.review.domain.ReviewDTO;
 import com.rewrite.review.domain.ReviewVO;
 
 public class ReviewDAO {
@@ -14,9 +15,8 @@ public SqlSession sqlSession;
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 //	reviewList전체 불러오기
-	public List<ReviewVO> selectAll() {
+	public List<ReviewDTO> selectAll() {
 		return sqlSession.selectList("review.selectAll");
 	}
-	
 		
 }

@@ -267,7 +267,7 @@
 						</div>
 					</div>
 					<div class="MainMessageContainer">
-						<span class="mainMessage">${receiveMessage.messageId}</span>
+						<span class="mainMessage">${receiveMessage.messageContent}</span>
 					</div>
 				</div>
 			</form>

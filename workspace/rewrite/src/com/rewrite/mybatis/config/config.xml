@@ -24,11 +24,8 @@
 		<typeAlias type="com.rewrite.notice.domain.NoticeVO" alias="noticeVO"/>
 		<typeAlias type="com.rewrite.mypage.domain.MypageDTO" alias="mypageDTO"/>
 		<typeAlias type="com.rewrite.mypage.domain.ReceiveMessageDTO" alias="receiveMessageDTO"/>
-<<<<<<< HEAD
 		<typeAlias type="com.rewrite.like.domain.FeedLikeVO" alias="feedLikeVO"/>
-=======
 		<typeAlias type="com.rewrite.mypage.domain.SendMessageDTO" alias="sendMessageDTO"/>
->>>>>>> youngjun
 	</typeAliases>
 	
 	<environments default="mysql">
@@ -56,11 +53,8 @@
 		<mapper resource="com/rewrite/mybatis/mapper/replyMapper.xml"/>
 		<mapper resource="com/rewrite/mybatis/mapper/mypageMapper.xml"/>
 		<mapper resource="com/rewrite/mybatis/mapper/receiveMessageMapper.xml"/>
-<<<<<<< HEAD
 		<mapper resource="com/rewrite/mybatis/mapper/LikeMapper.xml"/>
-=======
 		<mapper resource="com/rewrite/mybatis/mapper/sendMessageMapper.xml"/>
->>>>>>> youngjun
 	</mappers>
 </configuration>
 

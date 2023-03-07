@@ -248,6 +248,28 @@
 	<div class="chatWholeContainer">
 		<div class="mainContainer">
 			<form action="#" class="mainContainerForm">
+				<div class="mainContainerFormDiv">
+					<div class="mainTitleContainer">
+						<h2 md="Headline3" class="mainTitle">보낸 메세지</h2>
+					</div>
+					<div class="MemberProfile">
+						<div class="MemberProfileContainer">
+							<div class="MemberProfileWrapper">
+								<div size="28" class="MemberProfileImageContainer">
+									<span class="mainContainerFormDivDiv2DivDivDivSpan">
+										<picture class="mainContainerFormDivDiv2DivDivDivSpanPicture">
+											<img sizes=" 100vw" src="https://class101.net/images/default-user.png" class="MemberProfileImage">
+										</picture>
+									</span>
+								</div>
+								<div md="Body2" class="MemberProfileNickname">${sendMessage.memberNickname}</div>
+							</div>
+						</div>
+					</div>
+					<div class="MainMessageContainer">
+						<span class="mainMessage">${sendMessage.messageContent}</span>
+					</div>
+				</div>
 			</form>
 		</div>
 	</div>
@@ -391,9 +413,10 @@
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script>
     	let contextPath = "${pageContext.request.contextPath}"
+    	let messageId = `${sendMessage.messageId}`;
     	let sendMessage = `${sendMessage}`;
     </script>
     <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
-    <script src="${pageContext.request.contextPath}/static/js/mypage/sendMessageDetail.js"></script>
+    <%-- <script src="${pageContext.request.contextPath}/static/js/mypage/sendMessageDetail.js"></script> --%>
 
 </html>

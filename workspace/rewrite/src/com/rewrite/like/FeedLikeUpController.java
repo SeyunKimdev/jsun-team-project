@@ -14,7 +14,6 @@ import com.rewrite.Action;
 import com.rewrite.Result;
 import com.rewrite.like.dao.LikeDAO;
 import com.rewrite.like.domain.FeedLikeVO;
-import com.rewrite.like.domain.ReplyLikeVO;
 
 public class FeedLikeUpController implements Action {
 
@@ -27,9 +26,8 @@ public class FeedLikeUpController implements Action {
 		feedLikeVO.setFeedId(Long.valueOf(req.getParameter("feedId")));
 		feedLikeVO.setMemberId(Long.valueOf(req.getParameter("memberId")));
 		
-		boolean check = likeDAO.feedLikeCheck(feedLikeVO);
-		System.out.println("좋아요 상승 : " + check);
-		if(!check) {
+		Long check = likeDAO.feedLikeCheck(feedLikeVO);
+		if(check == 0) {
 			likeDAO.feedLikeUp(feedLikeVO);
 			likeDAO.feedLikeCountUpdate(Long.valueOf(req.getParameter("feedId")));
 		}else {
@@ -39,7 +37,6 @@ public class FeedLikeUpController implements Action {
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}
-				
 			out.close();
 		}
 		

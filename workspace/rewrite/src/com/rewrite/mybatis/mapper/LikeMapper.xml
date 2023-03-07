@@ -7,31 +7,16 @@
 		values(#{feedId}, #{memberId})
 	</insert>
 
-	<insert id="replyLikeUp" parameterType="replyLikeVO">
-		insert into tbl_reply_like(reply_id, member_id)
-		values(#{replyId}, #{memberId})
-	</insert>
-
 	<select id="feedLikeCheck" parameterType="feedLikeVO" resultType="long">
 		select count(feed_like_id) from tbl_feed_like
 		where feed_id = #{feedId} and member_id = #{memberId}
 	</select>
 
-	<select id="replyLikeCheck" parameterType="replyLikeVO"  resultType="long">
-		select count(reply_like_id) from tbl_reply_like
-		where reply_id = #{replyId} and member_id = #{memberId}
-	</select>
-	
 	<delete id="feedLikeDown" parameterType="feedLikeVO">
 		delete from tbl_feed_like
 		where feed_id = #{feedId} and member_id = #{memberId}
 	</delete>
 
-	<delete id="replyLikeDown" parameterType="replyLikeVO">
-		delete from tbl_reply_like
-		where reply_id = #{replyId} and member_id = #{memberId}
-	</delete>
-	
 	<select id="feedLikeCount" parameterType="long" resultType="int">
 		select feed_like_count from tbl_feed where feed_id = #{feedId}
 	</select>
@@ -40,16 +25,6 @@
 		update tbl_feed 
 		set feed_like_count = (select count(feed_like_id) from tbl_feed_like e where feed_id = #{feedId})
 		where feed_id = #{feedId}
-	</update>
-	
-	<select id="replyLikeCount" parameterType="long" resultType="int">
-		select reply_like_count from tbl_reply where reply_id = #{replyId}
-	</select>
-	
-	<update id="replyLikeCountUpdate" parameterType="long">
-		update tbl_reply
-		set reply_like_count = (select count(reply_like_id) from tbl_reply_like e where reply_id = #{replyId})
-		where reply_id = #{replyId}
 	</update>
 	
 </mapper>

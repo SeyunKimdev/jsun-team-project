@@ -24,15 +24,6 @@ public class LikeFrontController extends HttpServlet{
 		}else if (target.equals("/like/feedLikeCount")) {
 			new FeedLikeCountController().execute(req, resp);
 			
-		}else if (target.equals("/like/replyLikeUp")) {
-			new ReplyLikeUpController().execute(req, resp);
-			
-		}else if (target.equals("/like/replyLikeDown")) {
-			new ReplyLikeDownController().execute(req, resp);
-			
-		}else if (target.equals("/like/replyLikeCount")) {
-			new ReplyLikeCountController().execute(req, resp);
-			
 		}else {
 			System.out.println(target);
 		}

@@ -68,6 +68,7 @@ $like.click(function(){
 		$heart.hide();
 		likeService.likeDown(feedId);
 		likeService.likeCount(feedId,function (result) {
+			console.log(result);
             $(".feedLikeCount").text(result);
         });
 	}

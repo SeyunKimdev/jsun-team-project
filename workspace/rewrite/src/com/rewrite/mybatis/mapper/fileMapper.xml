@@ -14,4 +14,9 @@
 	<delete id="delete" parameterType="long">
 		delete from tbl_feed_file where feed_id = #{feedId}
 	</delete>
+	
+	<select id="selectfile" resultType="reviewFileVO">
+		select file_id, file_original_name, file_system_name, file_register_date, review_id
+		from tbl_review_file
+	</select>
 </mapper>

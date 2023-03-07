@@ -3,7 +3,7 @@
 <mapper namespace="review">
 	<select id="selectAll" resultType="reviewDTO">
 		select review_id, review_title, review_content, review_register_date, 
-		review_update_date, review_read_count, member_nickname, m.member_id,
+		review_update_date, review_read_count, review_score, member_nickname, member_id,
 		file_id, file_original_name, file_system_name, file_register_date
 		from view_review_file
 	</select>

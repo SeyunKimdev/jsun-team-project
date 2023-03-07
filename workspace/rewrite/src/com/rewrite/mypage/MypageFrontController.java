@@ -41,9 +41,16 @@ public class MypageFrontController extends HttpServlet{
 			result.setPath("/templates/mypage/mycoin.jsp");
 			
 		} else if(target.equals("/receiveMessageOk")) {
-			System.out.println("receive체크");
 			result = new receiveMessageOkController().execute(req, resp);
+			
+		} else if(target.equals("/receiveMessageDetailOk")) {
+			result = new receiveMessageDetailOkController().execute(req, resp);
+		} else if(target.equals("/receiveMessageDetail")) {
+			System.out.println("detail들어와");
+			result = new Result();
+			result.setPath("/templates/mypage/receiveMessageDetail.jsp");
 		}
+		
 			else {	
 		}
 		

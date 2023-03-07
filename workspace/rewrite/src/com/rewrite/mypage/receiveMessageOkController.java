@@ -18,7 +18,6 @@ public class receiveMessageOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		System.out.println("들어옴 체크");
 		Result result = new Result();
 		MypageDAO mypageDAO = new MypageDAO();
 		ReceiveMessageDTO receiveMessageDTO = new ReceiveMessageDTO();

@@ -184,7 +184,7 @@
                                                                 </div>
                                                                 <div class="mpDivDivDiv2">
                                                                     <p class="mpDivDivDiv2P">
-                                                                        Classmate
+                                                                        ${receiveMessage.memberNickname}
                                                                     </p>
                                                                     <button
                                                                         class="mpDivDivDiv2Button"
@@ -262,19 +262,14 @@
 											src="https://class101.net/images/default-user.png"
 											class="MemberProfileImage"></picture></span>
 								</div>
-								<div md="Body2" class="MemberProfileNickname">Classmate</div>
+								<div md="Body2" class="MemberProfileNickname">${receiveMessage.memberNickname}</div>
 							</div>
 						</div>
-						</div>
+					</div>
 						<div class="MainMessageContainer">
-							<span class="mainMessage">안녕하세요. 만나서 반갑습니다. 저는 이러이러한 사람인데 나중에 한 번 만나보는거 어떨까요?
-								  안녕하세요. 만나서 반갑습니다. 저는 이러이러한 사람인데 나중에 한 번 만나보는거 어떨까요?
-								  안녕하세요. 만나서 반갑습니다. 저는 이러이러한 사람인데 나중에 한 번 만나보는거 어떨까요?
-								  안녕하세요. 만나서 반갑습니다. 저는 이러이러한 사람인데 나중에 한 번 만나보는거 어떨까요?		
-							</span>
+							<span class="mainMessage">${receiveMessage.messageContent}</span>
 						</div>
 					</div>
-				</div>
 			</form>
 		</div>
 	</div>
@@ -416,7 +411,12 @@
         </footer>
 </body>
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script>let contextPath = "${pageContext.request.contextPath}"</script>
+    <script>
+    	let contextPath = "${pageContext.request.contextPath}"
+    	let receiveMessage = `${receiveMessage}`;
+    	
+    	</script>
     <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
+    <%-- <script src="${pageContext.request.contextPath}/static/js/mypage/receiveMessageDetail.js"></script> --%>
 
 </html>

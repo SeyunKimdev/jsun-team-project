@@ -307,11 +307,11 @@
                     <aside class="mpbodyAside">
                         <section class="mpbodyAsideSection">
                             <h4 class="AsideSectionName">내 정보</h4>
-                            <a class="sideMenuContainer" href="">
+                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/editOk.mypage">
                                 <div class="sideMenuTitle">프로필수정</div>
                             </a>
-                            <a class="sideMenuContainer" href="">
-                                <div class="sideMenuTitle">내 포인트</div>
+                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/mycoinOk.mypage">
+                                <div class="sideMenuTitle">내 코인</div>
                             </a>
                             <a class="sideMenuContainer" href="">
                                 <div class="sideMenuTitle">나의 매칭 정보</div>
@@ -319,7 +319,7 @@
                             <a class="sideMenuContainer" href="">
                                 <div class="sideMenuTitle">내 피드 목록</div>
                             </a>
-                            <a class="sideMenuContainer" href="">
+                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/receiveMessageOk.mypage">
                                 <div class="sideMenuTitle">쪽지함</div>
                             </a>
                         </section>

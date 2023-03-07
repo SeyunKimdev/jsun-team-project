@@ -233,7 +233,7 @@
 								</div>
 							</label>
 							<div class="spaceBetween"></div>
-							<button type="button" class="checkButton" onclick="goInputNumber()" disabled>
+							<button type="button" class="checkButton" disabled>
 								<div class="buttonTextWrapper">
 									<span class="buttonText">인증번호 전송</span>
 								</div>
@@ -262,7 +262,7 @@
 								<p class="noSendNumber">인증번호가 전송되지 않으셨나요?</p>
 							</a>
 						</div>
-						<button type="button" class="checkNumberButton" onclick="goCheck()">
+						<button type="button" class="checkNumberButton">
 							<div class="buttonTextWrapper">
 								<span class="buttonText">인증번호 확인</span>
 							</div>
@@ -280,7 +280,7 @@
 					<div class="idBoxContainer">
 						<label>
 							<div class="idBoxWrapper">
-								<h4>${memberIdentification.member}</h4>
+								<h4 id="memberIdentification"></h4>
 							</div>
 						</label>
 						<div class="spaceBetween">

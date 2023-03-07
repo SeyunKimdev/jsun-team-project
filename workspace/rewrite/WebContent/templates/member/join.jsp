@@ -227,7 +227,7 @@
 								<div class="passwordWrap">
 									<p class="passwordText">비밀번호</p>
 									<div class="formTextMargin"></div>
-									<div class="passwordInputContainer">
+									<div class="passwordInputBoxContainer">
 										<div class="inputBoxWrap">
 											<span> <input id="password"
 												placeholder="비밀번호를 입력해주세요." name="memberPassword"

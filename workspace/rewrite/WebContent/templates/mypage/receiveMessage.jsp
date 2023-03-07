@@ -527,11 +527,9 @@
     </body>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script>
-    	let contextPath = `${pageContext.request.contextPath}`
-    	let memberId = `{memberId}`;
-    	let receiveMessage = `{receiveMessage}`;
-    	let sendMessage = `${sendMessage}`;
-    	let receiveMessages = `${receiveMessages}`
+    	let contextPath = `${pageContext.request.contextPath}`;
+    	let memberId = `${memberId}`;
+    	let receiveMessages = `${receiveMessages}`;
     	console.log(memberId);
     </script>
     

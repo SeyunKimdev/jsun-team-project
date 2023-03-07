@@ -242,7 +242,7 @@
                     </label>
                 </div>
                 <!-- 수정용 폼 -->
-                <form class="editForm" action="">
+                <form class="editForm" name="edit" action="${pageContext.request.contextPath}/editChangeOk.mypage?memberId=${mypage.memberId}" method="post" enctype="multipart/form-data">
                     <div class="editInputForm">
                         <div class="editDivFormDivDiv">
                             <label class="editDivFormDivDivLabel" for="">비밀번호</label>
@@ -404,7 +404,7 @@
                         </div>
                         <!-- 수정버튼 -->
                         <div class="updateForm">
-                            <button class="editDivFormDiv2Button" disabled>
+                            <button class="editDivFormDiv2Button" type="button" disabled onclick="send()">
                                 <span class="editDivFormDiv2ButtonSpan">수정하기</span>
                             </button>
                         </div>

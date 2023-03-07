@@ -30,11 +30,18 @@ public class MypageFrontController extends HttpServlet{
 		} else if(target.equals("/editOk")) {
 			result = new editOkController().execute(req, resp);
 			
-		} else if(target.equals("/edit")) {
-			result = new Result();
-			result.setPath("/templates/mypage/edit.jsp");
+		} else if(target.equals("/editChangeOk")) {
+			System.out.println("update 들어옴");
+			result = new editChangeOkController().execute(req, resp);
 			
-		} else if(target.equals("/mycoinOk")) {
+		} 
+//		else if(target.equals("/edit")) {
+//			result = new Result();
+//			result.setPath("/templates/mypage/edit.jsp");
+//			
+//		} 
+		
+		else if(target.equals("/mycoinOk")) {
 			result = new mycoinOkController().execute(req, resp);
 			
 		} else if(target.equals("/mycoin")) {

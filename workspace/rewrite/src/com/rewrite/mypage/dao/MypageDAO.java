@@ -51,4 +51,9 @@ public SqlSession sqlSession;
 	public SendMessageDTO selectSend(Long messageId) {
 		return sqlSession.selectOne("sendMessage.select", messageId);
 	}
+	
+//	정보 수정하기
+	public void editChange(MypageDTO mypageDTO) {
+		sqlSession.update("mypage.updateEdit", mypageDTO);
+	}
 }

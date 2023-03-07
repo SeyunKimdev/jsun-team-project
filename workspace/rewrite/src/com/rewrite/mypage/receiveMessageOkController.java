@@ -23,6 +23,7 @@ public class receiveMessageOkController implements Action {
 		MypageDAO mypageDAO = new MypageDAO();
 		ReceiveMessageDTO receiveMessageDTO = new ReceiveMessageDTO();
 		JSONArray jsons = new JSONArray();
+		
 		mypageDAO.selectReceiveAll(memberId).stream().map(receiveMessage -> new JSONObject(receiveMessage)).forEach(jsons::put);
 		req.setAttribute("receiveMessages", jsons);
 		

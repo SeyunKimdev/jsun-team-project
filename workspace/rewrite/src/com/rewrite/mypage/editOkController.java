@@ -26,10 +26,10 @@ public class editOkController implements Action {
 		Result result = new Result();
 		MypageDAO mypageDAO = new MypageDAO();
 		
-		req.setAttribute("mypage", new JSONObject(mypageDAO.editSelect(memberId)));
-//		req.setAttribute("mypage", mypageDAO.editSelect(memberId));
+//		req.setAttribute("mypage", new JSONObject(mypageDAO.editSelect(memberId)));
+		req.setAttribute("mypage", mypageDAO.editSelect(memberId));
 		
-		result.setPath("/edit.mypage");
+		result.setPath("/templates/mypage/edit.jsp");
 		
 		return result;
 	}

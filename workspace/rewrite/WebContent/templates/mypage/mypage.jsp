@@ -261,7 +261,7 @@
                                     <span class="profileDiv1Div1DivSpan"></span>
                                 </div>
                             </div>
-                            <a class="memberNicknameWrapper" href="">
+                            <a class="memberNicknameWrapper">
                                 <h2 class="memberNickname">${mypage.memberNickname}</h2>
                             </a>
                         </div>

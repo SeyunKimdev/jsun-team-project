@@ -8,8 +8,8 @@
 		coin_update_date, coin_count
 		from view_member_profile_coin where member_id = #{memberId}
 	</select>
-	<update id="updateEdit" parameterType="Long" >
-		update view view_member_profile
+	<update id="updateEdit" parameterType="mypageDTO" >
+		update view_member_profile_coin
 		set member_password = #{memberPassword}, member_nickname = #{memberNickname}, member_email = #{memberEmail},
 		profile_location = #{profileLocation}, profile_job = #{profileJob}, profile_height = #{profileHeight},
 		profile_married = #{profileMarried}, profile_child = #{profileChild}, profile_mbti = #{profileMbti},

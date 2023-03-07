@@ -159,6 +159,11 @@ $UpInputs.on("change", function(){
 		}
 });
 
+function send() {
+	
+	document.edit.submit();
+}
+
 
 
 

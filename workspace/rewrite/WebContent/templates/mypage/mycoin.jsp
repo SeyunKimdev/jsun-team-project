@@ -307,7 +307,7 @@
                     <aside class="mpbodyAside">
                         <section class="mpbodyAsideSection">
                             <h4 class="AsideSectionName">내 정보</h4>
-                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/editOk.mypage">
+                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/editOk.mypage?memberId=${mypage.memberId}">
                                 <div class="sideMenuTitle">프로필수정</div>
                             </a>
                             <a class="sideMenuContainer" href="${pageContext.request.contextPath}/mycoinOk.mypage?memberId=${mypage.memberId}">
@@ -662,8 +662,8 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script>
     	let contextPath = "${pageContext.request.contextPath}"
-    	let memberId = `${memberId}`;
-    	let mypage = `${mypage}`;
+    	let memberId = `${mypage.memberId}`;
+    	console.log(memberId);
     </script>
     <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
 

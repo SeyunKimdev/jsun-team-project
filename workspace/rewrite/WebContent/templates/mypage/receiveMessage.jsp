@@ -310,7 +310,7 @@
                             <a class="sideMenuContainer" href="${pageContext.request.contextPath}/editOk.mypage?memberId=${mypage.memberId}">
                                 <div class="sideMenuTitle">프로필수정</div>
                             </a>
-                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/mycoinOk.mypage?${mypage.memberId}">
+                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/mycoinOk.mypage?memberId=${mypage.memberId}">
                                 <div class="sideMenuTitle">내 코인</div>
                             </a>
                             <a class="sideMenuContainer" href="">
@@ -348,7 +348,7 @@
                     <div class="mpbodyDiv2">
                         <h4 class="mpbodyDiv2H4">
                             받은 메세지
-                            <input class="mpbodyDivButton" type="button" value="보낸 메세지" onclick="location.href='${pageContext.request.contextPath}/sendMessageOk.mypage?memberId=${memberId}'">
+                            <input class="mpbodyDivButton" type="button" value="보낸 메세지" onclick="location.href='${pageContext.request.contextPath}/sendMessageOk.mypage?memberId=${receiveMessage.memberId}'">
                         </h4>
                         <div class="feedListMargin"></div>
 							<div class="feedListContainer">
@@ -529,7 +529,10 @@
     <script>
     	let contextPath = `${pageContext.request.contextPath}`
     	let memberId = `{memberId}`;
+    	let receiveMessage = `{receiveMessage}`;
+    	let sendMessage = `${sendMessage}`;
     	let receiveMessages = `${receiveMessages}`
+    	console.log(memberId);
     </script>
     
     <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>

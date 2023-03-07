@@ -21,7 +21,8 @@ public class sendMessageDetailOkController implements Action {
 		Result result = new Result();
 		MypageDAO mypageDAO = new MypageDAO();
 		
-		req.setAttribute("sendMessage", new JSONObject(mypageDAO.selectReceive(messageId)));
+//		req.setAttribute("sendMessage", new JSONObject(mypageDAO.selectReceive(messageId)));
+		req.setAttribute("sendMessage", mypageDAO.selectSend(messageId));
 		result.setPath("/templates/mypage/sendMessageDetail.jsp");
 		
 		return result;

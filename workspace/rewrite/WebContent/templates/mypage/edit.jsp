@@ -131,7 +131,7 @@
                                             <div id="mypageCont" class="myProContainer">
                                                 <div class="myProWrapper">
                                                     <div class="mpDiv">
-                                                        <a href="${pageContext.request.contextPath}/mypageOk.mypage">
+                                                        <a href="${pageContext.request.contextPath}/mypageOk.mypage?memberId=${mypage.memberId}">
                                                             <div class="mpDivDiv">
                                                                 <div class="mpDivDivDiv1">
                                                                     <div class="mpDivDivDiv1Div">
@@ -423,6 +423,8 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script>
     	let contextPath = "${pageContext.request.contextPath}"
+    	let memberId = `${mypage.memberId}`;
+    	let mypage = `${mypage}`;
     </script>
     <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
     <script src="${pageContext.request.contextPath}/static/js/mypage/edit.js"></script>

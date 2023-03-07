@@ -310,7 +310,7 @@
                             <a class="sideMenuContainer" href="${pageContext.request.contextPath}/editOk.mypage">
                                 <div class="sideMenuTitle">프로필수정</div>
                             </a>
-                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/mycoinOk.mypage">
+                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/mycoinOk.mypage?memberId=${mypage.memberId}">
                                 <div class="sideMenuTitle">내 코인</div>
                             </a>
                             <a class="sideMenuContainer" href="">
@@ -319,7 +319,7 @@
                             <a class="sideMenuContainer" href="">
                                 <div class="sideMenuTitle">내 피드 목록</div>
                             </a>
-                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/receiveMessageOk.mypage">
+                            <a class="sideMenuContainer" href="${pageContext.request.contextPath}/receiveMessageOk.mypage?memberId=${mypage.memberId}">
                                 <div class="sideMenuTitle">쪽지함</div>
                             </a>
                         </section>
@@ -660,7 +660,11 @@
         </footer>
     </body>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script>let contextPath = "${pageContext.request.contextPath}"</script>
+    <script>
+    	let contextPath = "${pageContext.request.contextPath}"
+    	let memberId = `${memberId}`;
+    	let mypage = `${mypage}`;
+    </script>
     <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
 
     </html>

@@ -139,8 +139,9 @@ const replyService = (function(){
 			url: contextPath + "/reply/replyCountOk.reply",
 			data: {feedId: feedId},
 			success: function(result){
+				console.log(result);
 				if(callback){
-					callback(result)
+					callback(result);
 				}
 			}
 		});
@@ -278,10 +279,8 @@ function showReplyAll(replyMoreDTO){
 					</div>
 				</div>
 			`;
-			likeService.likeCount(reply.replyId,function(result){
-				$($(".likeCount")[i]).text(result);
-			});
 		});
+		
 	}
 	$replyListBox.append(text);
 }
@@ -382,7 +381,7 @@ $replyListBox.on("click", "button.likeButton",function(){
 			likeService.likeUp(replyId);
 			
 			likeService.likeCount(replyId, function(count){
-				$($(".likeCount")[i]).text(count);
+				$(".likeCount").text(count);
 			});
 			
 		}else {

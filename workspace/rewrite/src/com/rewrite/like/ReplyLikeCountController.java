@@ -25,14 +25,15 @@ public class ReplyLikeCountController implements Action {
 		try {
 			json.put("likeCount", likeDAO.replyLikeCount(Long.valueOf(req.getParameter("replyId"))));
 			out.print(json.toString());
+			System.out.println(json);
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
 		} catch (JSONException e) {
 			e.printStackTrace();
-		} finally {
-			out.close();
 		}
+			out.close();
 		
+	
 		return null;
 	}
 

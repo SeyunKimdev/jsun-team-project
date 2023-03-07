@@ -19,7 +19,8 @@ public class ReviewFrontController extends HttpServlet{
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
 
-		if (target.equals("/boardReview")) {
+		if (target.equals("/reviewList")) {
+			System.out.println(target);
 			result = new ReviewListOkController().execute(req, resp);
 		}
 	}

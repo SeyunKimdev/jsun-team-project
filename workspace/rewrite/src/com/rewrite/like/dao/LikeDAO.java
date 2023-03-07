@@ -29,15 +29,8 @@ public class LikeDAO {
 		return sqlSession.selectOne("like.feedLikeCount", feedId);
 	}
 	
-	public Integer replyLikeCount(Long replyId) {
-		return sqlSession.selectOne("like.replyLikeCount", replyId);
-	}
-	
 	public void feedLikeCountUpdate(Long feedId) {
 		sqlSession.selectOne("like.feedLikeCountUpdate", feedId);
 	}
 	
-	public void replyLikeCountUpdate(Long replyId) {
-		sqlSession.selectOne("like.replyLikeCountUpdate", replyId);
-	}
 }

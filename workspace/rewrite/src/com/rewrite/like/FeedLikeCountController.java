@@ -22,8 +22,6 @@ public class FeedLikeCountController implements Action {
 		JSONObject json = new JSONObject();
 		LikeDAO likeDAO = new LikeDAO();
 		
-		System.out.println(likeDAO.feedLikeCount(Long.valueOf(req.getParameter("feedId"))));
-		
 		try {
 			json.put("likeCount", likeDAO.feedLikeCount(Long.valueOf(req.getParameter("feedId"))));
 			out.print(json.toString());

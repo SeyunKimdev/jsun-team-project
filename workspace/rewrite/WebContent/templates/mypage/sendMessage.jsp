@@ -263,7 +263,7 @@
                                 </div>
                             </div>
                             <a class="memberNicknameWrapper" href="">
-                                <h2 class="memberNickname">Classmate</h2>
+                                <h2 class="memberNickname">${sendMessage.memberNickname}</h2>
                             </a>
                         </div>
                         <div class="mpheadDivDiv2">
@@ -354,72 +354,6 @@
 							<div class="feedListContainer">
 								<div class="feedListWrapper">
 	                                <ul class="feedList">
-	                                    <li>
-											<div class="feedWrap">
-												<div class="feed">
-													<div class="feedThumbnail">
-													<!-- 이미지 넣는 곳 src -->
-														<span class="feedThumbnailSpan" ratio="0.75">
-															<picture ratio="0.75" class="feedPicture">
-																<source class="feedPictureSource" type="image/webp" sizes="(min-width: 1024px) 300px, 50vw" srcset="https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/375xauto.webp 375w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/750xauto.webp 750w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/960xauto.webp 960w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/1440xauto.webp 1440w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/2048xauto.webp 2048w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/2880xauto.webp 2880w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/autoxauto.webp 5120w"/>
-																<img class="feedImage" sizes="(min-width: 1024px) 300px, 50vw" srcset="https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/375xauto 375w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/750xauto 750w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/960xauto 960w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/1440xauto 1440w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/2048xauto 2048w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/2880xauto 2880w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/autoxauto 5120w alt="싸나이" />
-															</picture>
-														</span>
-														<!-- 지역 이름 넣기 -->
-														<div class="locationWrap">
-															<div class="location" color="#FFF" backgroundcolor="#000">
-																<div color="#FFF" class="locationText">부산</div>
-															</div>
-														</div>
-													</div>	
-													<div class="feedInfo">
-														<div class="feedNickname">
-															<!-- 닉네임 -->
-															<p class="feedNicknameText">싸나이</p>
-														</div>
-													</div>
-													<div class="feedInfoMargin"></div>
-													<div class="statusWrap">
-														<div class="status">
-															<p class="statusText">돌싱</p>
-														</div>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="feedWrap">
-												<div class="feed">
-													<div class="feedThumbnail">
-													<!-- 이미지 넣는 곳 src -->
-														<span class="feedThumbnailSpan" ratio="0.75">
-															<picture ratio="0.75" class="feedPicture">
-																<source class="feedPictureSource" type="image/webp" sizes="(min-width: 1024px) 300px, 50vw" srcset="https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/375xauto.webp 375w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/750xauto.webp 750w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/960xauto.webp 960w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/1440xauto.webp 1440w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/2048xauto.webp 2048w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/2880xauto.webp 2880w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/autoxauto.webp 5120w"/>
-																<img class="feedImage" sizes="(min-width: 1024px) 300px, 50vw" srcset="https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/375xauto 375w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/750xauto 750w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/960xauto 960w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/1440xauto 1440w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/2048xauto 2048w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/2880xauto 2880w,https://cdn.class101.net/images/003012c8-a9e5-4a01-9008-4330ddce7ca9/autoxauto 5120w alt="싸나이" />
-															</picture>
-														</span>
-														<!-- 지역 이름 넣기 -->
-														<div class="locationWrap">
-															<div class="location" color="#FFF" backgroundcolor="#000">
-																<div color="#FFF" class="locationText">부산</div>
-															</div>
-														</div>
-													</div>	
-													<div class="feedInfo">
-														<div class="feedNickname">
-															<!-- 닉네임 -->
-															<p class="feedNicknameText">싸나이</p>
-														</div>
-													</div>
-													<div class="feedInfoMargin"></div>
-													<div class="statusWrap">
-														<div class="status">
-															<p class="statusText">돌싱</p>
-														</div>
-													</div>
-												</div>
-											</div>
-										</li>
 	                                </ul>
                             	</div>
                             </div>
@@ -592,7 +526,12 @@
         </footer>
     </body>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script>let contextPath = "${pageContext.request.contextPath}"</script>
+    <script>
+    	let contextPath = "${pageContext.request.contextPath}"
+    	let memberId = `${memberId}`;
+    	let sendMessages = `${sendMessages}`
+    </script>
     <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
+    <script src="${pageContext.request.contextPath}/static/js/mypage/sendMessage.js"></script>
 
     </html>

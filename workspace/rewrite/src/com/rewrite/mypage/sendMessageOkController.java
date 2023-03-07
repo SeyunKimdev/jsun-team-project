@@ -12,21 +12,22 @@ import org.json.JSONObject;
 import com.rewrite.Action;
 import com.rewrite.Result;
 import com.rewrite.mypage.dao.MypageDAO;
-import com.rewrite.mypage.domain.ReceiveMessageDTO;
+import com.rewrite.mypage.domain.SendMessageDTO;
 
-public class receiveMessageOkController implements Action {
+public class sendMessageOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		System.out.println("sendMessage 체크");
 		Long memberId = Long.valueOf(req.getParameter("memberId"));
 		Result result = new Result();
 		MypageDAO mypageDAO = new MypageDAO();
-		ReceiveMessageDTO receiveMessageDTO = new ReceiveMessageDTO();
+		SendMessageDTO sendMessageDTO = new SendMessageDTO();
 		JSONArray jsons = new JSONArray();
-		mypageDAO.selectReceiveAll(memberId).stream().map(receiveMessage -> new JSONObject(receiveMessage)).forEach(jsons::put);
-		req.setAttribute("receiveMessages", jsons);
+		mypageDAO.selectSendAll(memberId).stream().map(sendMessage -> new JSONObject(sendMessage)).forEach(jsons::put);
+		req.setAttribute("sendMessages", jsons);
 		
-		result.setPath("/templates/mypage/receiveMessage.jsp");
+		result.setPath("/templates/mypage/sendMessage.jsp");
 		
 		return result;
 	}

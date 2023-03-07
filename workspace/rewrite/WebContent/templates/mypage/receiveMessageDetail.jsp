@@ -256,20 +256,20 @@
 						<div class="MemberProfileContainer">
 							<div class="MemberProfileWrapper">
 								<div size="28" class="MemberProfileImageContainer">
-									<span class="mainContainerFormDivDiv2DivDivDivSpan"><picture
-											class="mainContainerFormDivDiv2DivDivDivSpanPicture">
-										<img sizes=" 100vw"
-											src="https://class101.net/images/default-user.png"
-											class="MemberProfileImage"></picture></span>
+									<span class="mainContainerFormDivDiv2DivDivDivSpan">
+										<picture class="mainContainerFormDivDiv2DivDivDivSpanPicture">
+											<img sizes=" 100vw" src="https://class101.net/images/default-user.png" class="MemberProfileImage">
+										</picture>
+									</span>
 								</div>
 								<div md="Body2" class="MemberProfileNickname">${receiveMessage.memberNickname}</div>
 							</div>
 						</div>
 					</div>
-						<div class="MainMessageContainer">
-							<span class="mainMessage">${receiveMessage.messageContent}</span>
-						</div>
+					<div class="MainMessageContainer">
+						<span class="mainMessage">${receiveMessage.messageId}</span>
 					</div>
+				</div>
 			</form>
 		</div>
 	</div>
@@ -413,9 +413,10 @@
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script>
     	let contextPath = "${pageContext.request.contextPath}"
+    	let messageId = `${receiveMessage.messageId}`;
     	let receiveMessage = `${receiveMessage}`;
-    	
-    	</script>
+    	console.log(receiveMessage);
+    </script>
     <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
     <%-- <script src="${pageContext.request.contextPath}/static/js/mypage/receiveMessageDetail.js"></script> --%>
 

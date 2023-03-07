@@ -21,8 +21,8 @@ public class FeedLikeDownController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		FeedLikeVO feedLikeVO = new FeedLikeVO();
 		LikeDAO likeDAO = new LikeDAO();
-		PrintWriter out = resp.getWriter();
 		JSONObject json = new JSONObject();
+		PrintWriter out = resp.getWriter();
 		feedLikeVO.setFeedId(Long.valueOf(req.getParameter("feedId")));
 		feedLikeVO.setMemberId(Long.valueOf(req.getParameter("memberId")));
 		
@@ -30,19 +30,16 @@ public class FeedLikeDownController implements Action {
 		
 		
 		if(check != 0) {
-			System.out.println("좋아요 하락 : " + check);
 			likeDAO.feedLikeDown(feedLikeVO);
 			likeDAO.feedLikeCountUpdate(Long.valueOf(req.getParameter("feedId")));
-		}else {
 			try {
-				json.put("check", false);
+				json.put("likeCount", likeDAO.feedLikeCount(Long.valueOf(req.getParameter("feedId"))));
 				out.print(json.toString());
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}
-				out.close();
 		}
-		
+		out.close();
 		return null;
 	}
 

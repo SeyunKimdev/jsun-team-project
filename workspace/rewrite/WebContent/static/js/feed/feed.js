@@ -1,9 +1,8 @@
 /**
  * feed.jsp
  */
-
+globalThis.checkHeart;
 HTMLCollection.prototype.forEach = Array.prototype.forEach;
-
 const sortButton = document.getElementsByClassName("sortButton");
 const sortText = document.getElementsByClassName("sortText");
 const likeButton = document.querySelectorAll(".likeButton");
@@ -18,7 +17,6 @@ $sortButton.click(function(){
 	location.href=`${contextPath}/feedListOk.feed?sort=${i == 0 ? 'recent' : 'popular'}&keyword=${keyword}`;
 });
 
-
 /*피드 목록 가져오기*/	
 
 const $feedUl = $(".feedListWrapper .feedList");	
@@ -27,7 +25,6 @@ showFeedList();
 function showFeedList(){
 	feeds = JSON.parse(feeds);
 	files = JSON.parse(files);
-	console.log(files);
 	
 	let text = "";
 	
@@ -43,13 +40,13 @@ function showFeedList(){
 				`
 				if(files[feed.feedId]){
 					text +=	`<source class="feedPictureSource" type="image/webp" sizes="(min-width: 1024px) 300px, 50vw" />
-					<a href="javascript:location.href='${contextPath}/feedDetailOk.feed?feedId=${feed.feedId}&page=${page}&sort=${sort}&keyword=${keyword}'">
+					<a class="detail" href="javascript:location.href='${contextPath}/feedDetailOk.feed?feedId=${feed.feedId}&page=${page}&sort=${sort}&keyword=${keyword}&check=${globalThis.checkHeart}'">
 					<img class="feedImage" sizes="(min-width: 1024px) 300px, 50vw" src="${contextPath}/upload/${files[feed.feedId].fileSystemName}"/>
 					</a>
 				`
 				}else{
 					text +=	`<source class="feedPictureSource" type="image/webp" sizes="(min-width: 1024px) 300px, 50vw" /images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/375xauto 375w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/750xauto 750w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/960xauto 960w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/1440xauto 1440w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2048xauto 2048w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2880xauto 2880w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/autoxauto 5120w " />
-					<a href="javascript:location.href='${contextPath}/feedDetailOk.feed?feedId=${feed.feedId}&page=${page}&sort=${sort}&keyword=${keyword == null ? null : keyword}';">
+					<a class="detail" href="javascript:location.href='${contextPath}/feedDetailOk.feed?feedId=${feed.feedId}&page=${page}&sort=${sort}&keyword=${keyword == null ? null : keyword}'">
 					<img class="feedImage" sizes="(min-width: 1024px) 300px, 50vw" srcset="https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/375xauto 375w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/750xauto 750w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/960xauto 960w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/1440xauto 1440w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2048xauto 2048w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/2880xauto 2880w,https://cdn.class101.net/images/a787a840-b0c1-4ea5-b8f2-d280c954fc4e/autoxauto 5120w"
 				 			src="${contextPath}/upload/${files[feed.feedId].fileSystemName}"/>
 				 	</a>		
@@ -58,11 +55,11 @@ function showFeedList(){
 		text+=	`					</picture>
 								</span>
 				`;				/*좋아요 버튼*/
-/*		text += `				
+		text += `				
 								<div class="likeButtonWrap">
 									<button type="button" icon-position="2" class="likeButton" color="transparent" this.onclick=null;>
 										<span class="likeButtonSpan" id="${feed.feedId}">
-											<img class="emptyHeartImg active" src="${contextPath}/static/images/emptyHeart.png">
+											<img class="emptyHeartImg active" like="false" src="${contextPath}/static/images/emptyHeart.png">
 											<img class="heartImg" src="${contextPath}/static/images/heart.png">
 										</span>
 									</button>
@@ -119,4 +116,29 @@ function showFeedList(){
 }
 
 
+$feedUl.on("click","button.likeButton",function(){
+	let i = $feedUl.find(".likeButton").index($(this));
+	let replyId = $($(".likeButtonSpan")[i]).attr("id");
+		if($($(".emptyHeartImg")[i]).hasClass("active")){
+			$($(".emptyHeartImg")[i]).hide();
+			$($(".heartImg")[i]).show();
+			$($(".emptyHeartImg")[i]).removeClass("active");
+			checkHeart = true;
+			console.log(checkHeart);
+			likeService.likeUp(replyId,function(result){
+				$($("span.count")[i]).text(result.likeCount);
+			});
+			
+		}else {
+			$($(".emptyHeartImg")[i]).show();
+			$($(".heartImg")[i]).hide();
+			$($(".emptyHeartImg")[i]).addClass("active");
+			checkHeart= false;
+			console.log(checkHeart);
+			likeService.likeDown(replyId,function(result){
+				$($("span.count")[i]).text(result.likeCount);
+			});
+		}
+		console.log(globalThis.checkHeart);
+});
 

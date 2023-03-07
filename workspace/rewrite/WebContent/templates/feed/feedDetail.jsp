@@ -157,8 +157,10 @@
 	let $feedTag = `${feed.feedHashTag}`;
 	let $replyAll = `${reply}`;
 	let feedId = `${param.feedId}`;
+	let checkHeart = `${param.check}`;
 	let memberId = "1";
 </script>
+<script src="${pageContext.request.contextPath}/static/js/feed/like.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/feed/feedDetail.js"></script>
 <script>
 	const $replyButton = $(".feedReplyButton");

@@ -409,5 +409,6 @@
 	let memberId= "3";
 </script>
 <script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/feed/like.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/feed/feed.js"></script>
 </html>

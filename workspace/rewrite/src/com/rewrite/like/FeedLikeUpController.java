@@ -23,6 +23,7 @@ public class FeedLikeUpController implements Action {
 		LikeDAO likeDAO = new LikeDAO();
 		PrintWriter out = resp.getWriter();
 		JSONObject json = new JSONObject();
+		Integer count = null;
 		feedLikeVO.setFeedId(Long.valueOf(req.getParameter("feedId")));
 		feedLikeVO.setMemberId(Long.valueOf(req.getParameter("memberId")));
 		
@@ -30,16 +31,17 @@ public class FeedLikeUpController implements Action {
 		if(check == 0) {
 			likeDAO.feedLikeUp(feedLikeVO);
 			likeDAO.feedLikeCountUpdate(Long.valueOf(req.getParameter("feedId")));
-		}else {
+			count = likeDAO.feedLikeCount(Long.valueOf(req.getParameter("feedId")));
 			try {
-				json.put("check", false);
+				json.put("likeCount", count);
 				out.print(json.toString());
 			} catch (JSONException e) {
+				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			out.close();
 		}
 		
+		out.close();
 		return null;
 	}
 

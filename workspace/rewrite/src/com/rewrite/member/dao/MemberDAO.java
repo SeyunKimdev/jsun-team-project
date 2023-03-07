@@ -45,6 +45,11 @@ public class MemberDAO {
 		return sqlSession.selectOne("member.sms", code) != null;
 	}
 	
+//	아이디 찾기
+	public String findId(String memberPhone) {
+		return sqlSession.selectOne("member.findId", memberPhone);
+	}
+	
 //	회원가입
 	public void join(MemberVO memberVO) {
 		sqlSession.insert("member.join", memberVO);

@@ -1,10 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>회원가입</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/header/newHeader.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/join.css">
@@ -296,7 +297,7 @@
 									<div class="inputBoxWrap phoneCheckWrap">
 										<span class="phoneInputBoxWrap"> <input id="phone"
 											name="memberPhone" type="text" placeholder="휴대폰 번호를 입력하세요."
-											class="inputBox" value=""> <img class="checkImg">
+											class="inputBox"> <img class="checkImg">
 										</span>
 										<button type="button" class="getPhoneCheck">
 											<span class="getPhoneCheckText">인증번호 받기</span>

@@ -1,55 +1,6 @@
 /**
  * feedDetailReply.jsp
  */
-/* 좋아요 모듈*/
-
-let likeService = (function(){
-
-	function likeUp(replyId, callback){
-		$.ajax({
-			url: contextPath + "/like/replyLikeUp.like",
-			data: {replyId : replyId, memberId : memberId},
-			dataType: "json",
-			success: function(check){
-				if(callback){
-					callback(check);
-				}
-			}
-		});
-	};
-	
-	function likeDown(replyId, callback){
-		$.ajax({
-			url: contextPath + "/like/replyLikeDown.like",
-			data: {replyId : replyId, memberId : memberId},
-			dataType: "json",
-			success: function(check){
-				if(callback){
-					callback(check);
-				}
-			}
-		});
-	}
-	
-	function likeCount(replyId, callback){
-		$.ajax({
-			url: contextPath + "/like/replyLikeCount.like",
-			data: {replyId : replyId},
-			dataType: "json",
-			success: function(count){
-				if(callback){
-					callback(count.likeCount);
-				}
-			}
-		});
-		
-	}
-
-	return {likeUp : likeUp, likeDown : likeDown, likeCount : likeCount};
-
-})();	
-
-
 const $writeButton = $(".reply-write-button");
 const $exitButton = $(".exitButton");
 $writeButton.click(function(){
@@ -59,7 +10,6 @@ $writeButton.click(function(){
 });
 
 $exitButton.click(function(){
-	
 	location.href=`${contextPath}/feedDetailOk.feed?feedId=${feedId}&page=${feedPage}&sort=${sort}&keyword=${keyword}`;
 });
 
@@ -68,18 +18,6 @@ const likeButton = document.querySelectorAll(".likeButton");
 const heartImg = document.querySelector(".heartImg");
 const emptyHeartImg = document.querySelector(".emptyHeartImg");
 
-$(".likeButton").each((i, e) => {
-	   $(e).on("click", function() {
-	        var checkHeart = $($('.heartImg')[i]).css("display");
-	        if(checkHeart == "none"){
-	            $($('.heartImg')[i]).css("display", "block");
-	            $($('.emptyHeartImg')[i]).css("display", "none");
-	        } else {
-	        	$($('.heartImg')[i]).css("display", "none");
-	        	$($('.emptyHeartImg')[i]).css("display", "block");
-	        }
-	   })
-	});
 /*=========================================================================================================*/
 let page = 1;
 /*=======================================================================*/
@@ -139,9 +77,8 @@ const replyService = (function(){
 			url: contextPath + "/reply/replyCountOk.reply",
 			data: {feedId: feedId},
 			success: function(result){
-				console.log(result);
 				if(callback){
-					callback(result);
+					callback(result)
 				}
 			}
 		});
@@ -263,26 +200,12 @@ function showReplyAll(replyMoreDTO){
 								</div>
 							</div>
 						</div>
-						<div marginleft="0" class="likeContainer">
-							<div class="likeWrap">
-								<div class="likeAndCount">
-									<button type="button" class="likeButton" color="transparent">
-										<span class="likeButtonSpan"> 
-											<img class="emptyHeartImg" src="${contextPath}/static/images/emptyHeart.png"> 
-											<img class="heartImg" src="${contextPath}/static/images/heart.png">
-										</span>
-									</button>
-									<div color="#cacaca" class="likeCount"></div>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 			`;
 		});
-		
+		$replyListBox.append(text);
 	}
-	$replyListBox.append(text);
 }
 
 $(".replyInputButton").on("click", write);
@@ -302,7 +225,6 @@ function write(){
 	});
 
 }
-
 
 $replyListBox.on("click","button.reply-delete-button",function(){
 	let replyId = $(this).data("reply-id");
@@ -365,37 +287,3 @@ function count(feedId){
 		$relplyCount.text(result.count);
 	});
 }	
-
-
-$replyListBox.on("click", "button.likeButton",function(){
-	let i = $replyListBox.find(".likeButton").index($(this));
-	let $likeButton = $($("button.likeButton")[i]);
-	let replyId = $replyListBox.find("textarea").eq(i).attr("id");
-	
-	$likeButton.click(function(){
-		if($($(".emptyHeartImg")[i]).hasClass("active")){
-			$($(".heartImg")[i]).show();
-			$($(".emptyHeartImg")[i]).hide();
-			$($(".emptyHeartImg")[i]).removeClass("active");
-			
-			likeService.likeUp(replyId);
-			
-			likeService.likeCount(replyId, function(count){
-				$(".likeCount").text(count);
-			});
-			
-		}else {
-			$($(".heartImg")[i]).hide();
-			$($(".emptyHeartImg")[i]).show();
-			$($(".emptyHeartImg")[i]).addClass("active");
-			likeService.likeDown(replyId);
-			
-			likeService.likeCount(replyId, function(count){
-				$($(".likeCount")[i]).text(count);
-			});
-		}
-		
-		
-	});
-	
-});

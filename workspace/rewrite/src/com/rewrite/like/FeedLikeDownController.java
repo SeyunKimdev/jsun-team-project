@@ -26,10 +26,11 @@ public class FeedLikeDownController implements Action {
 		feedLikeVO.setFeedId(Long.valueOf(req.getParameter("feedId")));
 		feedLikeVO.setMemberId(Long.valueOf(req.getParameter("memberId")));
 		
-		boolean check = likeDAO.feedLikeCheck(feedLikeVO);
-		System.out.println("좋아요 하락 : " + check);
+		Long check = likeDAO.feedLikeCheck(feedLikeVO);
 		
-		if(!check) {
+		
+		if(check != 0) {
+			System.out.println("좋아요 하락 : " + check);
 			likeDAO.feedLikeDown(feedLikeVO);
 			likeDAO.feedLikeCountUpdate(Long.valueOf(req.getParameter("feedId")));
 		}else {
@@ -40,7 +41,6 @@ public class FeedLikeDownController implements Action {
 				e.printStackTrace();
 			}
 				out.close();
-			
 		}
 		
 		return null;

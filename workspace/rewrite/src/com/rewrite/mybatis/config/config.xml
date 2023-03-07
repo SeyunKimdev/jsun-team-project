@@ -25,7 +25,6 @@
 		<typeAlias type="com.rewrite.mypage.domain.MypageDTO" alias="mypageDTO"/>
 		<typeAlias type="com.rewrite.mypage.domain.ReceiveMessageDTO" alias="receiveMessageDTO"/>
 		<typeAlias type="com.rewrite.like.domain.FeedLikeVO" alias="feedLikeVO"/>
-		<typeAlias type="com.rewrite.like.domain.ReplyLikeVO" alias="replyLikeVO"/>
 	</typeAliases>
 	
 	<environments default="mysql">

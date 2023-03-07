@@ -1633,3 +1633,8 @@ hr {
     width: 14px;
     filter: invert(1);
 }
+.review_whole_img {
+	width: 100px;
+	height: 100px;
+}
+

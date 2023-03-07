@@ -7,11 +7,14 @@ public class ReviewDTO {
 	private String reviewContent;
 	private String reviewRegisterDate;
 	private String reviewUpdateDate;
-	private String reviewLikeCount;
 	private String reviewReadCount;
-	private String reviewImage;
 	private String memberNickname;
-
+	private Long memberId;
+	private Long fileId;
+	private String fileOriginalName;
+	private String fileSystemName;
+	private String fileRegisterDate;
+	
 	public ReviewDTO() {;}
 
 	public Long getReviewId() {
@@ -54,28 +57,12 @@ public class ReviewDTO {
 		this.reviewUpdateDate = reviewUpdateDate;
 	}
 
-	public String getReviewLikeCount() {
-		return reviewLikeCount;
-	}
-
-	public void setReviewLikeCount(String reviewLikeCount) {
-		this.reviewLikeCount = reviewLikeCount;
-	}
-
 	public String getReviewReadCount() {
 		return reviewReadCount;
 	}
 
 	public void setReviewReadCount(String reviewReadCount) {
 		this.reviewReadCount = reviewReadCount;
-	}
-
-	public String getReviewImage() {
-		return reviewImage;
-	}
-
-	public void setReviewImage(String reviewImage) {
-		this.reviewImage = reviewImage;
 	}
 
 	public String getMemberNickname() {
@@ -86,12 +73,53 @@ public class ReviewDTO {
 		this.memberNickname = memberNickname;
 	}
 
+	public Long getMemberId() {
+		return memberId;
+	}
+
+	public void setMemberId(Long memberId) {
+		this.memberId = memberId;
+	}
+
+	public Long getFileId() {
+		return fileId;
+	}
+
+	public void setFileId(Long fileId) {
+		this.fileId = fileId;
+	}
+
+	public String getFileOriginalName() {
+		return fileOriginalName;
+	}
+
+	public void setFileOriginalName(String fileOriginalName) {
+		this.fileOriginalName = fileOriginalName;
+	}
+
+	public String getFileSystemName() {
+		return fileSystemName;
+	}
+
+	public void setFileSystemName(String fileSystemName) {
+		this.fileSystemName = fileSystemName;
+	}
+
+	public String getFileRegisterDate() {
+		return fileRegisterDate;
+	}
+
+	public void setFileRegisterDate(String fileRegisterDate) {
+		this.fileRegisterDate = fileRegisterDate;
+	}
+
 	@Override
 	public String toString() {
 		return "ReviewDTO [reviewId=" + reviewId + ", reviewTitle=" + reviewTitle + ", reviewContent=" + reviewContent
 				+ ", reviewRegisterDate=" + reviewRegisterDate + ", reviewUpdateDate=" + reviewUpdateDate
-				+ ", reviewLikeCount=" + reviewLikeCount + ", reviewReadCount=" + reviewReadCount + ", reviewImage="
-				+ reviewImage + ", memberNickname=" + memberNickname + "]";
+				+ ", reviewReadCount=" + reviewReadCount + ", memberNickname=" + memberNickname + ", memberId="
+				+ memberId + ", fileId=" + fileId + ", fileOriginalName=" + fileOriginalName + ", fileSystemName="
+				+ fileSystemName + ", fileRegisterDate=" + fileRegisterDate + "]";
 	}
 
 	@Override
@@ -99,7 +127,6 @@ public class ReviewDTO {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((reviewId == null) ? 0 : reviewId.hashCode());
-		result = prime * result + ((reviewUpdateDate == null) ? 0 : reviewUpdateDate.hashCode());
 		return result;
 	}
 
@@ -117,12 +144,11 @@ public class ReviewDTO {
 				return false;
 		} else if (!reviewId.equals(other.reviewId))
 			return false;
-		if (reviewUpdateDate == null) {
-			if (other.reviewUpdateDate != null)
-				return false;
-		} else if (!reviewUpdateDate.equals(other.reviewUpdateDate))
-			return false;
 		return true;
 	}
+	
+	
+
+
 
 }

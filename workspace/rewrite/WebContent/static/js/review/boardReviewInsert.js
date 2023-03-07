@@ -62,6 +62,29 @@ $textAreaTitle.on('blur', () => {
 	$titleWrap.css('border','');
 });
 /*----------------------------------------------------------------------*/
+/*별 개수 세주는 이벤트*/
+const $yellowStar = $(".fill-star");
+const $blackStar = $(".nonfill-star svg");
+const $div = $(".star-wrap")
+let star = 0;
+
+$blackStar.on("click", function(){
+	let i = $blackStar.index(this);
+	star = i + 1;
+	for(let j = 0; j<i+1; j++) {
+		$blackStar.eq(j).hide();
+	}
+	console.log(star);
+});
+
+$yellowStar.on("click", function(){
+	let i = $yellowStar.index(this);
+	star = i + 1;
+	for(let j = i+1; j<5; j++) {
+		$blackStar.eq(j).show();
+	}
+	console.log(star);
+});
 
 
 

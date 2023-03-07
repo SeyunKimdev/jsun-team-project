@@ -20,7 +20,7 @@ public class ReviewFrontController extends HttpServlet{
 		Result result = null;
 
 		if (target.equals("/boardReview")) {
-			result = new boardReviewOkController().execute(req, resp);
+			result = new ReviewListOkController().execute(req, resp);
 		}
 	}
 	

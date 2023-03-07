@@ -13,12 +13,12 @@
 	</insert>
 
 	<select id="feedLikeCheck" parameterType="feedLikeVO" resultType="long">
-		select feed_like_id from tbl_feed_like
+		select count(feed_like_id) from tbl_feed_like
 		where feed_id = #{feedId} and member_id = #{memberId}
 	</select>
 
 	<select id="replyLikeCheck" parameterType="replyLikeVO"  resultType="long">
-		select reply_like_id from tbl_reply_like
+		select count(reply_like_id) from tbl_reply_like
 		where reply_id = #{replyId} and member_id = #{memberId}
 	</select>
 	

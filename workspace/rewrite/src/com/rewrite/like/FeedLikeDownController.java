@@ -27,6 +27,7 @@ public class FeedLikeDownController implements Action {
 		feedLikeVO.setMemberId(Long.valueOf(req.getParameter("memberId")));
 		
 		boolean check = likeDAO.feedLikeCheck(feedLikeVO);
+		System.out.println("좋아요 하락 : " + check);
 		
 		if(!check) {
 			likeDAO.feedLikeDown(feedLikeVO);
@@ -37,9 +38,9 @@ public class FeedLikeDownController implements Action {
 				out.print(json.toString());
 			} catch (JSONException e) {
 				e.printStackTrace();
-			}finally {
-				out.close();
 			}
+				out.close();
+			
 		}
 		
 		return null;

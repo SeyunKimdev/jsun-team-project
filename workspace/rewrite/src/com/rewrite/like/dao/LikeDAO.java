@@ -22,11 +22,11 @@ public class LikeDAO {
 	}
 	
 	public boolean feedLikeCheck(FeedLikeVO feedLikeVO) {
-		return sqlSession.selectOne("like.feedLikeCheck",feedLikeVO) == null;
+		return sqlSession.selectOne("like.feedLikeCheck",feedLikeVO) == "0";
 	}
 	
 	public boolean replyLikeCheck(ReplyLikeVO replyLikeVO) {
-		return sqlSession.selectOne("like.replyLikeCheck",replyLikeVO) == null;
+		return sqlSession.selectOne("like.replyLikeCheck",replyLikeVO) == "0";
 	}
 	
 	public void feedLikeDown(FeedLikeVO feedLikeVO) {

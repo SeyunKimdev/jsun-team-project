@@ -113,7 +113,6 @@ function showFeedList(){
 				</li>
 					`;
 					
-			getCount(feed.feedId);		
 	});			
 	 
 	$feedUl.append(text);

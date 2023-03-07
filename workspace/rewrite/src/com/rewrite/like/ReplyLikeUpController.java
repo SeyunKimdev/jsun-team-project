@@ -38,9 +38,9 @@ public class ReplyLikeUpController implements Action {
 				out.print(json.toString());
 			} catch (JSONException e) {
 				e.printStackTrace();
-			}finally {
-				out.close();
 			}
+				out.close();
+			
 		}
 		
 		return null;

@@ -28,8 +28,8 @@ public class FeedLikeUpController implements Action {
 		feedLikeVO.setMemberId(Long.valueOf(req.getParameter("memberId")));
 		
 		boolean check = likeDAO.feedLikeCheck(feedLikeVO);
-		
-		if(check) {
+		System.out.println("좋아요 상승 : " + check);
+		if(!check) {
 			likeDAO.feedLikeUp(feedLikeVO);
 			likeDAO.feedLikeCountUpdate(Long.valueOf(req.getParameter("feedId")));
 		}else {
@@ -38,9 +38,9 @@ public class FeedLikeUpController implements Action {
 				out.print(json.toString());
 			} catch (JSONException e) {
 				e.printStackTrace();
-			}finally {
-				out.close();
 			}
+				
+			out.close();
 		}
 		
 		return null;

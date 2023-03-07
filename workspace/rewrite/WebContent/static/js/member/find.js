@@ -14,7 +14,6 @@ const $inputNumber = $(".numberInputBox");
 
 let inputCheck = false;
 
-var code = "";
 
 $findInput.on("blur", function() {
 	let value = $(this).val();
@@ -34,6 +33,7 @@ $findInput.on("blur", function() {
 	}
 });
 
+var code = "";
 $(".checkButton").on("click", function() {
 	var phone = $(".findFormInput").val().replaceAll("-", "");
 	console.log(phone);
@@ -46,6 +46,7 @@ $(".checkButton").on("click", function() {
 			code = data;
 		}
 	});
+	goInputNumber();
 });
 
 function goInputNumber() {
@@ -70,17 +71,31 @@ $inputNumber.on("blur", function() {
 	}
 	if (numberCheck) {
 		alert("인증 성공");
-		goCheck();
 	} else {
 		alert("인증번호를 확인하세요.");
 	}
 });
 
-function goCheck() {
-	if (numberCheck == true) {
+var identification = "";
+$(".checkNumberButton").on("click", function() {
+	var phone = $(".findFormInput").val();
+	$.ajax({
+		type: "POST",
+		url: contextPath + "/findIdOk.member",
+		data: { memberPhone: phone },
+		success: function(data) {
+			console.log(data);
+			identification = data;
+			$("#memberIdentification").html(JSON.parse(identification).memberIdentification);
+		}
 
+	});
+	goCheck();
+});
+
+function goCheck() {
 		step = 3;
-		
+
 		$(".inputNumberFormWrapper").hide();
 		$(".findFormWrapper").hide();
 		$(".checkFormWrapper").show();
@@ -88,6 +103,7 @@ function goCheck() {
 		$([document.documentElement, document.body]).animate({
 			scrollTop: 0
 		}, 300);
-	}
+		
 };
+
 

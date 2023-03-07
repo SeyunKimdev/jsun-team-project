@@ -217,7 +217,7 @@
 								placeholder="전화번호를 입력해주세요">
 						</div>
 						<div class="spaceBetween">
-							<a class="findTextWrapper" href>
+							<a class="findTextWrapper" href="${pageContext.request.contextPath}/findId.member">
 								<p class="findIdText">아이디를 잊으셨나요?</p>
 							</a>
 						</div>
@@ -262,19 +262,52 @@
 		<div class="checkFormWrapper">
 			<div class="checkPasswordContainer">
 				<div class="checkPasswordWrapper">
-					<h3 class="checkPasswordTitle">홍길동<span>님의 비밀번호</span></h3>
+					<h3 class="checkPasswordTitle">새로운 비밀번호를 입력하세요.</span></h3>
 					<div class="spaceUnder"></div>
-					<p class="checkPasswordText">본인의 비밀번호를 확인하세요.</p>
 				</div>
-				<form style="width: auto; height: auto;">
+				<form style="width: auto; height: auto;" action="${pageContext.request.contextPath}/findPasswordOk.member">
 					<div class="passwordBoxContainer">
-							<div class="passwordBoxWrapper">
-								<h4>asd1234!!!</h4>
-							</div>
+							<label>
+								<div class="passwordWrap">
+									<p class="passwordText">비밀번호</p>
+									<div class="formTextMargin"></div>
+									<div class="passwordInputBoxContainer">
+										<div class="inputBoxWrap">
+											<span> <input id="password"
+												placeholder="새로운 비밀번호를 입력해주세요." name="memberPassword"
+												type="password" class="inputBox" value="" /> <img
+												class="checkImg">
+											</span>
+										</div>
+										<div class="passwordInfoWrap">
+											<p class="passwordInfo">영문 대·소문자/숫자/특수문자 중 2가지 이상 조합,
+												8자~32자</p>
+										</div>
+										<p class="help"></p>
+									</div>
+								</div>
+							</label>
+							<div class="joinFormLabelMargin"></div>
+							<label>
+								<div class="passwordWrap">
+									<p class="passwordText">비밀번호 확인</p>
+									<div class="formTextMargin"></div>
+									<div class="passwordInputBoxContainer">
+										<div class="inputBoxWrap">
+											<span> <input id="passwordCheck"
+												placeholder="비밀번호를 한 번 더 입력해주세요." name="memberPassword"
+												type="password" class="inputBox" value=""> <img
+												class="checkImg">
+											</span>
+										</div>
+										<p class="help"></p>
+									</div>
+								</div>
+							</label>
 						<div class="spaceBetween"></div>
-						<button type="button" class="goLoginButton" onclick="location.href='${pageContext.request.contextPath}/login.member'">
+						<button type="button" class="changePasswordButton">
 							<div class="buttonTextWrapper">
-								<span class="buttonText">로그인 하러가기</span>
+								<span class="buttonText">비밀번호 변경하기</span>
 							</div>
 						</button>
 					</div>

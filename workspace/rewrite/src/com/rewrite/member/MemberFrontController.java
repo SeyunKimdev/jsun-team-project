@@ -49,10 +49,13 @@ public class MemberFrontController extends HttpServlet{
 			result = new Result();
 			result.setPath("/templates/member/findPw.jsp");
 			
-		}
-		else if(target.equals("/findId")) {
+		}else if(target.equals("/findId")) {
 			result = new Result();
 			result.setPath("/templates/member/findId.jsp");
+			
+		}
+		else if(target.equals("/findIdOk")) {
+			result = new FindIdOkController().execute(req, resp);
 			
 		}
 		else {

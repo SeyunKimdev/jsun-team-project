@@ -241,7 +241,7 @@ function showHelp($joinInputs, fileName) {
 		$joinInputs.css("border", "1px solid rgb(255, 64, 62)");
 		$joinInputs.css("background", "rgb(255, 246, 246)");
 	}
-}
+};
 
 /* 성별 선택 */
 $checks.on("change", function() {

@@ -106,4 +106,81 @@ function goCheck() {
 		
 };
 
+const passwordNumberRegex = /[0-9]/g;
+const passwordEnglishRegex = /[a-z]/ig;
+const passwordSpecialCharacterRegex = /[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi;
+let passwordCheck;
+let passwordCheckAll = [false, false];
+let joinBlurMessages = ["비밀번호를 입력하세요.", "비밀번호 확인을 위해 한번 더 입력하세요."];
+let joinRegexMessages = ["공백 제외 영어 및 숫자, 특수문자 모두 포함하여 10~20자로 입력해주세요.", "위 비밀번호와 일치하지 않습니다. 다시 입력해주세요."];
+const $joinHelp = $("p.help");
+const $passwordInputs = $("input[type='password']");
+
+$passwordInputs.on("blur", function() {
+	let i = $passwordInputs.index($(this));
+	let value = $(this).val();
+
+	$(this).next().hide();
+	$(this).next().fadeIn(500);
+
+	if (!value) {
+		$joinHelp.eq(i).text(joinBlurMessages[i]);
+		$joinHelp.eq(i).css('color', 'red');
+		showHelp($(this), contextPath + "/static/images/error.png");
+		passwordCheck = false;
+		passwordCheckAll[i] = passwordCheck;
+		return;
+	}
+	
+	switch(i){
+		case 0:
+			let numberCheck = value.search(passwordNumberRegex);
+			let englishCheck = value.search(passwordEnglishRegex);
+			let specialCharacterCheck = value
+				.search(passwordSpecialCharacterRegex);
+
+			var condition1 = (numberCheck >= 0 && englishCheck >= 0)
+				&& (englishCheck >= 0 && specialCharacterCheck >= 0)
+				&& (specialCharacterCheck >= 0 && numberCheck >= 0)
+			var condition2 = value.length > 9 && value.length < 21;
+			var condition3 = value.search(/\s/) < 0;
+
+			passwordCheck = condition1 && condition2 && condition3;
+		break;
+		case 1:
+			passwordCheck = $passwordInputs.eq(i - 1).val() == value;
+		break;
+	}
+	
+	passwordCheckAll[i] = passwordCheck;
+	
+	if (!passwordCheck) {
+		$joinHelp.eq(i).text(joinRegexMessages[i]);
+		$joinHelp.eq(i).css('color', 'red')
+		showHelp($(this), contextPath + "/static/images/error.png");
+	}else{
+	$joinHelp.eq(i).text("");
+	showHelp($(this), contextPath + "/static/images/pass.png");
+	}
+});
+
+
+function showHelp($passwordInputs, fileName) {
+	$passwordInputs.next().attr("src", fileName);
+
+	if (fileName == contextPath + "/static/images/pass.png") {
+		$passwordInputs.css("border", "1px solid rgba(0, 0, 0, 0.1)");
+		$passwordInputs.css("background", "rgb(255, 255, 255)");
+		$passwordInputs.next().attr("width", "18px");
+	} else {
+		$passwordInputs.css("border", "1px solid rgb(255, 64, 62)");
+		$passwordInputs.css("background", "rgb(255, 246, 246)");
+	}
+};
+
+
+
+
+
+
 

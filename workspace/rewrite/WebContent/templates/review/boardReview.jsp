@@ -299,14 +299,72 @@
 						<!-- ------------------------------------------------------------------------------------------------------------------------------------------------- -->
 					</ul>
 				</div>
-				<div top="24" right="0" bottom="32" left="0"
-					class="mainContainerDivDiv2">
-					<span class="mainContainerDivDiv2SpanASpan">더보기</span>
-					<div class="mainContainerDivDiv2SpanADiv">
-						<img class="plusBtn"
-							src="${pageContext.request.contextPath}/static/images/plus.png" />
-					</div>
-				</div>
+				<div class="bottomContainer">
+                <div class="bottomDiv1">
+                    <button
+                        type="button"
+                        icon-position="2"
+                        disabled=""
+                        class="bottomDiv1Button1"
+                        color="default"
+                    >
+                        <span class="bottomDiv1Button1Span1">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M15.5 5.5l-6 6.5 6 6.5L14 20l-7.5-8L14 4l1.5 1.5z"
+                                    fill="#efefef"
+                                ></path>
+                            </svg>
+                        </span>
+                    </button>
+                    <button
+                        type="button"
+                        icon-position="0"
+                        class="bottomDiv1Button1"
+                        color="orange"
+                        fill="false"
+                    >
+                        <span class="bottomDiv1Button1Span1">1</span>
+                    </button>
+                    <button
+                        type="button"
+                        icon-position="0"
+                        class="bottomDiv1Button1"
+                        color="white"
+                        fill="false"
+                    >
+                        <span class="bottomDiv1Button1Span1">2</span>
+                    </button>
+                    <button
+                        type="button"
+                        icon-position="2"
+                        class="bottomDiv1Button1"
+                        color="default"
+                    >
+                        <span class="bottomDiv1Button1Span1">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z"
+                                    fill="#1a1a1a"
+                                ></path></svg
+                        ></span>
+                    </button>
+                </div>
+            </div>
 				<div class="mainContainerDivDiv3"></div>
 			</div>
 		</div>

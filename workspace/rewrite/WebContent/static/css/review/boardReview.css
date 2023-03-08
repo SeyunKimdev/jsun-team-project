@@ -1603,5 +1603,71 @@ hr {
 	filter: invert(1);
 }
 
+/* 페이징 관리 부분 */
+.mainBottomDiv1 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.bottomContainer {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-top: 32px;
+    /* margin-bottom: 56px; 
+    */
+    padding-bottom: 48px;
+}
+
+@media (min-width: 1024px) {
+    .bottomContainer {
+        /* margin-bottom: 72px; */
+        padding-bottom: 48px;
+    }
+}
+
+.bottomDiv1Button1 {
+    border: 0px;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    flex: initial;
+    box-sizing: border-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    display: inline-flex;
+    flex: 0 0 auto;
+    vertical-align: middle;
+    padding: 0px;
+    border-radius: 3px;
+    color: rgb(26, 26, 26);
+    background-color: rgb(248, 248, 248);
+    width: 32px;
+    height: 32px;
+    transition: background-color 0.1s ease 0s;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.bottomDiv1Button1.disabled {
+    color: rgb(239, 239, 239);
+    background-color: rgb(248, 248, 248);
+}
+
+.bottomDiv1Button1Span1 {
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
 
 

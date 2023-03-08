@@ -290,6 +290,12 @@
     line-height: 1rem;
 }
 
+.inputBoxWrap span {
+	position: relative;
+    display: block;
+}
+
+
 .checkImg {
 	position: absolute;
     top: 16px;
